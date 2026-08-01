@@ -4,14 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title id="pageTitle">Studio Ma Félicité — Décoration événementielle &amp; Animation à Paris</title>
-<meta id="metaDescription" name="description" content="Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages, anniversaires et conférences d'entreprise." />
-<meta name="theme-color" content="#0F3D2E" />
+<meta id="metaDescription" name="description" content="Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages et anniversaires." />
+<meta name="theme-color" content="#3D0F14" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Studio Ma Félicité — Décoration événementielle &amp; Animation à Paris" />
 <meta property="og:description" content="Décoration sur mesure et animation professionnelle, réunies sous un même toit. Paris, France." />
 <meta property="og:type" content="website" />
 
+<link rel="icon" type="image/png" href="images/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -76,7 +77,7 @@
   .navlink:hover::after, .navlink.active::after { width:100%; }
 
   /* Portfolio filter */
-  .filter-btn.is-active { background:#0F3D2E; color:#F9F5EE; border-color:#0F3D2E; }
+  .filter-btn.is-active { background:#7C1E27; color:#F9F5EE; border-color:#7C1E27; }
 
   /* Language switch */
   .lang-btn.is-active { background:#C9A96A; color:#14110D; }
@@ -88,9 +89,9 @@
   .track { display:flex; transition:transform .7s cubic-bezier(.16,1,.3,1); }
 
   /* Form floating focus */
-  .field:focus { outline:none; border-color:#0F3D2E; box-shadow:0 0 0 3px rgba(15,61,46,.10); }
+  .field:focus { outline:none; border-color:#7C1E27; box-shadow:0 0 0 3px rgba(124,30,39,.10); }
 
-  ::selection { background:#0F3D2E; color:#F9F5EE; }
+  ::selection { background:#7C1E27; color:#F9F5EE; }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
@@ -119,8 +120,8 @@
 
       <!-- Wordmark -->
       <a href="#hero" class="group flex items-center gap-3 shrink-0">
-        <span class="grid place-items-center w-10 h-10 rounded-full border transition-colors duration-500 border-current" id="navMark">
-          <span class="font-serif text-[15px] italic leading-none translate-y-[1px]">M</span>
+        <span class="grid place-items-center w-10 h-10 rounded-full bg-cream-50 shadow-soft overflow-hidden shrink-0" id="navMark">
+          <img src="images/logo-mark-crop.png" alt="Studio Ma Félicité" class="w-7 h-auto object-contain" />
         </span>
         <span class="leading-tight">
           <span class="block font-serif text-lg sm:text-xl tracking-tight">Studio Ma Félicité</span>
@@ -313,12 +314,12 @@
       <div class="reveal relative">
         <div class="relative rounded-[2rem] overflow-hidden shadow-lift ph aspect-[4/5]">
           <img src="images/about-main.jpg"
-               alt="Banquet table dressed with candlelight and seasonal florals" loading="lazy"
+               alt="Gold banquet room at the Shangri-La Paris dressed with candlelight and white floral centerpieces" loading="lazy"
                class="w-full h-full object-cover" />
         </div>
         <div class="absolute -bottom-10 -right-4 sm:right-6 w-40 sm:w-56 rounded-[1.5rem] overflow-hidden ring-8 ring-cream-50 shadow-lift ph aspect-[3/4] hidden sm:block">
           <img src="images/about-host.jpg"
-               alt="Event host addressing guests with a microphone" loading="lazy"
+               alt="Close-up of deep red peony floral detail from a ceremony arrangement" loading="lazy"
                class="w-full h-full object-cover" />
         </div>
         <div class="absolute -top-6 -left-3 sm:-left-6 rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
@@ -344,7 +345,7 @@
             qui ne raconte rien.
           </p>
           <p data-i18n-html="about.p2">
-            Studio Ma Félicité a été fondé dans le 4<sup>e</sup> arrondissement pour combler cet écart. Nous concevons
+            Studio Ma Félicité a été fondé à Paris pour combler cet écart. Nous concevons
             la salle et menons la soirée, à partir du même brief et de la même équipe. La lumière change au moment
             exact du discours. Les centres de table disparaissent avant la première danse. Rien n'est improvisé, et
             pourtant tout semble couler de source.
@@ -357,9 +358,9 @@
         <!-- Signature -->
         <div class="mt-9 flex items-center gap-4">
           <img src="images/founder.jpg"
-               alt="" loading="lazy" class="w-14 h-14 rounded-full object-cover ph ring-1 ring-taupe-100" />
+               alt="Ma Rong, founder of Studio Ma Félicité" loading="lazy" class="w-14 h-14 rounded-full object-cover ph ring-1 ring-taupe-100" />
           <div>
-            <p class="font-serif text-lg text-ink-900">Amélie Rousseau</p>
+            <p class="font-serif text-lg text-ink-900">Ma Rong</p>
             <p class="text-xs uppercase tracking-[0.16em] text-taupe-400" data-i18n="about.founderTitle">Fondatrice &amp; Directrice de création</p>
           </div>
         </div>
@@ -405,13 +406,13 @@
       </p>
     </div>
 
-    <div class="mt-16 grid md:grid-cols-3 gap-7 lg:gap-8">
+    <div class="mt-16 grid md:grid-cols-2 gap-7 lg:gap-8 max-w-4xl mx-auto">
 
       <!-- Weddings -->
       <article class="reveal group flex flex-col rounded-[1.75rem] bg-cream-50 border border-taupe-100/70 overflow-hidden shadow-soft transition-all duration-500 hover:shadow-lift hover:-translate-y-1.5">
         <div class="relative aspect-[16/11] overflow-hidden ph">
-          <img src="images/service-weddings.jpg"
-               alt="Floral wedding ceremony arch in a garden" loading="lazy"
+          <img src="images/rednote-huatian-red-aisle.jpg"
+               alt="Red carpet aisle with floral moon-gate arch, Chinese-style ceremony decor" loading="lazy"
                class="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-ink-900/45 to-transparent opacity-70"></div>
           <span class="absolute top-4 left-4 rounded-full bg-cream-50/90 backdrop-blur px-4 py-1.5 text-[10px] uppercase tracking-widest2 text-wine-700" data-i18n="services.badge1">01 — Mariages</span>
@@ -438,8 +439,8 @@
       <!-- Anniversaries -->
       <article class="reveal group flex flex-col rounded-[1.75rem] bg-cream-50 border border-taupe-100/70 overflow-hidden shadow-soft transition-all duration-500 hover:shadow-lift hover:-translate-y-1.5" style="transition-delay:.1s">
         <div class="relative aspect-[16/11] overflow-hidden ph">
-          <img src="images/service-anniversaries.jpg"
-               alt="Guests celebrating at an intimate anniversary party" loading="lazy"
+          <img src="images/rednote-salons-hoche-birthday.jpg"
+               alt="18th birthday celebration decor at Les Salons Hoche, blue and gold balloon arch" loading="lazy"
                class="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-ink-900/45 to-transparent opacity-70"></div>
           <span class="absolute top-4 left-4 rounded-full bg-cream-50/90 backdrop-blur px-4 py-1.5 text-[10px] uppercase tracking-widest2 text-mauve-600" data-i18n="services.badge2">02 — Anniversaires</span>
@@ -463,33 +464,6 @@
         </div>
       </article>
 
-      <!-- Conferences -->
-      <article class="reveal group flex flex-col rounded-[1.75rem] bg-cream-50 border border-taupe-100/70 overflow-hidden shadow-soft transition-all duration-500 hover:shadow-lift hover:-translate-y-1.5" style="transition-delay:.2s">
-        <div class="relative aspect-[16/11] overflow-hidden ph">
-          <img src="images/service-conferences.jpg"
-               alt="Speaker on stage in front of a corporate conference audience" loading="lazy"
-               class="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/45 to-transparent opacity-70"></div>
-          <span class="absolute top-4 left-4 rounded-full bg-cream-50/90 backdrop-blur px-4 py-1.5 text-[10px] uppercase tracking-widest2 text-dustyblue-700" data-i18n="services.badge3">03 — Corporate</span>
-        </div>
-
-        <div class="flex flex-col flex-1 p-7 lg:p-8">
-          <h3 class="font-serif text-2xl text-ink-900" data-i18n="services.title3">Conférences &amp; Entreprises</h3>
-          <p class="mt-3 text-[15px] leading-relaxed text-ink-500 flex-1" data-i18n="services.desc3">
-            Une scénographie soignée à l'image de votre marque, avec des présentateurs posés qui introduisent les
-            intervenants, animent les tables rondes et tiennent un programme d'une journée entière à la minute près.
-          </p>
-          <ul class="mt-6 space-y-2.5 text-sm text-taupe-500">
-            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet3a">Scénographie de scène et décor de marque</span></li>
-            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet3b">Accueil, espace lounge &amp; habillage du dîner de gala</span></li>
-            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet3c">Présentateurs, animation de tables rondes &amp; déroulé</span></li>
-          </ul>
-          <a href="#contact" data-i18n="services.cta" class="mt-8 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-dustyblue-700 group-hover:gap-3.5 transition-all duration-300">
-            Demander un devis
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </article>
     </div>
 
     <!-- Process strip -->
@@ -498,7 +472,7 @@
         <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
         <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step1Label">Étape 01</p>
         <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step1Title">Consultation</h4>
-        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step1Desc">Une session de 60 minutes dans notre atelier du Marais ou en visioconférence, sans engagement.</p>
+        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step1Desc">Une session de 60 minutes à Paris ou en visioconférence, sans engagement.</p>
       </div>
       <div class="relative pl-6 border-l border-taupe-100">
         <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
@@ -544,7 +518,7 @@
     <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
 
       <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]">
-        <img src="images/venue-chateau-villette.jpg" alt="Chandelier-lit château ballroom set for a reception" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-chateau-purple.jpg" alt="French château wedding decor in a romantic purple palette" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
         <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgePartner">Partenaire</span>
         <div class="absolute inset-x-0 bottom-0 p-6">
@@ -574,7 +548,7 @@
       </article>
 
       <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.24s">
-        <img src="images/venue-salons-hoche.jpg" alt="Grand salon with ornate chandelier prepared for a gala" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-salons-hoche-birthday.jpg" alt="Les Salons Hoche decorated for an 18th birthday celebration" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
         <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgeExclusive">Exclusivité</span>
         <div class="absolute inset-x-0 bottom-0 p-6">
@@ -610,7 +584,6 @@
         <button class="filter-btn is-active rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="all" role="tab" aria-selected="true" data-i18n="portfolio.filterAll">Tout</button>
         <button class="filter-btn rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="weddings" role="tab" aria-selected="false" data-i18n="portfolio.filterWeddings">Mariages</button>
         <button class="filter-btn rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="anniversaries" role="tab" aria-selected="false" data-i18n="portfolio.filterAnniversaries">Anniversaires</button>
-        <button class="filter-btn rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="conferences" role="tab" aria-selected="false" data-i18n="portfolio.filterConferences">Conférences</button>
       </div>
     </div>
 
@@ -618,75 +591,120 @@
     <div id="gallery" class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/5] sm:row-span-2 sm:aspect-auto sm:min-h-[520px] cursor-pointer" data-cat="weddings">
-        <img src="images/gallery-wedding-1.jpg" alt="Candlelit wedding reception hall dressed in white and greenery" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-elyseum-blue-purple.jpg" alt="Blue and purple floral wedding decor, Élysée reception" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 lg:p-7 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item1.cat">Mariage · Château de Villette</p>
-          <h3 class="mt-2 font-serif text-2xl">Camille &amp; Théo</h3>
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item1.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-2xl" data-i18n-html="portfolio.item1.title">Bleu &amp; Prune</h3>
           <p class="mt-2 text-sm text-cream-200/0 group-hover:text-cream-200/85 transition-colors duration-500" data-i18n="portfolio.item1.desc">Scénographie complète + animation bilingue de cérémonie pour 180 invités.</p>
         </figcaption>
       </figure>
 
-      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="conferences">
-        <img src="images/gallery-conference-1.jpg" alt="Conference stage with speaker and large screen" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
-        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item2.cat">Conférence · Pavillon Gabriel</p>
-          <h3 class="mt-2 font-serif text-xl">Horizon Tech Summit</h3>
-        </figcaption>
-      </figure>
-
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="anniversaries">
-        <img src="images/gallery-anniversary-1.jpg" alt="Guests raising glasses under confetti at a celebration" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-blue-gold-18th.jpg" alt="Blue and gold balloon arch for an 18th birthday celebration" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item3.cat">Anniversaire · Le Marais</p>
-          <h3 class="mt-2 font-serif text-xl">Noces d'Or — 50 Years</h3>
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item2.cat">Anniversaire · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n-html="portfolio.item2.title">18 Ans, Bleu &amp; Or</h3>
         </figcaption>
       </figure>
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
-        <img src="images/gallery-wedding-2.jpg" alt="Wedding guests dancing during the reception" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-champagne-pink.jpg" alt="Champagne-pink wedding decor at Huatian" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item4.cat">Mariage · Saint-Germain</p>
-          <h3 class="mt-2 font-serif text-xl">Une Soirée Blanche</h3>
-        </figcaption>
-      </figure>
-
-      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="conferences">
-        <img src="images/gallery-conference-2.jpg" alt="Delegates seated at a corporate conference" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
-        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item5.cat">Entreprise · La Défense</p>
-          <h3 class="mt-2 font-serif text-xl">Annual Partners Forum</h3>
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item3.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item3.title">Camaïeu Champagne</h3>
         </figcaption>
       </figure>
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="anniversaries">
-        <img src="images/gallery-anniversary-2.jpg" alt="Long banquet table styled for a private dinner" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-navy-18th-chateau.jpg" alt="Navy blue 18th birthday backdrop in an elegant château room" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n-html="portfolio.item6.cat">Anniversaire · 7<sup>e</sup> Arrondissement</p>
-          <h3 class="mt-2 font-serif text-xl">Table d'Honneur</h3>
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item4.cat">Anniversaire · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item4.title">18 Ans au Château</h3>
         </figcaption>
       </figure>
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
-        <img src="images/gallery-wedding-3.jpg" alt="Outdoor wedding ceremony seating with floral aisle" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <img src="images/rednote-white-calla-aisle.jpg" alt="White calla lily wedding aisle with sculptural floral decor" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item7.cat">Mariage · Fontainebleau</p>
-          <h3 class="mt-2 font-serif text-xl">Jardin Secret</h3>
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item5.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item5.title">Allée Blanche</h3>
         </figcaption>
       </figure>
 
-      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="conferences">
-        <img src="images/gallery-conference-3.jpg" alt="Gala dinner room set for a corporate evening" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-pink-staircase-aisle.jpg" alt="Pink and white floral staircase aisle" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item8.cat">Entreprise · Salons Hoche</p>
-          <h3 class="mt-2 font-serif text-xl">Gala des Fondateurs</h3>
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item6.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item6.title">Escalier en Fleurs</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-purple-lilac-backdrop.jpg" alt="Purple and lilac wedding backdrop with crystal chandeliers" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item7.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item7.title">Lueurs Lilas</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-pink-lavender-photocall.jpg" alt="Pink and lavender floral photocall backdrop" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item8.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item8.title">Photocall Lavande</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-salon-hoche-ballroom.jpg" alt="Grand ballroom at Les Salons Hoche set for a wedding gala" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item9.cat">Mariage · Salons Hoche</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item9.title">Grand Salon</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-salon-hoche-backdrop.jpg" alt="Monet-garden style purple wedding backdrop at Les Salons Hoche" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item10.cat">Mariage · Salons Hoche</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item10.title">Jardin de Monet</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-red-orange-floral.jpg" alt="Red and orange traditional Chinese-style floral arrangement" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item11.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n-html="portfolio.item11.title">Rouge &amp; Safran</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-maillard-backdrop.jpg" alt="Maillard-toned champagne and brown wedding backdrop with dried florals" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item12.cat">Mariage · Paris</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item12.title">Camaïeu Maillard</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/rednote-welcome-sign.jpg" alt="Elegant white wedding welcome sign with floral and pearl detail" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item13.cat">Mariage · Shangri-La</p>
+          <h3 class="mt-2 font-serif text-xl" data-i18n="portfolio.item13.title">Bienvenue</h3>
         </figcaption>
       </figure>
 
@@ -841,7 +859,7 @@
             </span>
             <div>
               <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.phoneLabel">Téléphone</p>
-              <a href="tel:+33142607890" class="mt-1 block font-serif text-xl text-ink-900 hover:text-wine-700 transition">+33 1 42 60 78 90</a>
+              <a href="tel:+33698772612" class="mt-1 block font-serif text-xl text-ink-900 hover:text-wine-700 transition">+33 6 98 77 26 12</a>
               <p class="text-sm text-taupe-400" data-i18n="contact.phoneHours">Lun–Sam, 9h – 19h (heure de Paris)</p>
             </div>
           </li>
@@ -862,9 +880,9 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.6"/></svg>
             </span>
             <div>
-              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.addressLabel">Atelier</p>
-              <p class="mt-1 font-serif text-xl text-ink-900">18 Rue des Francs-Bourgeois</p>
-              <p class="text-sm text-taupe-400" data-i18n="contact.addressDesc">75004 Paris, France — nous intervenons à Paris &amp; en Île-de-France, et nous déplaçons partout en France sur demande.</p>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.addressLabel">Localisation</p>
+              <p class="mt-1 font-serif text-xl text-ink-900">Paris, France</p>
+              <p class="text-sm text-taupe-400" data-i18n="contact.addressDesc">Nous intervenons à Paris &amp; en Île-de-France, et nous déplaçons partout en France sur demande.</p>
             </div>
           </li>
         </ul>
@@ -873,17 +891,8 @@
         <div class="mt-10 pt-8 border-t border-taupe-100">
           <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.followUs">Suivez-nous</p>
           <div class="mt-4 flex gap-3">
-            <a href="#" aria-label="Instagram" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
-              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="#" aria-label="Pinterest" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
-              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.5 1.9 1.9 0 3.2-2.4 3.2-5.2 0-2.1-1.5-3.7-4.1-3.7-3 0-4.8 2.2-4.8 4.7 0 .9.3 1.5.7 2 .2.2.2.3.1.6l-.2.9c-.1.3-.3.4-.6.2-1.3-.5-1.9-2-1.9-3.6 0-2.7 2.3-6 6.8-6 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.1 6.5-1 0-2-.6-2.3-1.2l-.6 2.5c-.2.8-.7 1.8-1.1 2.4A10 10 0 1012 2z"/></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
-              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.3V21h3.6V8.6zM5.1 3a2.1 2.1 0 100 4.2 2.1 2.1 0 000-4.2zM21 14.2c0-3.4-1.8-5-4.3-5-2 0-2.9 1.1-3.4 1.9V8.6H9.7c0 1 0 12.4 0 12.4h3.6v-6.9c0-.4 0-.7.1-1 .3-.7.9-1.5 2-1.5 1.4 0 2 1.1 2 2.7V21H21v-6.8z"/></svg>
-            </a>
-            <a href="#" aria-label="Facebook" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
-              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7.2c0-.8.2-1.2 1.4-1.2H17V3h-2.6c-3 0-4 1.4-4 3.9V9H8v3h2.4v9H14v-9h2.6l.4-3H14z"/></svg>
+            <a href="https://www.rednote.com/user/profile/63b6a3fa0000000026011ae4?xsec_token=ABy1RzgtTyJW4dYonvTPjh_zUPnIS3vViFRxaRkA35V68=&xsec_source=pc_note" target="_blank" rel="noopener" aria-label="rednote" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 1-2-2V5z" stroke-linejoin="round"/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 0 2-2V5z" stroke-linejoin="round"/></svg>
             </a>
           </div>
         </div>
@@ -925,7 +934,6 @@
                   <option value="" data-i18n="contact.optChoose">Veuillez choisir…</option>
                   <option data-i18n="contact.optWedding">Mariage</option>
                   <option data-i18n="contact.optAnniversary">Anniversaire / Occasion spéciale</option>
-                  <option data-i18n="contact.optConference">Conférence / Entreprise</option>
                   <option data-i18n="contact.optPrivate">Dîner privé ou cocktail</option>
                   <option data-i18n="contact.optOther">Autre</option>
                 </select>
@@ -993,13 +1001,13 @@
 
       <div class="md:col-span-5">
         <a href="#hero" class="flex items-center gap-3 text-cream-50">
-          <span class="grid place-items-center w-10 h-10 rounded-full border border-gold-500/60">
-            <span class="font-serif text-[15px] italic text-gold-300 translate-y-[1px]">M</span>
+          <span class="grid place-items-center w-10 h-10 rounded-full bg-cream-50 overflow-hidden shrink-0">
+            <img src="images/logo-mark-crop.png" alt="Studio Ma Félicité" class="w-7 h-auto object-contain" />
           </span>
           <span class="font-serif text-xl">Studio Ma Félicité</span>
         </a>
         <p class="mt-5 max-w-sm text-sm leading-relaxed" data-i18n="footer.tagline">
-          Décoration événementielle et animation professionnelle, pensées ensemble dans le Marais et déployées
+          Décoration événementielle et animation professionnelle, pensées ensemble et déployées
           à Paris et en Île-de-France.
         </p>
         <p class="mt-6 font-serif italic text-gold-300/90 text-lg" data-i18n="footer.motto">Votre félicité, notre métier.</p>
@@ -1022,32 +1030,22 @@
         <ul class="mt-5 space-y-3 text-sm">
           <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink1">Mariages</a></li>
           <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink2">Anniversaires</a></li>
-          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink3">Conférences</a></li>
           <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink4">Animation &amp; Présentateurs</a></li>
           <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink5">Scénographie</a></li>
         </ul>
       </div>
 
       <div class="md:col-span-3">
-        <p class="text-[10px] uppercase tracking-widest2 text-cream-50/50" data-i18n="footer.atelierHeader">Atelier</p>
+        <p class="text-[10px] uppercase tracking-widest2 text-cream-50/50" data-i18n="footer.atelierHeader">Localisation</p>
         <address class="mt-5 not-italic text-sm leading-relaxed">
-          18 Rue des Francs-Bourgeois<br />75004 Paris, France
+          Paris, France
         </address>
-        <a href="tel:+33142607890" class="mt-3 block text-sm hover:text-gold-300 transition">+33 1 42 60 78 90</a>
+        <a href="tel:+33698772612" class="mt-3 block text-sm hover:text-gold-300 transition">+33 6 98 77 26 12</a>
         <a href="mailto:bonjour@studiomafelicite.com" class="block text-sm hover:text-gold-300 transition break-all">bonjour@studiomafelicite.com</a>
 
         <div class="mt-6 flex gap-2.5">
-          <a href="#" aria-label="Instagram" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" aria-label="Pinterest" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.5 1.9 1.9 0 3.2-2.4 3.2-5.2 0-2.1-1.5-3.7-4.1-3.7-3 0-4.8 2.2-4.8 4.7 0 .9.3 1.5.7 2 .2.2.2.3.1.6l-.2.9c-.1.3-.3.4-.6.2-1.3-.5-1.9-2-1.9-3.6 0-2.7 2.3-6 6.8-6 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.1 6.5-1 0-2-.6-2.3-1.2l-.6 2.5c-.2.8-.7 1.8-1.1 2.4A10 10 0 1012 2z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.3V21h3.6V8.6zM5.1 3a2.1 2.1 0 100 4.2 2.1 2.1 0 000-4.2zM21 14.2c0-3.4-1.8-5-4.3-5-2 0-2.9 1.1-3.4 1.9V8.6H9.7c0 1 0 12.4 0 12.4h3.6v-6.9c0-.4 0-.7.1-1 .3-.7.9-1.5 2-1.5 1.4 0 2 1.1 2 2.7V21H21v-6.8z"/></svg>
-          </a>
-          <a href="#" aria-label="Facebook" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7.2c0-.8.2-1.2 1.4-1.2H17V3h-2.6c-3 0-4 1.4-4 3.9V9H8v3h2.4v9H14v-9h2.6l.4-3H14z"/></svg>
+          <a href="https://www.rednote.com/user/profile/63b6a3fa0000000026011ae4?xsec_token=ABy1RzgtTyJW4dYonvTPjh_zUPnIS3vViFRxaRkA35V68=&xsec_source=pc_note" target="_blank" rel="noopener" aria-label="rednote" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 1-2-2V5z" stroke-linejoin="round"/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 0 2-2V5z" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
@@ -1083,7 +1081,7 @@
   const I18N = {
     fr: {
       meta: { title: "Studio Ma Félicité — Décoration événementielle & Animation à Paris",
-              description: "Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages, anniversaires et conférences d'entreprise." },
+              description: "Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages et anniversaires." },
       a11y: { skipLink:"Aller au contenu", primaryNav:"Navigation principale", mobileNav:"Navigation mobile",
               marquee:"Lieux et partenaires sélectionnés", filterPortfolio:"Filtrer le portfolio",
               testimonialSlides:"Diapositives de témoignages", toTop:"Retour en haut",
@@ -1107,7 +1105,7 @@
         yearsBadge:"Ans à Paris", kicker:"La Maison",
         title:`Le décor pose le cadre.<br /><em class="italic text-wine-700">L'animation</em> lui donne vie.`,
         p1:"La plupart des événements sont assemblés à partir d'éléments qui ne se sont jamais rencontrés. Un fleuriste ici, un scénographe là, un présentateur qui reçoit le déroulé la veille au soir. Les invités sentent les coutures — une salle magnifique où rien ne se passe vraiment, ou un animateur plein de vie dans un lieu qui ne raconte rien.",
-        p2:`Studio Ma Félicité a été fondé dans le 4<sup>e</sup> arrondissement pour combler cet écart. Nous concevons la salle et menons la soirée, à partir du même brief et de la même équipe. La lumière change au moment exact du discours. Les centres de table disparaissent avant la première danse. Rien n'est improvisé, et pourtant tout semble couler de source.`,
+        p2:`Studio Ma Félicité a été fondé à Paris pour combler cet écart. Nous concevons la salle et menons la soirée, à partir du même brief et de la même équipe. La lumière change au moment exact du discours. Les centres de table disparaissent avant la première danse. Rien n'est improvisé, et pourtant tout semble couler de source.`,
         quote:"« Un seul studio, une seule vision — du premier croquis à la dernière annonce. »",
         founderTitle:"Fondatrice & Directrice de création",
         stat1:"Événements réalisés", stat2:"Clients satisfaits", stat3:"Années d'expérience", stat4:"Lieux partenaires"
@@ -1122,11 +1120,8 @@
         badge2:"02 — Anniversaires", title2:"Anniversaires",
         desc2:"D'un dîner intime pour douze personnes à un grand gala de noces d'or, nous construisons le décor puis menons le déroulé — toasts, hommages, surprises et gâteau, tout arrive au bon moment.",
         bullet2a:"Décors intimistes & grand format", bullet2b:"Coordination du déroulé festif", bullet2c:"Animation dynamique, jeux & hommages familiaux",
-        badge3:"03 — Corporate", title3:"Conférences & Entreprises",
-        desc3:"Une scénographie soignée à l'image de votre marque, avec des présentateurs posés qui introduisent les intervenants, animent les tables rondes et tiennent un programme d'une journée entière à la minute près.",
-        bullet3a:"Scénographie de scène et décor de marque", bullet3b:"Accueil, espace lounge & habillage du dîner de gala", bullet3c:"Présentateurs, animation de tables rondes & déroulé",
         cta:"Demander un devis",
-        step1Label:"Étape 01", step1Title:"Consultation", step1Desc:"Une session de 60 minutes dans notre atelier du Marais ou en visioconférence, sans engagement.",
+        step1Label:"Étape 01", step1Title:"Consultation", step1Desc:"Une session de 60 minutes à Paris ou en visioconférence, sans engagement.",
         step2Label:"Étape 02", step2Title:"Conception & Script", step2Desc:"Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.",
         step3Label:"Étape 03", step3Title:"Installation", step3Desc:"Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.",
         step4Label:"Étape 04", step4Title:"Le Grand Soir", step4Desc:"Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité."
@@ -1145,12 +1140,20 @@
       portfolio: {
         kicker:"Portfolio",
         title:`Une sélection de nos réalisations,<br class="hidden sm:block" /> à Paris et au-delà.`,
-        filterAll:"Tout", filterWeddings:"Mariages", filterAnniversaries:"Anniversaires", filterConferences:"Conférences",
-        item1:{cat:"Mariage · Château de Villette", desc:"Scénographie complète + animation bilingue de cérémonie pour 180 invités."},
-        item2:{cat:"Conférence · Pavillon Gabriel"}, item3:{cat:"Anniversaire · Le Marais"},
-        item4:{cat:"Mariage · Saint-Germain"}, item5:{cat:"Entreprise · La Défense"},
-        item6:{cat:`Anniversaire · 7<sup>e</sup> Arrondissement`}, item7:{cat:"Mariage · Fontainebleau"},
-        item8:{cat:"Entreprise · Salons Hoche"},
+        filterAll:"Tout", filterWeddings:"Mariages", filterAnniversaries:"Anniversaires",
+        item1:{cat:"Mariage · Paris", title:"Bleu &amp; Prune", desc:"Scénographie complète + animation bilingue de cérémonie pour 180 invités."},
+        item2:{cat:"Anniversaire · Paris", title:"18 Ans, Bleu &amp; Or"},
+        item3:{cat:"Mariage · Paris", title:"Camaïeu Champagne"},
+        item4:{cat:"Anniversaire · Paris", title:"18 Ans au Château"},
+        item5:{cat:"Mariage · Paris", title:"Allée Blanche"},
+        item6:{cat:"Mariage · Paris", title:"Escalier en Fleurs"},
+        item7:{cat:"Mariage · Paris", title:"Lueurs Lilas"},
+        item8:{cat:"Mariage · Paris", title:"Photocall Lavande"},
+        item9:{cat:"Mariage · Salons Hoche", title:"Grand Salon"},
+        item10:{cat:"Mariage · Salons Hoche", title:"Jardin de Monet"},
+        item11:{cat:"Mariage · Paris", title:"Rouge &amp; Safran"},
+        item12:{cat:"Mariage · Paris", title:"Camaïeu Maillard"},
+        item13:{cat:"Mariage · Shangri-La", title:"Bienvenue"},
         empty:"Aucun projet dans cette catégorie pour le moment.", cta:"Discuter de votre événement"
       },
       testimonials: {
@@ -1171,7 +1174,7 @@
         subtitle:"Indiquez-nous la date, le lieu et l'ambiance recherchée. Nous répondons sous un jour ouvré avec nos disponibilités et un budget indicatif — sans engagement.",
         phoneLabel:"Téléphone", phoneHours:"Lun–Sam, 9h – 19h (heure de Paris)",
         emailLabel:"Email", emailResponse:"Réponse sous 24 h",
-        addressLabel:"Atelier", addressDesc:"75004 Paris, France — nous intervenons à Paris & en Île-de-France, et nous déplaçons partout en France sur demande.",
+        addressLabel:"Localisation", addressDesc:"Nous intervenons à Paris & en Île-de-France, et nous déplaçons partout en France sur demande.",
         followUs:"Suivez-nous",
         formTitle:"Demander une consultation",
         formRequiredNote:`Les champs marqués <span class="text-wine-700">*</span> sont obligatoires.`,
@@ -1180,7 +1183,7 @@
         labelDate:"Date de l'événement",
         labelType:`Type d'événement <span class="text-wine-700">*</span>`, errType:"Merci de sélectionner un type d'événement.",
         optChoose:"Veuillez choisir…", optWedding:"Mariage", optAnniversary:"Anniversaire / Occasion spéciale",
-        optConference:"Conférence / Entreprise", optPrivate:"Dîner privé ou cocktail", optOther:"Autre",
+        optPrivate:"Dîner privé ou cocktail", optOther:"Autre",
         needLabel:"De quoi avez-vous besoin ?", needDecoration:"Décoration", needHosting:"Animation / Maître de cérémonie", needBoth:"Les deux",
         labelMessage:`Message <span class="text-wine-700">*</span>`, placeholderMessage:"Lieu, nombre d'invités, l'ambiance que vous imaginez…", errMessage:"Merci d'ajouter quelques mots sur votre événement.",
         submit:"Envoyer la demande",
@@ -1188,17 +1191,17 @@
         successTitle:"Merci — demande bien reçue.", successDesc:"Nous vous recontactons sous un jour ouvré à l'adresse indiquée.", successReset:"Envoyer une nouvelle demande"
       },
       footer: {
-        tagline:"Décoration événementielle et animation professionnelle, pensées ensemble dans le Marais et déployées à Paris et en Île-de-France.",
+        tagline:"Décoration événementielle et animation professionnelle, pensées ensemble et déployées à Paris et en Île-de-France.",
         motto:"Votre félicité, notre métier.",
         navHeader:"Navigation", servicesHeader:"Prestations",
-        serviceLink1:"Mariages", serviceLink2:"Anniversaires", serviceLink3:"Conférences", serviceLink4:"Animation & Présentateurs", serviceLink5:"Scénographie",
-        atelierHeader:"Atelier", rights:"Tous droits réservés.", legal1:"Mentions légales", legal2:"Politique de confidentialité"
+        serviceLink1:"Mariages", serviceLink2:"Anniversaires", serviceLink4:"Animation & Présentateurs", serviceLink5:"Scénographie",
+        atelierHeader:"Localisation", rights:"Tous droits réservés.", legal1:"Mentions légales", legal2:"Politique de confidentialité"
       }
     },
 
     en: {
       meta: { title: "Studio Ma Félicité — Event Decoration & Hosting in Paris",
-              description: "Studio Ma Félicité is a Paris-based event house pairing bespoke decoration with professional hosting and MC services for weddings, anniversaries and corporate conferences." },
+              description: "Studio Ma Félicité is a Paris-based event house pairing bespoke decoration with professional hosting and MC services for weddings and anniversaries." },
       a11y: { skipLink:"Skip to content", primaryNav:"Primary", mobileNav:"Mobile",
               marquee:"Selected venues and partners", filterPortfolio:"Filter portfolio",
               testimonialSlides:"Testimonial slides", toTop:"Back to top",
@@ -1222,7 +1225,7 @@
         yearsBadge:"Years in Paris", kicker:"La Maison",
         title:`Decor sets the scene.<br /><em class="italic text-wine-700">Hosting</em> makes it move.`,
         p1:"Most events are assembled from parts that never met. A florist here, a stage designer there, a presenter who receives the running order the night before. The guests feel the seams — a beautiful room where nothing quite happens, or a lively host in a space that says nothing.",
-        p2:`Studio Ma Félicité was founded in the 4<sup>e</sup> arrondissement to close that gap. We design the room and we lead the evening, from the same brief and the same team. The lighting cue lands with the speech. The centrepieces clear before the first dance. Nothing is improvised, and yet everything feels effortless.`,
+        p2:`Studio Ma Félicité was founded in Paris to close that gap. We design the room and we lead the evening, from the same brief and the same team. The lighting cue lands with the speech. The centrepieces clear before the first dance. Nothing is improvised, and yet everything feels effortless.`,
         quote:"“One studio, one vision — from the first sketch to the last announcement.”",
         founderTitle:"Founder & Creative Director",
         stat1:"Events Completed", stat2:"Client Satisfaction", stat3:"Years of Experience", stat4:"Partner Venues"
@@ -1237,11 +1240,8 @@
         badge2:"02 — Anniversaries", title2:"Anniversaries",
         desc2:"From an intimate dinner for twelve to a grand golden-anniversary gala, we build the setting and then run the timeline — toasts, tributes, surprises and the cake, all landing on cue.",
         bullet2a:"Intimate & large-format decor setups", bullet2b:"Celebratory timeline coordination", bullet2c:"Dynamic MCing, games & family tributes",
-        badge3:"03 — Corporate", title3:"Conferences & Corporate",
-        desc3:"Polished stage design that carries your brand, with articulate presenters who introduce speakers, moderate panels and keep a full-day schedule running to the minute.",
-        bullet3a:"Stage, scenic & branded set design", bullet3b:"Registration, lounge & gala dinner styling", bullet3c:"Presenters, panel moderation & run-of-show",
         cta:"Request a quote",
-        step1Label:"Step 01", step1Title:"Consultation", step1Desc:"A 60-minute session in our Marais studio or by video, free of charge.",
+        step1Label:"Step 01", step1Title:"Consultation", step1Desc:"A 60-minute session in Paris or by video, free of charge.",
         step2Label:"Step 02", step2Title:"Design & Script", step2Desc:"Mood boards, floor plans and the full run-of-show, delivered together.",
         step3Label:"Step 03", step3Title:"Installation", step3Desc:"Our crew dresses the venue and rehearses cues with your suppliers.",
         step4Label:"Step 04", step4Title:"The Big Night", step4Desc:"We host, we watch the clock, and you spend the night as a guest."
@@ -1260,12 +1260,20 @@
       portfolio: {
         kicker:"Portfolio",
         title:`Selected work<br class="hidden sm:block" /> from Paris and beyond.`,
-        filterAll:"All", filterWeddings:"Weddings", filterAnniversaries:"Anniversaries", filterConferences:"Conferences",
-        item1:{cat:"Wedding · Château de Villette", desc:"Full scenography + bilingual ceremony hosting for 180 guests."},
-        item2:{cat:"Conference · Pavillon Gabriel"}, item3:{cat:"Anniversary · Le Marais"},
-        item4:{cat:"Wedding · Saint-Germain"}, item5:{cat:"Corporate · La Défense"},
-        item6:{cat:`Anniversary · 7<sup>th</sup> Arrondissement`}, item7:{cat:"Wedding · Fontainebleau"},
-        item8:{cat:"Corporate · Salons Hoche"},
+        filterAll:"All", filterWeddings:"Weddings", filterAnniversaries:"Anniversaries",
+        item1:{cat:"Wedding · Paris", title:"Blue &amp; Plum", desc:"Full scenography + bilingual ceremony hosting for 180 guests."},
+        item2:{cat:"Anniversary · Paris", title:"18th, Blue &amp; Gold"},
+        item3:{cat:"Wedding · Paris", title:"Champagne Tones"},
+        item4:{cat:"Anniversary · Paris", title:"18th at the Château"},
+        item5:{cat:"Wedding · Paris", title:"White Aisle"},
+        item6:{cat:"Wedding · Paris", title:"Floral Staircase"},
+        item7:{cat:"Wedding · Paris", title:"Lilac Glow"},
+        item8:{cat:"Wedding · Paris", title:"Lavender Photocall"},
+        item9:{cat:"Wedding · Salons Hoche", title:"Grand Salon"},
+        item10:{cat:"Wedding · Salons Hoche", title:"Monet's Garden"},
+        item11:{cat:"Wedding · Paris", title:"Red &amp; Saffron"},
+        item12:{cat:"Wedding · Paris", title:"Maillard Tones"},
+        item13:{cat:"Wedding · Shangri-La", title:"Welcome"},
         empty:"No projects in this category yet.", cta:"Discuss your event"
       },
       testimonials: {
@@ -1286,7 +1294,7 @@
         subtitle:"Tell us the date, the venue and the feeling you're after. We reply within one working day with availability and an indicative budget — no obligation.",
         phoneLabel:"Phone", phoneHours:"Mon–Sat, 9:00 – 19:00 CET",
         emailLabel:"Email", emailResponse:"We reply within 24 hours",
-        addressLabel:"Studio", addressDesc:"75004 Paris, France — serving Paris & Île-de-France, travelling nationwide on request.",
+        addressLabel:"Location", addressDesc:"Serving Paris & Île-de-France, travelling nationwide on request.",
         followUs:"Follow Us",
         formTitle:"Request a consultation",
         formRequiredNote:`Fields marked <span class="text-wine-700">*</span> are required.`,
@@ -1295,7 +1303,7 @@
         labelDate:"Event date",
         labelType:`Event type <span class="text-wine-700">*</span>`, errType:"Please select an event type.",
         optChoose:"Please choose…", optWedding:"Wedding", optAnniversary:"Anniversary / Milestone",
-        optConference:"Conference / Corporate", optPrivate:"Private dinner or cocktail", optOther:"Other",
+        optPrivate:"Private dinner or cocktail", optOther:"Other",
         needLabel:"What do you need?", needDecoration:"Decoration", needHosting:"Hosting / MC", needBoth:"Both",
         labelMessage:`Message <span class="text-wine-700">*</span>`, placeholderMessage:"Venue, guest count, the atmosphere you have in mind…", errMessage:"Please add a few words about your event.",
         submit:"Send request",
@@ -1303,17 +1311,17 @@
         successTitle:"Merci — request received.", successDesc:"We'll be in touch within one working day at the address you gave us.", successReset:"Send another request"
       },
       footer: {
-        tagline:"Event decoration and professional hosting, designed together in the Marais and delivered across Paris and Île-de-France.",
+        tagline:"Event decoration and professional hosting, designed together and delivered across Paris and Île-de-France.",
         motto:"Your happiness, our craft.",
         navHeader:"Navigate", servicesHeader:"Services",
-        serviceLink1:"Weddings", serviceLink2:"Anniversaries", serviceLink3:"Conferences", serviceLink4:"MC & Presenters", serviceLink5:"Stage Design",
-        atelierHeader:"Studio", rights:"All rights reserved.", legal1:"Legal Notice", legal2:"Privacy Policy"
+        serviceLink1:"Weddings", serviceLink2:"Anniversaries", serviceLink4:"MC & Presenters", serviceLink5:"Stage Design",
+        atelierHeader:"Location", rights:"All rights reserved.", legal1:"Legal Notice", legal2:"Privacy Policy"
       }
     },
 
     zh: {
       meta: { title: "Studio Ma Félicité — 巴黎婚庆装饰与主持服务",
-              description: "Studio Ma Félicité 是一家总部位于巴黎的活动策划工作室，将定制装饰与专业主持相结合，服务于婚礼、纪念日庆典与企业会议。" },
+              description: "Studio Ma Félicité 是一家总部位于巴黎的活动策划工作室，将定制装饰与专业主持相结合，服务于婚礼与纪念日庆典。" },
       a11y: { skipLink:"跳至内容", primaryNav:"主导航", mobileNav:"移动端导航",
               marquee:"精选场地与合作伙伴", filterPortfolio:"筛选作品集",
               testimonialSlides:"客户评价轮播", toTop:"返回顶部",
@@ -1337,7 +1345,7 @@
         yearsBadge:"扎根巴黎", kicker:"关于工作室",
         title:`布置奠定场景，<br /><em class="italic text-wine-700">主持</em>赋予其生命。`,
         p1:"多数活动是由从未真正合作过的环节拼凑而成：这边一位花艺师，那边一位舞台设计师，主持人前一晚才拿到流程表。宾客能感受到这些接缝——华丽的空间里什么都没真正发生，或是活跃的主持人置身于毫无氛围的场地。",
-        p2:"Studio Ma Félicité 在巴黎第四区成立，正是为了填补这道裂缝。我们用同一份创意简报、同一支团队，来设计场地并主持整场活动。灯光的变化恰好踩在致辞的节点上，桌面摆设在第一支舞前悄然撤下。一切并非临场发挥，却处处显得毫不费力。",
+        p2:"Studio Ma Félicité 在巴黎成立，正是为了填补这道裂缝。我们用同一份创意简报、同一支团队，来设计场地并主持整场活动。灯光的变化恰好踩在致辞的节点上，桌面摆设在第一支舞前悄然撤下。一切并非临场发挥，却处处显得毫不费力。",
         quote:"「一个工作室，一种愿景——从第一张草图到最后一句宣布。」",
         founderTitle:"创始人兼创意总监",
         stat1:"已完成活动", stat2:"客户满意度", stat3:"从业年数", stat4:"合作场地"
@@ -1352,11 +1360,8 @@
         badge2:"02 — 纪念日", title2:"纪念日",
         desc2:"无论是十二人的私密晚宴，还是盛大的金婚庆典，我们都会先搭建场景，再主持全程节奏——祝酒、致敬、惊喜与切蛋糕，每一刻都恰逢其时。",
         bullet2a:"私密与大型布置皆可", bullet2b:"庆典流程统筹协调", bullet2c:"活力主持、互动游戏与家庭致敬环节",
-        badge3:"03 — 企业活动", title3:"会议与企业活动",
-        desc3:"精心打造契合品牌形象的舞台设计，配备沉稳专业的主持人负责嘉宾介绍、圆桌讨论主持，并将全天流程精准把控到每一分钟。",
-        bullet3a:"舞台美术与品牌视觉设计", bullet3b:"签到区、休息区与晚宴布置", bullet3c:"主持人、圆桌讨论与流程掌控",
         cta:"获取报价",
-        step1Label:"步骤 01", step1Title:"咨询洽谈", step1Desc:"在我们位于玛黑区的工作室或通过视频进行60分钟免费沟通。",
+        step1Label:"步骤 01", step1Title:"咨询洽谈", step1Desc:"在巴黎或通过视频进行60分钟免费沟通。",
         step2Label:"步骤 02", step2Title:"设计与流程脚本", step2Desc:"灵感板、场地平面图与完整流程脚本一并交付。",
         step3Label:"步骤 03", step3Title:"现场布置", step3Desc:"我们的团队负责现场布置，并与您的其他供应商彩排流程衔接。",
         step4Label:"步骤 04", step4Title:"活动当晚", step4Desc:"我们主持全场、把控时间，您只需以宾客身份尽情享受当晚。"
@@ -1375,12 +1380,20 @@
       portfolio: {
         kicker:"作品集",
         title:`精选作品，<br class="hidden sm:block" />源自巴黎，遍及各地。`,
-        filterAll:"全部", filterWeddings:"婚礼", filterAnniversaries:"纪念日", filterConferences:"会议活动",
-        item1:{cat:"婚礼 · 维莱特城堡", desc:"全场景布置，配双语司仪，服务180位宾客。"},
-        item2:{cat:"会议 · 加布里埃尔馆"}, item3:{cat:"纪念日 · 玛黑区"},
-        item4:{cat:"婚礼 · 圣日耳曼"}, item5:{cat:"企业活动 · 拉德芳斯"},
-        item6:{cat:"纪念日 · 第7区"}, item7:{cat:"婚礼 · 枫丹白露"},
-        item8:{cat:"企业活动 · 奥什厅"},
+        filterAll:"全部", filterWeddings:"婚礼", filterAnniversaries:"纪念日",
+        item1:{cat:"婚礼 · 巴黎", title:"蓝紫色调", desc:"全场景布置，配双语司仪，服务180位宾客。"},
+        item2:{cat:"纪念日 · 巴黎", title:"18岁生日蓝金宴"},
+        item3:{cat:"婚礼 · 巴黎", title:"香槟色调"},
+        item4:{cat:"纪念日 · 巴黎", title:"城堡18岁生日宴"},
+        item5:{cat:"婚礼 · 巴黎", title:"白色花艺长廊"},
+        item6:{cat:"婚礼 · 巴黎", title:"花艺楼梯"},
+        item7:{cat:"婚礼 · 巴黎", title:"紫色光影"},
+        item8:{cat:"婚礼 · 巴黎", title:"薰衣草合影区"},
+        item9:{cat:"婚礼 · 奥什厅", title:"华丽大厅"},
+        item10:{cat:"婚礼 · 奥什厅", title:"莫奈花园风"},
+        item11:{cat:"婚礼 · 巴黎", title:"红金色调"},
+        item12:{cat:"婚礼 · 巴黎", title:"美拉德色调"},
+        item13:{cat:"婚礼 · 香格里拉", title:"欢迎牌"},
         empty:"该类别暂无项目。", cta:"咨询您的活动"
       },
       testimonials: {
@@ -1401,7 +1414,7 @@
         subtitle:"请告诉我们活动日期、场地与您期望的氛围。我们将在一个工作日内回复，提供档期与预估预算——无任何强制义务。",
         phoneLabel:"电话", phoneHours:"周一至周六 9:00–19:00（巴黎时间）",
         emailLabel:"邮箱", emailResponse:"24小时内回复",
-        addressLabel:"工作室地址", addressDesc:"法国巴黎75004 — 服务范围覆盖巴黎及法兰西岛地区，亦可应要求前往法国各地。",
+        addressLabel:"所在地", addressDesc:"服务范围覆盖巴黎及法兰西岛地区，亦可应要求前往法国各地。",
         followUs:"关注我们",
         formTitle:"预约咨询",
         formRequiredNote:`标有 <span class="text-wine-700">*</span> 的字段为必填项。`,
@@ -1410,7 +1423,7 @@
         labelDate:"活动日期",
         labelType:`活动类型 <span class="text-wine-700">*</span>`, errType:"请选择活动类型。",
         optChoose:"请选择…", optWedding:"婚礼", optAnniversary:"纪念日 / 重要庆典",
-        optConference:"会议 / 企业活动", optPrivate:"私人晚宴或酒会", optOther:"其他",
+        optPrivate:"私人晚宴或酒会", optOther:"其他",
         needLabel:"您需要哪些服务？", needDecoration:"装饰布置", needHosting:"主持 / 司仪", needBoth:"两者皆需",
         labelMessage:`留言 <span class="text-wine-700">*</span>`, placeholderMessage:"场地、宾客人数、您心目中的氛围……", errMessage:"请简单描述一下您的活动。",
         submit:"发送请求",
@@ -1418,11 +1431,11 @@
         successTitle:"感谢您 — 我们已收到您的请求。", successDesc:"我们将在一个工作日内通过您提供的邮箱与您联系。", successReset:"再次发送请求"
       },
       footer: {
-        tagline:"婚庆装饰与专业主持，源自玛黑区的同一支团队构思，服务巴黎及法兰西岛地区。",
+        tagline:"婚庆装饰与专业主持，源自同一支团队构思，服务巴黎及法兰西岛地区。",
         motto:"成就您的幸福，是我们的使命。",
         navHeader:"导航", servicesHeader:"服务项目",
-        serviceLink1:"婚礼", serviceLink2:"纪念日", serviceLink3:"会议活动", serviceLink4:"主持与司仪", serviceLink5:"舞台设计",
-        atelierHeader:"工作室", rights:"版权所有。", legal1:"法律声明", legal2:"隐私政策"
+        serviceLink1:"婚礼", serviceLink2:"纪念日", serviceLink4:"主持与司仪", serviceLink5:"舞台设计",
+        atelierHeader:"所在地", rights:"版权所有。", legal1:"法律声明", legal2:"隐私政策"
       }
     }
   };
