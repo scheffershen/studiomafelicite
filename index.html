@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pageTitle">Studio Ma Félicité — Décoration événementielle &amp; Animation à Paris</title>
+<meta id="metaDescription" name="description" content="Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages, anniversaires et conférences d'entreprise." />
+<meta name="theme-color" content="#0F3D2E" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Studio Ma Félicité — Décoration événementielle &amp; Animation à Paris" />
+<meta property="og:description" content="Décoration sur mesure et animation professionnelle, réunies sous un même toit. Paris, France." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream:    { 50:'#FDFBF7', 100:'#F9F5EE', 200:'#F2EBE0', 300:'#E8DECE' },
+          taupe:    { 100:'#DED4C8', 200:'#C9BCAC', 300:'#B0A190', 400:'#8E7F6E', 500:'#6E6153' },
+          wine: { 50:'#F7ECED', 300:'#B3707A', 500:'#9B2F3A', 600:'#8F232C', 700:'#7C1E27', 900:'#3D0F14' },
+          gold:     { 300:'#E3CD9F', 400:'#D4B87C', 500:'#C9A96A', 600:'#A98A4E' },
+          mauve:    { 500:'#8B5D73', 600:'#7A4E63', 700:'#6B4055' },
+          dustyblue:{ 500:'#6B76A8', 600:'#5C6796', 700:'#4D5884' },
+          ink:      { 500:'#3A342D', 700:'#242019', 900:'#14110D' }
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          sans:  ['Inter', 'system-ui', 'sans-serif']
+        },
+        letterSpacing: { widest2: '0.28em' },
+        boxShadow: {
+          soft:  '0 4px 24px -6px rgba(36,32,25,.10)',
+          lift:  '0 22px 50px -18px rgba(36,32,25,.30)',
+          glass: '0 8px 40px -12px rgba(8,37,28,.45)'
+        },
+        keyframes: {
+          fadeUp:  { '0%':{opacity:'0',transform:'translateY(24px)'}, '100%':{opacity:'1',transform:'translateY(0)'} },
+          slowZoom:{ '0%':{transform:'scale(1.06)'}, '100%':{transform:'scale(1.16)'} },
+          marquee: { '0%':{transform:'translateX(0)'}, '100%':{transform:'translateX(-50%)'} }
+        },
+        animation: {
+          fadeUp: 'fadeUp .8s cubic-bezier(.16,1,.3,1) forwards',
+          slowZoom: 'slowZoom 22s ease-in-out infinite alternate',
+          marquee: 'marquee 38s linear infinite'
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { -webkit-tap-highlight-color: transparent; }
+  body { background:#FDFBF7; color:#242019; }
+
+  /* Scroll reveal */
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+  .reveal.is-visible { opacity:1; transform:none; }
+
+  /* Image placeholder backdrop so a slow/failed asset still looks intentional */
+  .ph { background:linear-gradient(135deg,#E8DECE 0%,#C9BCAC 45%,#B0A190 100%); }
+
+  /* Thin decorative rule */
+  .rule::after { content:''; display:block; width:56px; height:1px; background:#C9A96A; margin-top:1.25rem; }
+  .rule-center::after { margin-left:auto; margin-right:auto; }
+
+  /* Nav link underline */
+  .navlink { position:relative; }
+  .navlink::after { content:''; position:absolute; left:0; bottom:-4px; height:1px; width:0; background:currentColor; transition:width .35s cubic-bezier(.16,1,.3,1); }
+  .navlink:hover::after, .navlink.active::after { width:100%; }
+
+  /* Portfolio filter */
+  .filter-btn.is-active { background:#0F3D2E; color:#F9F5EE; border-color:#0F3D2E; }
+
+  /* Language switch */
+  .lang-btn.is-active { background:#C9A96A; color:#14110D; }
+
+  .gal-item { transition:opacity .45s ease, transform .45s ease; }
+  .gal-item.is-hidden { display:none; }
+
+  /* Carousel */
+  .track { display:flex; transition:transform .7s cubic-bezier(.16,1,.3,1); }
+
+  /* Form floating focus */
+  .field:focus { outline:none; border-color:#0F3D2E; box-shadow:0 0 0 3px rgba(15,61,46,.10); }
+
+  ::selection { background:#0F3D2E; color:#F9F5EE; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    .reveal { opacity:1; transform:none; }
+    html { scroll-behavior:auto; }
+  }
+</style>
+
+<!-- Without JS the IntersectionObserver never runs, so reveal-on-scroll content
+     would stay invisible. Show it all instead. -->
+<noscript><style>
+  .reveal { opacity:1 !important; transform:none !important; }
+  #mobileMenu { max-height:none !important; }
+</style></noscript>
+</head>
+
+<body class="font-sans antialiased selection:bg-wine-700">
+
+<!-- ══════════════════ SKIP LINK ══════════════════ -->
+<a href="#hero" data-i18n="a11y.skipLink" class="sr-only focus:not-sr-only focus:fixed focus:z-[100] focus:top-4 focus:left-4 focus:bg-wine-700 focus:text-cream-50 focus:px-5 focus:py-3 focus:rounded-full focus:text-sm">Aller au contenu</a>
+
+<!-- ══════════════════ NAVIGATION ══════════════════ -->
+<header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="flex items-center justify-between h-20 lg:h-24 transition-all duration-500" id="navInner">
+
+      <!-- Wordmark -->
+      <a href="#hero" class="group flex items-center gap-3 shrink-0">
+        <span class="grid place-items-center w-10 h-10 rounded-full border transition-colors duration-500 border-current" id="navMark">
+          <span class="font-serif text-[15px] italic leading-none translate-y-[1px]">M</span>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-serif text-lg sm:text-xl tracking-tight">Studio Ma Félicité</span>
+          <span class="block text-[10px] uppercase tracking-widest2 opacity-60 -mt-0.5">Paris · France</span>
+        </span>
+      </a>
+
+      <!-- Desktop links -->
+      <nav class="hidden lg:flex items-center gap-9 text-[13px] uppercase tracking-[0.16em] font-medium" id="navLinks" aria-label="Navigation principale" data-i18n-aria="a11y.primaryNav">
+        <a href="#about"     class="navlink" data-i18n="nav.about">Maison</a>
+        <a href="#services"  class="navlink" data-i18n="nav.services">Prestations</a>
+        <a href="#venues"    class="navlink" data-i18n="nav.venues">Adresses</a>
+        <a href="#portfolio" class="navlink" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#testimonials" class="navlink" data-i18n="nav.testimonials">Clients</a>
+        <a href="#contact"   class="navlink" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-5">
+        <div class="lang-switch flex items-center gap-1 rounded-full border border-current/20 p-1 text-[11px] font-semibold uppercase tracking-wider" id="langSwitchDesktop" role="group" aria-label="Choisir la langue">
+          <button type="button" class="lang-btn rounded-full px-2.5 py-1 transition-colors duration-200" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn rounded-full px-2.5 py-1 transition-colors duration-200" data-lang="zh">中文</button>
+          <button type="button" class="lang-btn rounded-full px-2.5 py-1 transition-colors duration-200" data-lang="en">EN</button>
+        </div>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="burger" class="lg:hidden relative w-11 h-11 grid place-items-center rounded-full border border-current/25" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="block w-5 space-y-[5px]">
+          <span class="block h-[1.5px] w-full bg-current transition-transform duration-300 origin-center" data-bar="1"></span>
+          <span class="block h-[1.5px] w-full bg-current transition-opacity duration-200" data-bar="2"></span>
+          <span class="block h-[1.5px] w-full bg-current transition-transform duration-300 origin-center" data-bar="3"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out bg-cream-50/97 backdrop-blur-xl border-t border-taupe-100">
+    <nav class="px-6 py-7 flex flex-col gap-1 text-ink-900" aria-label="Navigation mobile" data-i18n-aria="a11y.mobileNav">
+      <a href="#about"        class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.about">Maison</a>
+      <a href="#services"     class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.services">Prestations</a>
+      <a href="#venues"       class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.venues">Adresses</a>
+      <a href="#portfolio"    class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="#testimonials" class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.testimonials">Clients</a>
+      <a href="#contact"      class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switch mt-6 flex items-center justify-center gap-1 rounded-full border border-taupe-200 p-1 text-[12px] font-semibold uppercase tracking-wider self-center" id="langSwitchMobile" role="group" aria-label="Choisir la langue">
+        <button type="button" class="lang-btn rounded-full px-4 py-1.5 transition-colors duration-200" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn rounded-full px-4 py-1.5 transition-colors duration-200" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn rounded-full px-4 py-1.5 transition-colors duration-200" data-lang="en">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section id="hero" class="relative min-h-[100svh] flex items-center overflow-hidden bg-wine-900">
+  <!-- Background: static image by default; a looping aerial-Paris video swaps in
+       via JS for visitors who haven't asked for reduced motion (see script below). -->
+  <div class="absolute inset-0 ph" id="heroBg">
+    <img src="images/hero-bg.jpg"
+         alt="" aria-hidden="true" id="heroImg"
+         class="w-full h-full object-cover animate-slowZoom" />
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-wine-900/88 via-wine-700/72 to-ink-900/80"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_35%,rgba(201,169,106,.22),transparent_58%)]"></div>
+
+  <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 w-full pt-32 pb-24 lg:py-36">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+      <!-- Copy -->
+      <div class="lg:col-span-7 text-cream-50">
+        <p class="inline-flex items-center gap-3 text-[11px] uppercase tracking-widest2 text-gold-300 mb-7 opacity-0 animate-fadeUp" style="animation-delay:.1s">
+          <span class="w-8 h-px bg-gold-500"></span> <span data-i18n="hero.kicker">Décoration &amp; Animation · Paris</span>
+        </p>
+
+        <h1 class="font-serif text-[2.75rem] leading-[1.06] sm:text-6xl lg:text-[4.4rem] xl:text-[4.9rem] tracking-[-0.02em] opacity-0 animate-fadeUp" style="animation-delay:.22s" data-i18n-html="hero.title">
+          Transformer chaque instant<br class="hidden sm:block" />
+          en un souvenir <em class="italic text-gold-300">inoubliable</em>
+        </h1>
+
+        <p class="mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-cream-200/85 opacity-0 animate-fadeUp" style="animation-delay:.34s" data-i18n-html="hero.subtitle">
+          Un atelier parisien où la <strong class="font-semibold text-cream-50">décoration sur mesure</strong> et
+          l'<strong class="font-semibold text-cream-50">animation professionnelle</strong> sont pensées ensemble — pour
+          que chaque table, chaque lumière et chaque mot au micro racontent la même histoire.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 opacity-0 animate-fadeUp" style="animation-delay:.46s">
+          <a href="#contact" data-i18n="nav.bookCta" class="group inline-flex items-center justify-center gap-3 rounded-full bg-gold-500 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-ink-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lift hover:-translate-y-0.5">
+            Réserver un rendez-vous
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#portfolio" data-i18n="hero.ctaSecondary" class="inline-flex items-center justify-center gap-3 rounded-full border border-cream-50/35 bg-cream-50/5 backdrop-blur-md px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-cream-50 transition-all duration-300 hover:bg-cream-50/15 hover:border-cream-50/60">
+            Voir notre portfolio
+          </a>
+        </div>
+
+        <div class="mt-12 flex items-center gap-6 opacity-0 animate-fadeUp" style="animation-delay:.58s">
+          <div class="flex -space-x-3">
+            <img src="images/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full object-cover ring-2 ring-wine-900 ph" />
+            <img src="images/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full object-cover ring-2 ring-wine-900 ph" />
+            <img src="images/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full object-cover ring-2 ring-wine-900 ph" />
+          </div>
+          <p class="text-sm text-cream-200/80 leading-snug">
+            <span class="text-gold-300">★★★★★</span><br />
+            <span data-i18n="hero.trustText">Plus de 150 événements réalisés en Île-de-France</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Glass card -->
+      <div class="lg:col-span-5 opacity-0 animate-fadeUp" style="animation-delay:.7s">
+        <div class="relative rounded-[2rem] border border-cream-50/20 bg-cream-50/10 backdrop-blur-2xl p-7 sm:p-9 shadow-glass">
+          <div class="absolute -top-px left-10 right-10 h-px bg-gradient-to-r from-transparent via-gold-300/70 to-transparent"></div>
+
+          <p class="text-[11px] uppercase tracking-widest2 text-gold-300" data-i18n="hero.cardKicker">Deux savoir-faire. Une seule équipe.</p>
+          <h2 class="mt-4 font-serif text-2xl sm:text-[1.75rem] leading-snug text-cream-50" data-i18n-html="hero.cardTitle">
+            La salle, c'est nous.<br />La soirée, c'est nous aussi.
+          </h2>
+
+          <ul class="mt-8 space-y-5 text-cream-100/90">
+            <li class="flex gap-4">
+              <span class="mt-1 grid place-items-center w-9 h-9 shrink-0 rounded-full bg-gold-500/20 border border-gold-300/40">
+                <svg class="w-4 h-4 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.2 5.6L20 10l-4.4 3.4L16.8 19 12 16l-4.8 3 1.2-5.6L4 10l5.8-1.4L12 3z" stroke-linejoin="round"/></svg>
+              </span>
+              <span><span class="block text-cream-50 font-medium" data-i18n="hero.card.item1.title">Scénographie &amp; Décoration</span>
+              <span class="text-sm text-cream-200/75" data-i18n="hero.card.item1.desc">Fleurs, éclairage, art de la table, signalétique.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-1 grid place-items-center w-9 h-9 shrink-0 rounded-full bg-gold-500/20 border border-gold-300/40">
+                <svg class="w-4 h-4 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14a3 3 0 003-3V6a3 3 0 10-6 0v5a3 3 0 003 3z" stroke-linejoin="round"/><path d="M6 11a6 6 0 0012 0M12 17v4M9 21h6" stroke-linecap="round"/></svg>
+              </span>
+              <span><span class="block text-cream-50 font-medium" data-i18n="hero.card.item2.title">Animation &amp; Maîtrise de cérémonie</span>
+              <span class="text-sm text-cream-200/75" data-i18n="hero.card.item2.desc">Présentateurs bilingues FR/EN, déroulé, énergie en direct.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-1 grid place-items-center w-9 h-9 shrink-0 rounded-full bg-gold-500/20 border border-gold-300/40">
+                <svg class="w-4 h-4 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.6"/></svg>
+              </span>
+              <span><span class="block text-cream-50 font-medium" data-i18n="hero.card.item3.title">Paris &amp; Île-de-France</span>
+              <span class="text-sm text-cream-200/75" data-i18n="hero.card.item3.desc">Hôtels particuliers, châteaux, rooftops, salons.</span></span>
+            </li>
+          </ul>
+
+          <a href="#services" data-i18n="hero.exploreServices" class="mt-8 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.18em] text-gold-300 hover:text-gold-400 transition">
+            Découvrir nos prestations
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <a href="#about" class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2 text-cream-200/70 hover:text-cream-50 transition">
+    <span class="text-[10px] uppercase tracking-widest2">Scroll</span>
+    <span class="w-px h-10 bg-gradient-to-b from-cream-200/60 to-transparent"></span>
+  </a>
+</section>
+
+<!-- ══════════════════ LOGO MARQUEE ══════════════════ -->
+<section class="bg-wine-700 py-5 overflow-hidden" aria-label="Lieux et partenaires sélectionnés" data-i18n-aria="a11y.marquee">
+  <div class="flex w-max animate-marquee">
+    <div class="flex items-center gap-14 pr-14 text-cream-200/55 font-serif text-lg sm:text-xl italic whitespace-nowrap">
+      <span>Pavillon Vendôme</span><span class="text-gold-500">◆</span>
+      <span>Château de Villette</span><span class="text-gold-500">◆</span>
+      <span>Hôtel Salomon de Rothschild</span><span class="text-gold-500">◆</span>
+      <span>Le Shangri-La</span><span class="text-gold-500">◆</span>
+      <span>Pavillon Gabriel</span><span class="text-gold-500">◆</span>
+      <span>Les Salons Hoche</span><span class="text-gold-500">◆</span>
+    </div>
+    <div class="flex items-center gap-14 pr-14 text-cream-200/55 font-serif text-lg sm:text-xl italic whitespace-nowrap" aria-hidden="true">
+      <span>Pavillon Vendôme</span><span class="text-gold-500">◆</span>
+      <span>Château de Villette</span><span class="text-gold-500">◆</span>
+      <span>Hôtel Salomon de Rothschild</span><span class="text-gold-500">◆</span>
+      <span>Le Shangri-La</span><span class="text-gold-500">◆</span>
+      <span>Pavillon Gabriel</span><span class="text-gold-500">◆</span>
+      <span>Les Salons Hoche</span><span class="text-gold-500">◆</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section id="about" class="relative py-24 sm:py-32 lg:py-40 bg-cream-50 overflow-hidden">
+  <div class="pointer-events-none absolute -left-40 top-20 w-[34rem] h-[34rem] rounded-full bg-cream-200/60 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <!-- Image composition -->
+      <div class="reveal relative">
+        <div class="relative rounded-[2rem] overflow-hidden shadow-lift ph aspect-[4/5]">
+          <img src="images/about-main.jpg"
+               alt="Banquet table dressed with candlelight and seasonal florals" loading="lazy"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-10 -right-4 sm:right-6 w-40 sm:w-56 rounded-[1.5rem] overflow-hidden ring-8 ring-cream-50 shadow-lift ph aspect-[3/4] hidden sm:block">
+          <img src="images/about-host.jpg"
+               alt="Event host addressing guests with a microphone" loading="lazy"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -top-6 -left-3 sm:-left-6 rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
+          <p class="font-serif text-3xl leading-none">5<span class="text-gold-300">+</span></p>
+          <p class="mt-1 text-[10px] uppercase tracking-widest2 text-cream-200/75" data-i18n="about.yearsBadge">Ans à Paris</p>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="reveal" style="transition-delay:.12s">
+        <p class="rule text-[11px] uppercase tracking-widest2 text-wine-500" data-i18n="about.kicker">La Maison</p>
+
+        <h2 class="mt-8 font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-[-0.02em] text-ink-900" data-i18n-html="about.title">
+          Le décor pose le cadre.<br />
+          <em class="italic text-wine-700">L'animation</em> lui donne vie.
+        </h2>
+
+        <div class="mt-7 space-y-5 text-[15px] sm:text-base leading-relaxed text-ink-500">
+          <p data-i18n="about.p1">
+            La plupart des événements sont assemblés à partir d'éléments qui ne se sont jamais rencontrés. Un fleuriste
+            ici, un scénographe là, un présentateur qui reçoit le déroulé la veille au soir. Les invités sentent les
+            coutures — une salle magnifique où rien ne se passe vraiment, ou un animateur plein de vie dans un lieu
+            qui ne raconte rien.
+          </p>
+          <p data-i18n-html="about.p2">
+            Studio Ma Félicité a été fondé dans le 4<sup>e</sup> arrondissement pour combler cet écart. Nous concevons
+            la salle et menons la soirée, à partir du même brief et de la même équipe. La lumière change au moment
+            exact du discours. Les centres de table disparaissent avant la première danse. Rien n'est improvisé, et
+            pourtant tout semble couler de source.
+          </p>
+          <p class="font-serif italic text-lg text-wine-700" data-i18n="about.quote">
+            « Un seul studio, une seule vision — du premier croquis à la dernière annonce. »
+          </p>
+        </div>
+
+        <!-- Signature -->
+        <div class="mt-9 flex items-center gap-4">
+          <img src="images/founder.jpg"
+               alt="" loading="lazy" class="w-14 h-14 rounded-full object-cover ph ring-1 ring-taupe-100" />
+          <div>
+            <p class="font-serif text-lg text-ink-900">Amélie Rousseau</p>
+            <p class="text-xs uppercase tracking-[0.16em] text-taupe-400" data-i18n="about.founderTitle">Fondatrice &amp; Directrice de création</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="reveal mt-20 lg:mt-28 rounded-[2rem] bg-wine-700 text-cream-50 px-6 sm:px-12 py-12 sm:py-14 shadow-lift">
+      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 text-center divide-y-0 lg:divide-x lg:divide-cream-50/12">
+        <div>
+          <dd class="font-serif text-4xl sm:text-5xl text-gold-300"><span class="count" data-to="150">150</span>+</dd>
+          <dt class="mt-2 text-[10px] sm:text-[11px] uppercase tracking-widest2 text-cream-200/70" data-i18n="about.stat1">Événements réalisés</dt>
+        </div>
+        <div>
+          <dd class="font-serif text-4xl sm:text-5xl text-gold-300"><span class="count" data-to="100">100</span>%</dd>
+          <dt class="mt-2 text-[10px] sm:text-[11px] uppercase tracking-widest2 text-cream-200/70" data-i18n="about.stat2">Clients satisfaits</dt>
+        </div>
+        <div>
+          <dd class="font-serif text-4xl sm:text-5xl text-gold-300"><span class="count" data-to="5">5</span>+</dd>
+          <dt class="mt-2 text-[10px] sm:text-[11px] uppercase tracking-widest2 text-cream-200/70" data-i18n="about.stat3">Années d'expérience</dt>
+        </div>
+        <div>
+          <dd class="font-serif text-4xl sm:text-5xl text-gold-300"><span class="count" data-to="40">40</span>+</dd>
+          <dt class="mt-2 text-[10px] sm:text-[11px] uppercase tracking-widest2 text-cream-200/70" data-i18n="about.stat4">Lieux partenaires</dt>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SERVICES ══════════════════ -->
+<section id="services" class="py-24 sm:py-32 lg:py-40 bg-cream-100">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+    <div class="reveal max-w-3xl mx-auto text-center">
+      <p class="rule rule-center text-[11px] uppercase tracking-widest2 text-wine-500" data-i18n="services.kicker">Nos Prestations</p>
+      <h2 class="mt-8 font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-[-0.02em] text-ink-900" data-i18n-html="services.title">
+        Décoration et animation,<br class="hidden sm:block" /> un seul devis.
+      </h2>
+      <p class="mt-6 text-ink-500 leading-relaxed" data-i18n="services.subtitle">
+        Chaque prestation comprend une phase de conception et une phase de scène. Prenez les deux, ou seulement
+        celle qui vous manque — le studio s'adapte à ce que votre événement a déjà.
+      </p>
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-3 gap-7 lg:gap-8">
+
+      <!-- Weddings -->
+      <article class="reveal group flex flex-col rounded-[1.75rem] bg-cream-50 border border-taupe-100/70 overflow-hidden shadow-soft transition-all duration-500 hover:shadow-lift hover:-translate-y-1.5">
+        <div class="relative aspect-[16/11] overflow-hidden ph">
+          <img src="images/service-weddings.jpg"
+               alt="Floral wedding ceremony arch in a garden" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/45 to-transparent opacity-70"></div>
+          <span class="absolute top-4 left-4 rounded-full bg-cream-50/90 backdrop-blur px-4 py-1.5 text-[10px] uppercase tracking-widest2 text-wine-700" data-i18n="services.badge1">01 — Mariages</span>
+        </div>
+
+        <div class="flex flex-col flex-1 p-7 lg:p-8">
+          <h3 class="font-serif text-2xl text-ink-900" data-i18n="services.title1">Mariages</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-ink-500 flex-1" data-i18n="services.desc1">
+            Décor floral et scénographie sur mesure autour de votre palette, associés à un animateur charismatique
+            qui guide la cérémonie, les entrées et la réception sans jamais voler la vedette.
+          </p>
+          <ul class="mt-6 space-y-2.5 text-sm text-taupe-500">
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet1a">Design floral, arches &amp; art de la table</span></li>
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet1b">Éclairage d'ambiance &amp; architectural</span></li>
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet1c">Maître de cérémonie bilingue FR/EN</span></li>
+          </ul>
+          <a href="#contact" data-i18n="services.cta" class="mt-8 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-wine-700 group-hover:gap-3.5 transition-all duration-300">
+            Demander un devis
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Anniversaries -->
+      <article class="reveal group flex flex-col rounded-[1.75rem] bg-cream-50 border border-taupe-100/70 overflow-hidden shadow-soft transition-all duration-500 hover:shadow-lift hover:-translate-y-1.5" style="transition-delay:.1s">
+        <div class="relative aspect-[16/11] overflow-hidden ph">
+          <img src="images/service-anniversaries.jpg"
+               alt="Guests celebrating at an intimate anniversary party" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/45 to-transparent opacity-70"></div>
+          <span class="absolute top-4 left-4 rounded-full bg-cream-50/90 backdrop-blur px-4 py-1.5 text-[10px] uppercase tracking-widest2 text-mauve-600" data-i18n="services.badge2">02 — Anniversaires</span>
+        </div>
+
+        <div class="flex flex-col flex-1 p-7 lg:p-8">
+          <h3 class="font-serif text-2xl text-ink-900" data-i18n="services.title2">Anniversaires</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-ink-500 flex-1" data-i18n="services.desc2">
+            D'un dîner intime pour douze personnes à un grand gala de noces d'or, nous construisons le décor puis
+            menons le déroulé — toasts, hommages, surprises et gâteau, tout arrive au bon moment.
+          </p>
+          <ul class="mt-6 space-y-2.5 text-sm text-taupe-500">
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet2a">Décors intimistes &amp; grand format</span></li>
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet2b">Coordination du déroulé festif</span></li>
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet2c">Animation dynamique, jeux &amp; hommages familiaux</span></li>
+          </ul>
+          <a href="#contact" data-i18n="services.cta" class="mt-8 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-mauve-600 group-hover:gap-3.5 transition-all duration-300">
+            Demander un devis
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Conferences -->
+      <article class="reveal group flex flex-col rounded-[1.75rem] bg-cream-50 border border-taupe-100/70 overflow-hidden shadow-soft transition-all duration-500 hover:shadow-lift hover:-translate-y-1.5" style="transition-delay:.2s">
+        <div class="relative aspect-[16/11] overflow-hidden ph">
+          <img src="images/service-conferences.jpg"
+               alt="Speaker on stage in front of a corporate conference audience" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/45 to-transparent opacity-70"></div>
+          <span class="absolute top-4 left-4 rounded-full bg-cream-50/90 backdrop-blur px-4 py-1.5 text-[10px] uppercase tracking-widest2 text-dustyblue-700" data-i18n="services.badge3">03 — Corporate</span>
+        </div>
+
+        <div class="flex flex-col flex-1 p-7 lg:p-8">
+          <h3 class="font-serif text-2xl text-ink-900" data-i18n="services.title3">Conférences &amp; Entreprises</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-ink-500 flex-1" data-i18n="services.desc3">
+            Une scénographie soignée à l'image de votre marque, avec des présentateurs posés qui introduisent les
+            intervenants, animent les tables rondes et tiennent un programme d'une journée entière à la minute près.
+          </p>
+          <ul class="mt-6 space-y-2.5 text-sm text-taupe-500">
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet3a">Scénographie de scène et décor de marque</span></li>
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet3b">Accueil, espace lounge &amp; habillage du dîner de gala</span></li>
+            <li class="flex gap-2.5"><span class="text-gold-500 mt-0.5">—</span> <span data-i18n="services.bullet3c">Présentateurs, animation de tables rondes &amp; déroulé</span></li>
+          </ul>
+          <a href="#contact" data-i18n="services.cta" class="mt-8 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-dustyblue-700 group-hover:gap-3.5 transition-all duration-300">
+            Demander un devis
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Process strip -->
+    <div class="reveal mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+      <div class="relative pl-6 border-l border-taupe-100">
+        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step1Label">Étape 01</p>
+        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step1Title">Consultation</h4>
+        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step1Desc">Une session de 60 minutes dans notre atelier du Marais ou en visioconférence, sans engagement.</p>
+      </div>
+      <div class="relative pl-6 border-l border-taupe-100">
+        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step2Label">Étape 02</p>
+        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step2Title">Conception &amp; Script</h4>
+        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step2Desc">Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.</p>
+      </div>
+      <div class="relative pl-6 border-l border-taupe-100">
+        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step3Label">Étape 03</p>
+        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step3Title">Installation</h4>
+        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step3Desc">Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.</p>
+      </div>
+      <div class="relative pl-6 border-l border-taupe-100">
+        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step4Label">Étape 04</p>
+        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step4Title">Le Grand Soir</h4>
+        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step4Desc">Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ VENUES ══════════════════ -->
+<section id="venues" class="relative py-24 sm:py-32 lg:py-36 bg-ink-900 text-cream-50 overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(201,169,106,.14),transparent_55%)]"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div class="max-w-2xl">
+        <p class="rule text-[11px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.kicker">Nos Adresses</p>
+        <h2 class="mt-8 font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-[-0.02em]" data-i18n-html="venues.title">
+          Quatre adresses que nous<br class="hidden sm:block" /> connaissons mieux que personne.
+        </h2>
+      </div>
+      <p class="max-w-sm text-[15px] leading-relaxed text-cream-200/75" data-i18n="venues.subtitle">
+        Au-delà de la décoration et de l'animation, nous entretenons des relations de longue date avec une liste
+        restreinte de lieux parisiens — synonyme d'accès facilité, de moins de surprises, et d'un plan de salle
+        que nous connaissons déjà par cœur.
+      </p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]">
+        <img src="images/venue-chateau-villette.jpg" alt="Chandelier-lit château ballroom set for a reception" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgePartner">Partenaire</span>
+        <div class="absolute inset-x-0 bottom-0 p-6">
+          <h3 class="font-serif text-xl">Château de Villette</h3>
+          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n="venues.guests1">Yvelines · jusqu'à 250 invités</p>
+        </div>
+      </article>
+
+      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.08s">
+        <img src="images/venue-rooftop-gabriel.jpg" alt="Rooftop terrace overlooking Paris with the Eiffel Tower at dusk" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgeExclusive">Exclusivité</span>
+        <div class="absolute inset-x-0 bottom-0 p-6">
+          <h3 class="font-serif text-xl">Rooftop Gabriel</h3>
+          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n-html="venues.guests2">8<sup>e</sup> arrondissement · jusqu'à 180 invités</p>
+        </div>
+      </article>
+
+      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.16s">
+        <img src="images/venue-hotel-rothschild.jpg" alt="Elegant Parisian hôtel particulier courtyard entrance" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgePartner">Partenaire</span>
+        <div class="absolute inset-x-0 bottom-0 p-6">
+          <h3 class="font-serif text-xl">Hôtel Salomon<br />de Rothschild</h3>
+          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n-html="venues.guests3">8<sup>e</sup> arrondissement · jusqu'à 300 invités</p>
+        </div>
+      </article>
+
+      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.24s">
+        <img src="images/venue-salons-hoche.jpg" alt="Grand salon with ornate chandelier prepared for a gala" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgeExclusive">Exclusivité</span>
+        <div class="absolute inset-x-0 bottom-0 p-6">
+          <h3 class="font-serif text-xl">Les Salons Hoche</h3>
+          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n-html="venues.guests4">8<sup>e</sup> arrondissement · jusqu'à 400 invités</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal mt-12 text-center">
+      <a href="#contact" data-i18n="venues.cta" class="inline-flex items-center gap-3 rounded-full border border-gold-300/50 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold-300 transition-all duration-300 hover:bg-gold-500 hover:text-ink-900 hover:border-gold-500">
+        Nous consulter pour un lieu précis
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PORTFOLIO ══════════════════ -->
+<section id="portfolio" class="py-24 sm:py-32 lg:py-40 bg-cream-50">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div class="max-w-2xl">
+        <p class="rule text-[11px] uppercase tracking-widest2 text-wine-500" data-i18n="portfolio.kicker">Portfolio</p>
+        <h2 class="mt-8 font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-[-0.02em] text-ink-900" data-i18n-html="portfolio.title">
+          Une sélection de nos réalisations,<br class="hidden sm:block" /> à Paris et au-delà.
+        </h2>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-2.5" role="tablist" aria-label="Filtrer le portfolio" data-i18n-aria="a11y.filterPortfolio">
+        <button class="filter-btn is-active rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="all" role="tab" aria-selected="true" data-i18n="portfolio.filterAll">Tout</button>
+        <button class="filter-btn rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="weddings" role="tab" aria-selected="false" data-i18n="portfolio.filterWeddings">Mariages</button>
+        <button class="filter-btn rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="anniversaries" role="tab" aria-selected="false" data-i18n="portfolio.filterAnniversaries">Anniversaires</button>
+        <button class="filter-btn rounded-full border border-taupe-200 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-700 transition-all duration-300 hover:border-wine-700" data-filter="conferences" role="tab" aria-selected="false" data-i18n="portfolio.filterConferences">Conférences</button>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div id="gallery" class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/5] sm:row-span-2 sm:aspect-auto sm:min-h-[520px] cursor-pointer" data-cat="weddings">
+        <img src="images/gallery-wedding-1.jpg" alt="Candlelit wedding reception hall dressed in white and greenery" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 lg:p-7 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item1.cat">Mariage · Château de Villette</p>
+          <h3 class="mt-2 font-serif text-2xl">Camille &amp; Théo</h3>
+          <p class="mt-2 text-sm text-cream-200/0 group-hover:text-cream-200/85 transition-colors duration-500" data-i18n="portfolio.item1.desc">Scénographie complète + animation bilingue de cérémonie pour 180 invités.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="conferences">
+        <img src="images/gallery-conference-1.jpg" alt="Conference stage with speaker and large screen" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item2.cat">Conférence · Pavillon Gabriel</p>
+          <h3 class="mt-2 font-serif text-xl">Horizon Tech Summit</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="anniversaries">
+        <img src="images/gallery-anniversary-1.jpg" alt="Guests raising glasses under confetti at a celebration" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item3.cat">Anniversaire · Le Marais</p>
+          <h3 class="mt-2 font-serif text-xl">Noces d'Or — 50 Years</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/gallery-wedding-2.jpg" alt="Wedding guests dancing during the reception" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item4.cat">Mariage · Saint-Germain</p>
+          <h3 class="mt-2 font-serif text-xl">Une Soirée Blanche</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="conferences">
+        <img src="images/gallery-conference-2.jpg" alt="Delegates seated at a corporate conference" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item5.cat">Entreprise · La Défense</p>
+          <h3 class="mt-2 font-serif text-xl">Annual Partners Forum</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="anniversaries">
+        <img src="images/gallery-anniversary-2.jpg" alt="Long banquet table styled for a private dinner" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n-html="portfolio.item6.cat">Anniversaire · 7<sup>e</sup> Arrondissement</p>
+          <h3 class="mt-2 font-serif text-xl">Table d'Honneur</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
+        <img src="images/gallery-wedding-3.jpg" alt="Outdoor wedding ceremony seating with floral aisle" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item7.cat">Mariage · Fontainebleau</p>
+          <h3 class="mt-2 font-serif text-xl">Jardin Secret</h3>
+        </figcaption>
+      </figure>
+
+      <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="conferences">
+        <img src="images/gallery-conference-3.jpg" alt="Gala dinner room set for a corporate evening" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+          <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item8.cat">Entreprise · Salons Hoche</p>
+          <h3 class="mt-2 font-serif text-xl">Gala des Fondateurs</h3>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <p id="galEmpty" class="hidden mt-12 text-center text-taupe-400 italic" data-i18n="portfolio.empty">Aucun projet dans cette catégorie pour le moment.</p>
+
+    <div class="reveal mt-14 text-center">
+      <a href="#contact" data-i18n="portfolio.cta" class="inline-flex items-center gap-3 rounded-full border border-wine-700 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-wine-700 transition-all duration-300 hover:bg-wine-700 hover:text-cream-50">
+        Discuter de votre événement
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TESTIMONIALS ══════════════════ -->
+<section id="testimonials" class="relative py-24 sm:py-32 lg:py-40 bg-wine-700 text-cream-50 overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_15%,rgba(201,169,106,.16),transparent_55%)]"></div>
+  <div class="pointer-events-none absolute -left-24 -bottom-24 w-[30rem] h-[30rem] rounded-full bg-wine-900/40 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+    <div class="reveal max-w-2xl">
+      <p class="rule text-[11px] uppercase tracking-widest2 text-gold-300" data-i18n="testimonials.kicker">Témoignages</p>
+      <h2 class="mt-8 font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-[-0.02em]" data-i18n-html="testimonials.title">
+        Ce que nos hôtes<br class="hidden sm:block" /> disent après coup.
+      </h2>
+    </div>
+
+    <!-- Carousel -->
+    <div class="reveal mt-14 relative">
+      <div class="overflow-hidden" id="carouselViewport">
+        <div class="track" id="track">
+
+          <!-- 1 -->
+          <div class="slide shrink-0 w-full lg:w-1/3 px-0 lg:px-3">
+            <blockquote class="h-full rounded-[1.75rem] border border-cream-50/15 bg-cream-50/[0.07] backdrop-blur-xl p-8 lg:p-9 flex flex-col">
+              <svg class="w-9 h-9 text-gold-300/70" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 5C6.5 6.6 4.6 9.4 4.6 13v6h6.6v-6.6H8.1c.1-2.2 1-3.6 2.7-4.6L9.5 5zm9 0c-3 1.6-4.9 4.4-4.9 8v6h6.6v-6.6h-3.1c.1-2.2 1-3.6 2.7-4.6L18.5 5z"/></svg>
+              <p class="mt-6 font-serif text-lg lg:text-[1.35rem] leading-relaxed text-cream-100 flex-1" data-i18n="testimonials.quote1">
+                « Ils ont habillé l'orangerie puis animé toute la soirée. Nos invités n'arrêtaient pas de demander
+                qui était ce présentateur — il a fait rire toute la salle pendant le dîner, puis obtenu un silence
+                total pendant le discours de mon père. Pas une minute de retard sur le déroulé. »
+              </p>
+              <footer class="mt-8 flex items-center gap-4 pt-6 border-t border-cream-50/12">
+                <img src="images/testimonial-1.jpg" alt="" loading="lazy" class="w-12 h-12 rounded-full object-cover ph" />
+                <div>
+                  <p class="font-medium text-cream-50">Zhang Min</p>
+                  <p class="text-xs uppercase tracking-[0.14em] text-cream-200/60" data-i18n="portfolio.item1.cat">Mariage · Château de Villette</p>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+          <!-- 2 -->
+          <div class="slide shrink-0 w-full lg:w-1/3 px-0 lg:px-3">
+            <blockquote class="h-full rounded-[1.75rem] border border-cream-50/15 bg-cream-50/[0.07] backdrop-blur-xl p-8 lg:p-9 flex flex-col">
+              <svg class="w-9 h-9 text-gold-300/70" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 5C6.5 6.6 4.6 9.4 4.6 13v6h6.6v-6.6H8.1c.1-2.2 1-3.6 2.7-4.6L9.5 5zm9 0c-3 1.6-4.9 4.4-4.9 8v6h6.6v-6.6h-3.1c.1-2.2 1-3.6 2.7-4.6L18.5 5z"/></svg>
+              <p class="mt-6 font-serif text-lg lg:text-[1.35rem] leading-relaxed text-cream-100 flex-1" data-i18n="testimonials.quote2">
+                « Nous les avons réservés pour les cinquante ans de mariage de mes parents. Studio Ma Félicité a
+                transformé une simple salle de réception en un décor de film, puis a fait vivre trois générations
+                tout au long de la soirée — hommages, vidéo, gâteau — sans que personne ne se sente pressé. »
+              </p>
+              <footer class="mt-8 flex items-center gap-4 pt-6 border-t border-cream-50/12">
+                <img src="images/testimonial-2.jpg" alt="" loading="lazy" class="w-12 h-12 rounded-full object-cover ph" />
+                <div>
+                  <p class="font-medium text-cream-50">Wang Jun</p>
+                  <p class="text-xs uppercase tracking-[0.14em] text-cream-200/60" data-i18n-html="testimonials.role2">Noces d'or · Paris 4<sup>e</sup></p>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+          <!-- 3 -->
+          <div class="slide shrink-0 w-full lg:w-1/3 px-0 lg:px-3">
+            <blockquote class="h-full rounded-[1.75rem] border border-cream-50/15 bg-cream-50/[0.07] backdrop-blur-xl p-8 lg:p-9 flex flex-col">
+              <svg class="w-9 h-9 text-gold-300/70" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 5C6.5 6.6 4.6 9.4 4.6 13v6h6.6v-6.6H8.1c.1-2.2 1-3.6 2.7-4.6L9.5 5zm9 0c-3 1.6-4.9 4.4-4.9 8v6h6.6v-6.6h-3.1c.1-2.2 1-3.6 2.7-4.6L18.5 5z"/></svg>
+              <p class="mt-6 font-serif text-lg lg:text-[1.35rem] leading-relaxed text-cream-100 flex-1" data-i18n="testimonials.quote3">
+                « Deux jours, neuf sessions, quatre cents délégués. Le décor était à l'image de notre marque, et la
+                modératrice a géré l'annulation d'un intervenant avec une telle fluidité que la moitié de la salle
+                ne s'en est même pas rendu compte. Nous les avons déjà réengagés pour l'année prochaine. »
+              </p>
+              <footer class="mt-8 flex items-center gap-4 pt-6 border-t border-cream-50/12">
+                <img src="images/testimonial-3.jpg" alt="" loading="lazy" class="w-12 h-12 rounded-full object-cover ph" />
+                <div>
+                  <p class="font-medium text-cream-50">Chen Jing</p>
+                  <p class="text-xs uppercase tracking-[0.14em] text-cream-200/60" data-i18n="testimonials.role3">Responsable Événementiel · Horizon Tech</p>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+          <!-- 4 -->
+          <div class="slide shrink-0 w-full lg:w-1/3 px-0 lg:px-3">
+            <blockquote class="h-full rounded-[1.75rem] border border-cream-50/15 bg-cream-50/[0.07] backdrop-blur-xl p-8 lg:p-9 flex flex-col">
+              <svg class="w-9 h-9 text-gold-300/70" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 5C6.5 6.6 4.6 9.4 4.6 13v6h6.6v-6.6H8.1c.1-2.2 1-3.6 2.7-4.6L9.5 5zm9 0c-3 1.6-4.9 4.4-4.9 8v6h6.6v-6.6h-3.1c.1-2.2 1-3.6 2.7-4.6L18.5 5z"/></svg>
+              <p class="mt-6 font-serif text-lg lg:text-[1.35rem] leading-relaxed text-cream-100 flex-1" data-i18n="testimonials.quote4">
+                « L'animation bilingue est la raison pour laquelle nous les avons choisis, et ce fut sans faille —
+                nos invités anglophones n'ont jamais eu l'impression de regarder une soirée française de l'extérieur.
+                Le travail floral était, franchement, le plus beau que j'ai vu à Paris. »
+              </p>
+              <footer class="mt-8 flex items-center gap-4 pt-6 border-t border-cream-50/12">
+                <img src="images/testimonial-4.jpg" alt="" loading="lazy" class="w-12 h-12 rounded-full object-cover ph" />
+                <div>
+                  <p class="font-medium text-cream-50">Li Qiang</p>
+                  <p class="text-xs uppercase tracking-[0.14em] text-cream-200/60" data-i18n="testimonials.role4">Mariage · Saint-Germain-des-Prés</p>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="mt-10 flex items-center justify-between gap-6">
+        <div class="flex gap-2.5" id="dots" role="tablist" aria-label="Diapositives de témoignages" data-i18n-aria="a11y.testimonialSlides"></div>
+        <div class="flex gap-3">
+          <button id="prev" class="grid place-items-center w-12 h-12 rounded-full border border-cream-50/25 text-cream-50 transition-all duration-300 hover:bg-cream-50 hover:text-wine-700" aria-label="Témoignage précédent" data-i18n-aria="testimonials.prevAria">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M19 12H5M11 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button id="next" class="grid place-items-center w-12 h-12 rounded-full border border-cream-50/25 text-cream-50 transition-all duration-300 hover:bg-cream-50 hover:text-wine-700" aria-label="Témoignage suivant" data-i18n-aria="testimonials.nextAria">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section id="contact" class="py-24 sm:py-32 lg:py-40 bg-cream-100">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+
+      <!-- Info -->
+      <div class="lg:col-span-5 reveal">
+        <p class="rule text-[11px] uppercase tracking-widest2 text-wine-500" data-i18n="contact.kicker">Contact &amp; Réservation</p>
+        <h2 class="mt-8 font-serif text-4xl sm:text-5xl leading-[1.1] tracking-[-0.02em] text-ink-900" data-i18n-html="contact.title">
+          Organisons votre<br /><em class="italic text-wine-700">grande soirée</em>.
+        </h2>
+        <p class="mt-6 text-ink-500 leading-relaxed max-w-md" data-i18n="contact.subtitle">
+          Indiquez-nous la date, le lieu et l'ambiance recherchée. Nous répondons sous un jour ouvré avec nos
+          disponibilités et un budget indicatif — sans engagement.
+        </p>
+
+        <ul class="mt-10 space-y-6">
+          <li class="flex gap-5">
+            <span class="grid place-items-center w-12 h-12 shrink-0 rounded-full bg-wine-50 text-wine-700 border border-wine-700/12">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.phoneLabel">Téléphone</p>
+              <a href="tel:+33142607890" class="mt-1 block font-serif text-xl text-ink-900 hover:text-wine-700 transition">+33 1 42 60 78 90</a>
+              <p class="text-sm text-taupe-400" data-i18n="contact.phoneHours">Lun–Sam, 9h – 19h (heure de Paris)</p>
+            </div>
+          </li>
+
+          <li class="flex gap-5">
+            <span class="grid place-items-center w-12 h-12 shrink-0 rounded-full bg-wine-50 text-wine-700 border border-wine-700/12">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.emailLabel">Email</p>
+              <a href="mailto:bonjour@studiomafelicite.com" class="mt-1 block font-serif text-xl text-ink-900 hover:text-wine-700 transition break-all">bonjour@studiomafelicite.com</a>
+              <p class="text-sm text-taupe-400" data-i18n="contact.emailResponse">Réponse sous 24 h</p>
+            </div>
+          </li>
+
+          <li class="flex gap-5">
+            <span class="grid place-items-center w-12 h-12 shrink-0 rounded-full bg-wine-50 text-wine-700 border border-wine-700/12">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.6"/></svg>
+            </span>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.addressLabel">Atelier</p>
+              <p class="mt-1 font-serif text-xl text-ink-900">18 Rue des Francs-Bourgeois</p>
+              <p class="text-sm text-taupe-400" data-i18n="contact.addressDesc">75004 Paris, France — nous intervenons à Paris &amp; en Île-de-France, et nous déplaçons partout en France sur demande.</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Socials -->
+        <div class="mt-10 pt-8 border-t border-taupe-100">
+          <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.followUs">Suivez-nous</p>
+          <div class="mt-4 flex gap-3">
+            <a href="#" aria-label="Instagram" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.5 1.9 1.9 0 3.2-2.4 3.2-5.2 0-2.1-1.5-3.7-4.1-3.7-3 0-4.8 2.2-4.8 4.7 0 .9.3 1.5.7 2 .2.2.2.3.1.6l-.2.9c-.1.3-.3.4-.6.2-1.3-.5-1.9-2-1.9-3.6 0-2.7 2.3-6 6.8-6 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.1 6.5-1 0-2-.6-2.3-1.2l-.6 2.5c-.2.8-.7 1.8-1.1 2.4A10 10 0 1012 2z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.3V21h3.6V8.6zM5.1 3a2.1 2.1 0 100 4.2 2.1 2.1 0 000-4.2zM21 14.2c0-3.4-1.8-5-4.3-5-2 0-2.9 1.1-3.4 1.9V8.6H9.7c0 1 0 12.4 0 12.4h3.6v-6.9c0-.4 0-.7.1-1 .3-.7.9-1.5 2-1.5 1.4 0 2 1.1 2 2.7V21H21v-6.8z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7.2c0-.8.2-1.2 1.4-1.2H17V3h-2.6c-3 0-4 1.4-4 3.9V9H8v3h2.4v9H14v-9h2.6l.4-3H14z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="lg:col-span-7 reveal" style="transition-delay:.1s">
+        <div class="rounded-[2rem] bg-cream-50 border border-taupe-100 shadow-soft p-7 sm:p-10 lg:p-12">
+          <h3 class="font-serif text-2xl text-ink-900" data-i18n="contact.formTitle">Demander une consultation</h3>
+          <p class="mt-2 text-sm text-taupe-500" data-i18n-html="contact.formRequiredNote">Les champs marqués <span class="text-wine-700">*</span> sont obligatoires.</p>
+
+          <form id="bookingForm" novalidate class="mt-8 grid sm:grid-cols-2 gap-5">
+
+            <div>
+              <label for="name" class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n-html="contact.labelName">Nom complet <span class="text-wine-700">*</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Camille Béranger" data-i18n-ph="contact.placeholderName"
+                     class="field w-full rounded-xl border border-taupe-200 bg-cream-50 px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-taupe-300 transition" />
+              <p class="err hidden mt-1.5 text-xs text-red-600" data-i18n="contact.errName">Merci de renseigner votre nom.</p>
+            </div>
+
+            <div>
+              <label for="email" class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n-html="contact.labelEmail">Email <span class="text-wine-700">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="camille@exemple.fr" data-i18n-ph="contact.placeholderEmail"
+                     class="field w-full rounded-xl border border-taupe-200 bg-cream-50 px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-taupe-300 transition" />
+              <p class="err hidden mt-1.5 text-xs text-red-600" data-i18n="contact.errEmail">Merci de renseigner une adresse email valide.</p>
+            </div>
+
+            <div>
+              <label for="date" class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n="contact.labelDate">Date de l'événement</label>
+              <input id="date" name="date" type="date"
+                     class="field w-full rounded-xl border border-taupe-200 bg-cream-50 px-4 py-3.5 text-[15px] text-ink-900 transition" />
+            </div>
+
+            <div>
+              <label for="type" class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n-html="contact.labelType">Type d'événement <span class="text-wine-700">*</span></label>
+              <div class="relative">
+                <select id="type" name="type" required
+                        class="field w-full appearance-none rounded-xl border border-taupe-200 bg-cream-50 px-4 py-3.5 pr-11 text-[15px] text-ink-900 transition">
+                  <option value="" data-i18n="contact.optChoose">Veuillez choisir…</option>
+                  <option data-i18n="contact.optWedding">Mariage</option>
+                  <option data-i18n="contact.optAnniversary">Anniversaire / Occasion spéciale</option>
+                  <option data-i18n="contact.optConference">Conférence / Entreprise</option>
+                  <option data-i18n="contact.optPrivate">Dîner privé ou cocktail</option>
+                  <option data-i18n="contact.optOther">Autre</option>
+                </select>
+                <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-taupe-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="err hidden mt-1.5 text-xs text-red-600" data-i18n="contact.errType">Merci de sélectionner un type d'événement.</p>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n="contact.needLabel">De quoi avez-vous besoin ?</label>
+              <div class="flex flex-wrap gap-2.5">
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Decoration" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-taupe-200 px-5 py-2.5 text-[12px] uppercase tracking-[0.14em] text-ink-700 transition peer-checked:bg-wine-700 peer-checked:text-cream-50 peer-checked:border-wine-700 peer-focus-visible:ring-2 peer-focus-visible:ring-wine-700/30" data-i18n="contact.needDecoration">Décoration</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Hosting / MC" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-taupe-200 px-5 py-2.5 text-[12px] uppercase tracking-[0.14em] text-ink-700 transition peer-checked:bg-wine-700 peer-checked:text-cream-50 peer-checked:border-wine-700 peer-focus-visible:ring-2 peer-focus-visible:ring-wine-700/30" data-i18n="contact.needHosting">Animation / Maître de cérémonie</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Both" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-taupe-200 px-5 py-2.5 text-[12px] uppercase tracking-[0.14em] text-ink-700 transition peer-checked:bg-wine-700 peer-checked:text-cream-50 peer-checked:border-wine-700 peer-focus-visible:ring-2 peer-focus-visible:ring-wine-700/30" data-i18n="contact.needBoth">Les deux</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n-html="contact.labelMessage">Message <span class="text-wine-700">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Lieu, nombre d'invités, l'ambiance que vous imaginez…" data-i18n-ph="contact.placeholderMessage"
+                        class="field w-full rounded-xl border border-taupe-200 bg-cream-50 px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-taupe-300 transition resize-y"></textarea>
+              <p class="err hidden mt-1.5 text-xs text-red-600" data-i18n="contact.errMessage">Merci d'ajouter quelques mots sur votre événement.</p>
+            </div>
+
+            <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-5 pt-1">
+              <button type="submit" data-i18n="contact.submit" class="group inline-flex items-center justify-center gap-3 rounded-full bg-wine-700 px-9 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-cream-50 transition-all duration-300 hover:bg-wine-600 hover:shadow-lift hover:-translate-y-0.5">
+                Envoyer la demande
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="text-xs text-taupe-400 leading-relaxed" data-i18n="contact.disclaimer">
+                En envoyant ce formulaire, vous acceptez d'être contacté au sujet de votre demande. Nous ne
+                partageons jamais vos informations.
+              </p>
+            </div>
+          </form>
+
+          <!-- Success state -->
+          <div id="formSuccess" class="hidden mt-8 rounded-2xl border border-wine-700/20 bg-wine-50 p-7 text-center">
+            <span class="grid place-items-center mx-auto w-14 h-14 rounded-full bg-wine-700 text-cream-50">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h4 class="mt-5 font-serif text-2xl text-ink-900" data-i18n="contact.successTitle">Merci — demande bien reçue.</h4>
+            <p class="mt-2 text-sm text-ink-500" data-i18n="contact.successDesc">Nous vous recontactons sous un jour ouvré à l'adresse indiquée.</p>
+            <button id="formReset" data-i18n="contact.successReset" class="mt-6 text-[12px] font-semibold uppercase tracking-[0.16em] text-wine-700 underline underline-offset-4">Envoyer une nouvelle demande</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="bg-ink-900 text-cream-200/70 pt-20 pb-10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="grid md:grid-cols-12 gap-12 pb-14 border-b border-cream-50/10">
+
+      <div class="md:col-span-5">
+        <a href="#hero" class="flex items-center gap-3 text-cream-50">
+          <span class="grid place-items-center w-10 h-10 rounded-full border border-gold-500/60">
+            <span class="font-serif text-[15px] italic text-gold-300 translate-y-[1px]">M</span>
+          </span>
+          <span class="font-serif text-xl">Studio Ma Félicité</span>
+        </a>
+        <p class="mt-5 max-w-sm text-sm leading-relaxed" data-i18n="footer.tagline">
+          Décoration événementielle et animation professionnelle, pensées ensemble dans le Marais et déployées
+          à Paris et en Île-de-France.
+        </p>
+        <p class="mt-6 font-serif italic text-gold-300/90 text-lg" data-i18n="footer.motto">Votre félicité, notre métier.</p>
+      </div>
+
+      <div class="md:col-span-2">
+        <p class="text-[10px] uppercase tracking-widest2 text-cream-50/50" data-i18n="footer.navHeader">Navigation</p>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="#about" class="hover:text-gold-300 transition" data-i18n="nav.about">Maison</a></li>
+          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="nav.services">Prestations</a></li>
+          <li><a href="#venues" class="hover:text-gold-300 transition" data-i18n="nav.venues">Adresses</a></li>
+          <li><a href="#portfolio" class="hover:text-gold-300 transition" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-gold-300 transition" data-i18n="nav.testimonials">Clients</a></li>
+          <li><a href="#contact" class="hover:text-gold-300 transition" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <p class="text-[10px] uppercase tracking-widest2 text-cream-50/50" data-i18n="footer.servicesHeader">Prestations</p>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink1">Mariages</a></li>
+          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink2">Anniversaires</a></li>
+          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink3">Conférences</a></li>
+          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink4">Animation &amp; Présentateurs</a></li>
+          <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="footer.serviceLink5">Scénographie</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="text-[10px] uppercase tracking-widest2 text-cream-50/50" data-i18n="footer.atelierHeader">Atelier</p>
+        <address class="mt-5 not-italic text-sm leading-relaxed">
+          18 Rue des Francs-Bourgeois<br />75004 Paris, France
+        </address>
+        <a href="tel:+33142607890" class="mt-3 block text-sm hover:text-gold-300 transition">+33 1 42 60 78 90</a>
+        <a href="mailto:bonjour@studiomafelicite.com" class="block text-sm hover:text-gold-300 transition break-all">bonjour@studiomafelicite.com</a>
+
+        <div class="mt-6 flex gap-2.5">
+          <a href="#" aria-label="Instagram" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.5 1.9 1.9 0 3.2-2.4 3.2-5.2 0-2.1-1.5-3.7-4.1-3.7-3 0-4.8 2.2-4.8 4.7 0 .9.3 1.5.7 2 .2.2.2.3.1.6l-.2.9c-.1.3-.3.4-.6.2-1.3-.5-1.9-2-1.9-3.6 0-2.7 2.3-6 6.8-6 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.1 6.5-1 0-2-.6-2.3-1.2l-.6 2.5c-.2.8-.7 1.8-1.1 2.4A10 10 0 1012 2z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.3V21h3.6V8.6zM5.1 3a2.1 2.1 0 100 4.2 2.1 2.1 0 000-4.2zM21 14.2c0-3.4-1.8-5-4.3-5-2 0-2.9 1.1-3.4 1.9V8.6H9.7c0 1 0 12.4 0 12.4h3.6v-6.9c0-.4 0-.7.1-1 .3-.7.9-1.5 2-1.5 1.4 0 2 1.1 2 2.7V21H21v-6.8z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="grid place-items-center w-9 h-9 rounded-full border border-cream-50/20 hover:bg-gold-500 hover:border-gold-500 hover:text-ink-900 transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7.2c0-.8.2-1.2 1.4-1.2H17V3h-2.6c-3 0-4 1.4-4 3.9V9H8v3h2.4v9H14v-9h2.6l.4-3H14z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-50/45">
+      <p>© <span id="year">2026</span> Studio Ma Félicité — studiomafelicite.com. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gold-300 transition" data-i18n="footer.legal1">Mentions légales</a>
+        <a href="#" class="hover:text-gold-300 transition" data-i18n="footer.legal2">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="toTop" class="fixed bottom-6 right-6 z-40 grid place-items-center w-12 h-12 rounded-full bg-wine-700 text-cream-50 shadow-lift opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-wine-600" aria-label="Retour en haut" data-i18n-aria="a11y.toTop">
+  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function () {
+  'use strict';
+  const $  = (s, c) => (c || document).querySelector(s);
+  const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+
+  /* ── i18n: FR default, EN / 中文 as options ──────────
+     The static HTML is French (the real fallback with JS off).
+     I18N holds the fr/en/zh strings; applyLang() swaps text via
+     textContent (data-i18n), innerHTML (data-i18n-html, for nodes
+     with nested <br>/<em>/<sup>/<span> markup), placeholders
+     (data-i18n-ph) and aria-labels (data-i18n-aria). */
+  const I18N = {
+    fr: {
+      meta: { title: "Studio Ma Félicité — Décoration événementielle & Animation à Paris",
+              description: "Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages, anniversaires et conférences d'entreprise." },
+      a11y: { skipLink:"Aller au contenu", primaryNav:"Navigation principale", mobileNav:"Navigation mobile",
+              marquee:"Lieux et partenaires sélectionnés", filterPortfolio:"Filtrer le portfolio",
+              testimonialSlides:"Diapositives de témoignages", toTop:"Retour en haut",
+              openMenu:"Ouvrir le menu", closeMenu:"Fermer le menu" },
+      nav: { about:"Maison", services:"Prestations", venues:"Adresses", portfolio:"Portfolio",
+             testimonials:"Clients", contact:"Contact", bookCta:"Réserver un rendez-vous" },
+      hero: {
+        kicker:"Décoration & Animation · Paris",
+        title:`Transformer chaque instant<br class="hidden sm:block" /> en un souvenir <em class="italic text-gold-300">inoubliable</em>`,
+        subtitle:`Un atelier parisien où la <strong class="font-semibold text-cream-50">décoration sur mesure</strong> et l'<strong class="font-semibold text-cream-50">animation professionnelle</strong> sont pensées ensemble — pour que chaque table, chaque lumière et chaque mot au micro racontent la même histoire.`,
+        ctaSecondary:"Voir notre portfolio",
+        trustText:"Plus de 150 événements réalisés en Île-de-France",
+        cardKicker:"Deux savoir-faire. Une seule équipe.",
+        cardTitle:`La salle, c'est nous.<br />La soirée, c'est nous aussi.`,
+        card:{ item1:{title:"Scénographie & Décoration", desc:"Fleurs, éclairage, art de la table, signalétique."},
+               item2:{title:"Animation & Maîtrise de cérémonie", desc:"Présentateurs bilingues FR/EN, déroulé, énergie en direct."},
+               item3:{title:"Paris & Île-de-France", desc:"Hôtels particuliers, châteaux, rooftops, salons."} },
+        exploreServices:"Découvrir nos prestations"
+      },
+      about: {
+        yearsBadge:"Ans à Paris", kicker:"La Maison",
+        title:`Le décor pose le cadre.<br /><em class="italic text-wine-700">L'animation</em> lui donne vie.`,
+        p1:"La plupart des événements sont assemblés à partir d'éléments qui ne se sont jamais rencontrés. Un fleuriste ici, un scénographe là, un présentateur qui reçoit le déroulé la veille au soir. Les invités sentent les coutures — une salle magnifique où rien ne se passe vraiment, ou un animateur plein de vie dans un lieu qui ne raconte rien.",
+        p2:`Studio Ma Félicité a été fondé dans le 4<sup>e</sup> arrondissement pour combler cet écart. Nous concevons la salle et menons la soirée, à partir du même brief et de la même équipe. La lumière change au moment exact du discours. Les centres de table disparaissent avant la première danse. Rien n'est improvisé, et pourtant tout semble couler de source.`,
+        quote:"« Un seul studio, une seule vision — du premier croquis à la dernière annonce. »",
+        founderTitle:"Fondatrice & Directrice de création",
+        stat1:"Événements réalisés", stat2:"Clients satisfaits", stat3:"Années d'expérience", stat4:"Lieux partenaires"
+      },
+      services: {
+        kicker:"Nos Prestations",
+        title:`Décoration et animation,<br class="hidden sm:block" /> un seul devis.`,
+        subtitle:"Chaque prestation comprend une phase de conception et une phase de scène. Prenez les deux, ou seulement celle qui vous manque — le studio s'adapte à ce que votre événement a déjà.",
+        badge1:"01 — Mariages", title1:"Mariages",
+        desc1:"Décor floral et scénographie sur mesure autour de votre palette, associés à un animateur charismatique qui guide la cérémonie, les entrées et la réception sans jamais voler la vedette.",
+        bullet1a:"Design floral, arches & art de la table", bullet1b:"Éclairage d'ambiance & architectural", bullet1c:"Maître de cérémonie bilingue FR/EN",
+        badge2:"02 — Anniversaires", title2:"Anniversaires",
+        desc2:"D'un dîner intime pour douze personnes à un grand gala de noces d'or, nous construisons le décor puis menons le déroulé — toasts, hommages, surprises et gâteau, tout arrive au bon moment.",
+        bullet2a:"Décors intimistes & grand format", bullet2b:"Coordination du déroulé festif", bullet2c:"Animation dynamique, jeux & hommages familiaux",
+        badge3:"03 — Corporate", title3:"Conférences & Entreprises",
+        desc3:"Une scénographie soignée à l'image de votre marque, avec des présentateurs posés qui introduisent les intervenants, animent les tables rondes et tiennent un programme d'une journée entière à la minute près.",
+        bullet3a:"Scénographie de scène et décor de marque", bullet3b:"Accueil, espace lounge & habillage du dîner de gala", bullet3c:"Présentateurs, animation de tables rondes & déroulé",
+        cta:"Demander un devis",
+        step1Label:"Étape 01", step1Title:"Consultation", step1Desc:"Une session de 60 minutes dans notre atelier du Marais ou en visioconférence, sans engagement.",
+        step2Label:"Étape 02", step2Title:"Conception & Script", step2Desc:"Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.",
+        step3Label:"Étape 03", step3Title:"Installation", step3Desc:"Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.",
+        step4Label:"Étape 04", step4Title:"Le Grand Soir", step4Desc:"Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité."
+      },
+      venues: {
+        kicker:"Nos Adresses",
+        title:`Quatre adresses que nous<br class="hidden sm:block" /> connaissons mieux que personne.`,
+        subtitle:"Au-delà de la décoration et de l'animation, nous entretenons des relations de longue date avec une liste restreinte de lieux parisiens — synonyme d'accès facilité, de moins de surprises, et d'un plan de salle que nous connaissons déjà par cœur.",
+        badgePartner:"Partenaire", badgeExclusive:"Exclusivité",
+        guests1:"Yvelines · jusqu'à 250 invités",
+        guests2:`8<sup>e</sup> arrondissement · jusqu'à 180 invités`,
+        guests3:`8<sup>e</sup> arrondissement · jusqu'à 300 invités`,
+        guests4:`8<sup>e</sup> arrondissement · jusqu'à 400 invités`,
+        cta:"Nous consulter pour un lieu précis"
+      },
+      portfolio: {
+        kicker:"Portfolio",
+        title:`Une sélection de nos réalisations,<br class="hidden sm:block" /> à Paris et au-delà.`,
+        filterAll:"Tout", filterWeddings:"Mariages", filterAnniversaries:"Anniversaires", filterConferences:"Conférences",
+        item1:{cat:"Mariage · Château de Villette", desc:"Scénographie complète + animation bilingue de cérémonie pour 180 invités."},
+        item2:{cat:"Conférence · Pavillon Gabriel"}, item3:{cat:"Anniversaire · Le Marais"},
+        item4:{cat:"Mariage · Saint-Germain"}, item5:{cat:"Entreprise · La Défense"},
+        item6:{cat:`Anniversaire · 7<sup>e</sup> Arrondissement`}, item7:{cat:"Mariage · Fontainebleau"},
+        item8:{cat:"Entreprise · Salons Hoche"},
+        empty:"Aucun projet dans cette catégorie pour le moment.", cta:"Discuter de votre événement"
+      },
+      testimonials: {
+        kicker:"Témoignages",
+        title:`Ce que nos hôtes<br class="hidden sm:block" /> disent après coup.`,
+        quote1:"« Ils ont habillé l'orangerie puis animé toute la soirée. Nos invités n'arrêtaient pas de demander qui était ce présentateur — il a fait rire toute la salle pendant le dîner, puis obtenu un silence total pendant le discours de mon père. Pas une minute de retard sur le déroulé. »",
+        quote2:"« Nous les avons réservés pour les cinquante ans de mariage de mes parents. Studio Ma Félicité a transformé une simple salle de réception en un décor de film, puis a fait vivre trois générations tout au long de la soirée — hommages, vidéo, gâteau — sans que personne ne se sente pressé. »",
+        role2:`Noces d'or · Paris 4<sup>e</sup>`,
+        quote3:"« Deux jours, neuf sessions, quatre cents délégués. Le décor était à l'image de notre marque, et la modératrice a géré l'annulation d'un intervenant avec une telle fluidité que la moitié de la salle ne s'en est même pas rendu compte. Nous les avons déjà réengagés pour l'année prochaine. »",
+        role3:"Responsable Événementiel · Horizon Tech",
+        quote4:"« L'animation bilingue est la raison pour laquelle nous les avons choisis, et ce fut sans faille — nos invités anglophones n'ont jamais eu l'impression de regarder une soirée française de l'extérieur. Le travail floral était, franchement, le plus beau que j'ai vu à Paris. »",
+        role4:"Mariage · Saint-Germain-des-Prés",
+        prevAria:"Témoignage précédent", nextAria:"Témoignage suivant", dotAria:"Aller au témoignage {n}"
+      },
+      contact: {
+        kicker:"Contact & Réservation",
+        title:`Organisons votre<br /><em class="italic text-wine-700">grande soirée</em>.`,
+        subtitle:"Indiquez-nous la date, le lieu et l'ambiance recherchée. Nous répondons sous un jour ouvré avec nos disponibilités et un budget indicatif — sans engagement.",
+        phoneLabel:"Téléphone", phoneHours:"Lun–Sam, 9h – 19h (heure de Paris)",
+        emailLabel:"Email", emailResponse:"Réponse sous 24 h",
+        addressLabel:"Atelier", addressDesc:"75004 Paris, France — nous intervenons à Paris & en Île-de-France, et nous déplaçons partout en France sur demande.",
+        followUs:"Suivez-nous",
+        formTitle:"Demander une consultation",
+        formRequiredNote:`Les champs marqués <span class="text-wine-700">*</span> sont obligatoires.`,
+        labelName:`Nom complet <span class="text-wine-700">*</span>`, placeholderName:"Camille Béranger", errName:"Merci de renseigner votre nom.",
+        labelEmail:`Email <span class="text-wine-700">*</span>`, placeholderEmail:"camille@exemple.fr", errEmail:"Merci de renseigner une adresse email valide.",
+        labelDate:"Date de l'événement",
+        labelType:`Type d'événement <span class="text-wine-700">*</span>`, errType:"Merci de sélectionner un type d'événement.",
+        optChoose:"Veuillez choisir…", optWedding:"Mariage", optAnniversary:"Anniversaire / Occasion spéciale",
+        optConference:"Conférence / Entreprise", optPrivate:"Dîner privé ou cocktail", optOther:"Autre",
+        needLabel:"De quoi avez-vous besoin ?", needDecoration:"Décoration", needHosting:"Animation / Maître de cérémonie", needBoth:"Les deux",
+        labelMessage:`Message <span class="text-wine-700">*</span>`, placeholderMessage:"Lieu, nombre d'invités, l'ambiance que vous imaginez…", errMessage:"Merci d'ajouter quelques mots sur votre événement.",
+        submit:"Envoyer la demande",
+        disclaimer:"En envoyant ce formulaire, vous acceptez d'être contacté au sujet de votre demande. Nous ne partageons jamais vos informations.",
+        successTitle:"Merci — demande bien reçue.", successDesc:"Nous vous recontactons sous un jour ouvré à l'adresse indiquée.", successReset:"Envoyer une nouvelle demande"
+      },
+      footer: {
+        tagline:"Décoration événementielle et animation professionnelle, pensées ensemble dans le Marais et déployées à Paris et en Île-de-France.",
+        motto:"Votre félicité, notre métier.",
+        navHeader:"Navigation", servicesHeader:"Prestations",
+        serviceLink1:"Mariages", serviceLink2:"Anniversaires", serviceLink3:"Conférences", serviceLink4:"Animation & Présentateurs", serviceLink5:"Scénographie",
+        atelierHeader:"Atelier", rights:"Tous droits réservés.", legal1:"Mentions légales", legal2:"Politique de confidentialité"
+      }
+    },
+
+    en: {
+      meta: { title: "Studio Ma Félicité — Event Decoration & Hosting in Paris",
+              description: "Studio Ma Félicité is a Paris-based event house pairing bespoke decoration with professional hosting and MC services for weddings, anniversaries and corporate conferences." },
+      a11y: { skipLink:"Skip to content", primaryNav:"Primary", mobileNav:"Mobile",
+              marquee:"Selected venues and partners", filterPortfolio:"Filter portfolio",
+              testimonialSlides:"Testimonial slides", toTop:"Back to top",
+              openMenu:"Open menu", closeMenu:"Close menu" },
+      nav: { about:"About", services:"Services", venues:"Venues", portfolio:"Portfolio",
+             testimonials:"Testimonials", contact:"Contact", bookCta:"Book a Consultation" },
+      hero: {
+        kicker:"Decoration & Hosting · Paris",
+        title:`Transforming Moments<br class="hidden sm:block" /> into <em class="italic text-gold-300">Unforgettable</em> Memories`,
+        subtitle:`A Parisian atelier where <strong class="font-semibold text-cream-50">bespoke decoration</strong> and <strong class="font-semibold text-cream-50">professional hosting</strong> are designed together — so every table, every light and every word on the microphone belongs to the same story.`,
+        ctaSecondary:"View Our Portfolio",
+        trustText:"Trusted by 150+ hosts across Île-de-France",
+        cardKicker:"Two crafts. One team.",
+        cardTitle:`The room is set by us.<br />The evening is led by us.`,
+        card:{ item1:{title:"Scenography & Decoration", desc:"Florals, lighting design, tabletop, signage."},
+               item2:{title:"Hosting & MC Services", desc:"Bilingual FR/EN presenters, run-of-show, live energy."},
+               item3:{title:"Paris & Île-de-France", desc:"Hôtels particuliers, châteaux, rooftops, salons."} },
+        exploreServices:"Explore services"
+      },
+      about: {
+        yearsBadge:"Years in Paris", kicker:"La Maison",
+        title:`Decor sets the scene.<br /><em class="italic text-wine-700">Hosting</em> makes it move.`,
+        p1:"Most events are assembled from parts that never met. A florist here, a stage designer there, a presenter who receives the running order the night before. The guests feel the seams — a beautiful room where nothing quite happens, or a lively host in a space that says nothing.",
+        p2:`Studio Ma Félicité was founded in the 4<sup>e</sup> arrondissement to close that gap. We design the room and we lead the evening, from the same brief and the same team. The lighting cue lands with the speech. The centrepieces clear before the first dance. Nothing is improvised, and yet everything feels effortless.`,
+        quote:"“One studio, one vision — from the first sketch to the last announcement.”",
+        founderTitle:"Founder & Creative Director",
+        stat1:"Events Completed", stat2:"Client Satisfaction", stat3:"Years of Experience", stat4:"Partner Venues"
+      },
+      services: {
+        kicker:"Our Services",
+        title:`Decoration and hosting,<br class="hidden sm:block" /> quoted as one.`,
+        subtitle:"Every engagement includes a design phase and a stage phase. Take both, or take the one you're missing — the studio adapts to what your event already has.",
+        badge1:"01 — Weddings", title1:"Weddings",
+        desc1:"Bespoke floral and venue decor built around your palette, paired with a charismatic host who guides the ceremony, the entrances and the reception without ever stealing the moment.",
+        bullet1a:"Floral design, arches & tablescapes", bullet1b:"Ambient & architectural lighting", bullet1c:"Bilingual FR/EN ceremony & reception MC",
+        badge2:"02 — Anniversaries", title2:"Anniversaries",
+        desc2:"From an intimate dinner for twelve to a grand golden-anniversary gala, we build the setting and then run the timeline — toasts, tributes, surprises and the cake, all landing on cue.",
+        bullet2a:"Intimate & large-format decor setups", bullet2b:"Celebratory timeline coordination", bullet2c:"Dynamic MCing, games & family tributes",
+        badge3:"03 — Corporate", title3:"Conferences & Corporate",
+        desc3:"Polished stage design that carries your brand, with articulate presenters who introduce speakers, moderate panels and keep a full-day schedule running to the minute.",
+        bullet3a:"Stage, scenic & branded set design", bullet3b:"Registration, lounge & gala dinner styling", bullet3c:"Presenters, panel moderation & run-of-show",
+        cta:"Request a quote",
+        step1Label:"Step 01", step1Title:"Consultation", step1Desc:"A 60-minute session in our Marais studio or by video, free of charge.",
+        step2Label:"Step 02", step2Title:"Design & Script", step2Desc:"Mood boards, floor plans and the full run-of-show, delivered together.",
+        step3Label:"Step 03", step3Title:"Installation", step3Desc:"Our crew dresses the venue and rehearses cues with your suppliers.",
+        step4Label:"Step 04", step4Title:"The Big Night", step4Desc:"We host, we watch the clock, and you spend the night as a guest."
+      },
+      venues: {
+        kicker:"Our Venues",
+        title:`Four addresses we know<br class="hidden sm:block" /> better than anyone.`,
+        subtitle:"Beyond decoration and hosting, we hold long-standing relationships with a short list of Parisian venues — which means faster access, fewer surprises, and a floor plan we already know by heart.",
+        badgePartner:"Partner", badgeExclusive:"Exclusive",
+        guests1:"Yvelines · up to 250 guests",
+        guests2:`8<sup>th</sup> arrondissement · up to 180 guests`,
+        guests3:`8<sup>th</sup> arrondissement · up to 300 guests`,
+        guests4:`8<sup>th</sup> arrondissement · up to 400 guests`,
+        cta:"Ask about a specific venue"
+      },
+      portfolio: {
+        kicker:"Portfolio",
+        title:`Selected work<br class="hidden sm:block" /> from Paris and beyond.`,
+        filterAll:"All", filterWeddings:"Weddings", filterAnniversaries:"Anniversaries", filterConferences:"Conferences",
+        item1:{cat:"Wedding · Château de Villette", desc:"Full scenography + bilingual ceremony hosting for 180 guests."},
+        item2:{cat:"Conference · Pavillon Gabriel"}, item3:{cat:"Anniversary · Le Marais"},
+        item4:{cat:"Wedding · Saint-Germain"}, item5:{cat:"Corporate · La Défense"},
+        item6:{cat:`Anniversary · 7<sup>th</sup> Arrondissement`}, item7:{cat:"Wedding · Fontainebleau"},
+        item8:{cat:"Corporate · Salons Hoche"},
+        empty:"No projects in this category yet.", cta:"Discuss your event"
+      },
+      testimonials: {
+        kicker:"Testimonials",
+        title:`What our hosts<br class="hidden sm:block" /> say afterwards.`,
+        quote1:"“They dressed the orangery and then hosted the whole evening. Our guests kept asking who the presenter was — he had the room laughing during dinner and completely silent during my father's speech. Not one minute of the timeline slipped.”",
+        quote2:"“We booked them for my parents' fiftieth. Studio Ma Félicité turned a plain reception room into something out of a film, then carried three generations through the evening — tributes, the video, the cake — without anyone feeling rushed.”",
+        role2:`Golden Anniversary · Paris 4<sup>th</sup>`,
+        quote3:"“Two days, nine sessions, four hundred delegates. The set looked like our brand, and the moderator handled a speaker cancellation so smoothly that half the room never noticed. We have already signed them for next year.”",
+        role3:"Head of Events · Horizon Tech",
+        quote4:"“Bilingual hosting was the reason we chose them, and it was flawless — our English guests never felt like they were watching a French evening from the outside. The floral work was, frankly, the most beautiful I have seen in Paris.”",
+        role4:"Wedding · Saint-Germain-des-Prés",
+        prevAria:"Previous testimonial", nextAria:"Next testimonial", dotAria:"Go to testimonial {n}"
+      },
+      contact: {
+        kicker:"Contact & Booking",
+        title:`Let's plan your<br /><em class="italic text-wine-700">grand soir</em>.`,
+        subtitle:"Tell us the date, the venue and the feeling you're after. We reply within one working day with availability and an indicative budget — no obligation.",
+        phoneLabel:"Phone", phoneHours:"Mon–Sat, 9:00 – 19:00 CET",
+        emailLabel:"Email", emailResponse:"We reply within 24 hours",
+        addressLabel:"Studio", addressDesc:"75004 Paris, France — serving Paris & Île-de-France, travelling nationwide on request.",
+        followUs:"Follow Us",
+        formTitle:"Request a consultation",
+        formRequiredNote:`Fields marked <span class="text-wine-700">*</span> are required.`,
+        labelName:`Full name <span class="text-wine-700">*</span>`, placeholderName:"Camille Béranger", errName:"Please tell us your name.",
+        labelEmail:`Email <span class="text-wine-700">*</span>`, placeholderEmail:"camille@example.com", errEmail:"Please enter a valid email address.",
+        labelDate:"Event date",
+        labelType:`Event type <span class="text-wine-700">*</span>`, errType:"Please select an event type.",
+        optChoose:"Please choose…", optWedding:"Wedding", optAnniversary:"Anniversary / Milestone",
+        optConference:"Conference / Corporate", optPrivate:"Private dinner or cocktail", optOther:"Other",
+        needLabel:"What do you need?", needDecoration:"Decoration", needHosting:"Hosting / MC", needBoth:"Both",
+        labelMessage:`Message <span class="text-wine-700">*</span>`, placeholderMessage:"Venue, guest count, the atmosphere you have in mind…", errMessage:"Please add a few words about your event.",
+        submit:"Send request",
+        disclaimer:"By sending you agree to be contacted about your enquiry. We never share your details.",
+        successTitle:"Merci — request received.", successDesc:"We'll be in touch within one working day at the address you gave us.", successReset:"Send another request"
+      },
+      footer: {
+        tagline:"Event decoration and professional hosting, designed together in the Marais and delivered across Paris and Île-de-France.",
+        motto:"Your happiness, our craft.",
+        navHeader:"Navigate", servicesHeader:"Services",
+        serviceLink1:"Weddings", serviceLink2:"Anniversaries", serviceLink3:"Conferences", serviceLink4:"MC & Presenters", serviceLink5:"Stage Design",
+        atelierHeader:"Studio", rights:"All rights reserved.", legal1:"Legal Notice", legal2:"Privacy Policy"
+      }
+    },
+
+    zh: {
+      meta: { title: "Studio Ma Félicité — 巴黎婚庆装饰与主持服务",
+              description: "Studio Ma Félicité 是一家总部位于巴黎的活动策划工作室，将定制装饰与专业主持相结合，服务于婚礼、纪念日庆典与企业会议。" },
+      a11y: { skipLink:"跳至内容", primaryNav:"主导航", mobileNav:"移动端导航",
+              marquee:"精选场地与合作伙伴", filterPortfolio:"筛选作品集",
+              testimonialSlides:"客户评价轮播", toTop:"返回顶部",
+              openMenu:"打开菜单", closeMenu:"关闭菜单" },
+      nav: { about:"关于我们", services:"服务项目", venues:"场地", portfolio:"作品集",
+             testimonials:"客户评价", contact:"联系我们", bookCta:"预约咨询" },
+      hero: {
+        kicker:"婚庆布置与主持 · 巴黎",
+        title:`将每个瞬间<br class="hidden sm:block" />化为<em class="italic text-gold-300">难忘</em>的回忆`,
+        subtitle:`巴黎工作室将<strong class="font-semibold text-cream-50">定制装饰</strong>与<strong class="font-semibold text-cream-50">专业主持</strong>融为一体——每张桌布、每束灯光、每一句主持词，都在讲述同一个故事。`,
+        ctaSecondary:"查看作品集",
+        trustText:"已为150+场活动服务，覆盖法兰西岛地区",
+        cardKicker:"双重专长，一支团队",
+        cardTitle:`场地由我们布置，<br />当晚也由我们主持。`,
+        card:{ item1:{title:"场景设计与布置", desc:"花艺、灯光设计、桌面陈设、指示标牌。"},
+               item2:{title:"主持与司仪服务", desc:"法英双语主持人，流程掌控，现场氛围。"},
+               item3:{title:"巴黎及法兰西岛地区", desc:"私人官邸、城堡、屋顶露台、宴会厅。"} },
+        exploreServices:"了解服务详情"
+      },
+      about: {
+        yearsBadge:"扎根巴黎", kicker:"关于工作室",
+        title:`布置奠定场景，<br /><em class="italic text-wine-700">主持</em>赋予其生命。`,
+        p1:"多数活动是由从未真正合作过的环节拼凑而成：这边一位花艺师，那边一位舞台设计师，主持人前一晚才拿到流程表。宾客能感受到这些接缝——华丽的空间里什么都没真正发生，或是活跃的主持人置身于毫无氛围的场地。",
+        p2:"Studio Ma Félicité 在巴黎第四区成立，正是为了填补这道裂缝。我们用同一份创意简报、同一支团队，来设计场地并主持整场活动。灯光的变化恰好踩在致辞的节点上，桌面摆设在第一支舞前悄然撤下。一切并非临场发挥，却处处显得毫不费力。",
+        quote:"「一个工作室，一种愿景——从第一张草图到最后一句宣布。」",
+        founderTitle:"创始人兼创意总监",
+        stat1:"已完成活动", stat2:"客户满意度", stat3:"从业年数", stat4:"合作场地"
+      },
+      services: {
+        kicker:"我们的服务",
+        title:`装饰与主持，<br class="hidden sm:block" />一份报价搞定。`,
+        subtitle:"每一次合作都包含设计阶段与现场主持阶段。两者皆选，或只选您欠缺的那一项——工作室会根据您活动的现有条件灵活调整。",
+        badge1:"01 — 婚礼", title1:"婚礼",
+        desc1:"围绕您的色彩基调打造定制花艺与场地布置，并配备一位魅力主持人，从容引导仪式、入场与晚宴环节，却从不喧宾夺主。",
+        bullet1a:"花艺设计、拱门造景与桌面陈设", bullet1b:"氛围灯光与建筑照明", bullet1c:"法英双语司仪，覆盖仪式与晚宴",
+        badge2:"02 — 纪念日", title2:"纪念日",
+        desc2:"无论是十二人的私密晚宴，还是盛大的金婚庆典，我们都会先搭建场景，再主持全程节奏——祝酒、致敬、惊喜与切蛋糕，每一刻都恰逢其时。",
+        bullet2a:"私密与大型布置皆可", bullet2b:"庆典流程统筹协调", bullet2c:"活力主持、互动游戏与家庭致敬环节",
+        badge3:"03 — 企业活动", title3:"会议与企业活动",
+        desc3:"精心打造契合品牌形象的舞台设计，配备沉稳专业的主持人负责嘉宾介绍、圆桌讨论主持，并将全天流程精准把控到每一分钟。",
+        bullet3a:"舞台美术与品牌视觉设计", bullet3b:"签到区、休息区与晚宴布置", bullet3c:"主持人、圆桌讨论与流程掌控",
+        cta:"获取报价",
+        step1Label:"步骤 01", step1Title:"咨询洽谈", step1Desc:"在我们位于玛黑区的工作室或通过视频进行60分钟免费沟通。",
+        step2Label:"步骤 02", step2Title:"设计与流程脚本", step2Desc:"灵感板、场地平面图与完整流程脚本一并交付。",
+        step3Label:"步骤 03", step3Title:"现场布置", step3Desc:"我们的团队负责现场布置，并与您的其他供应商彩排流程衔接。",
+        step4Label:"步骤 04", step4Title:"活动当晚", step4Desc:"我们主持全场、把控时间，您只需以宾客身份尽情享受当晚。"
+      },
+      venues: {
+        kicker:"合作场地",
+        title:`四个我们比任何人<br class="hidden sm:block" />都更熟悉的场地。`,
+        subtitle:"除了装饰与主持，我们与少数几处巴黎场地保持着长期合作关系——这意味着更快捷的进场安排、更少的意外状况，以及我们早已烂熟于心的场地平面图。",
+        badgePartner:"合作场地", badgeExclusive:"独家场地",
+        guests1:"伊夫林省 · 最多250位宾客",
+        guests2:"第8区 · 最多180位宾客",
+        guests3:"第8区 · 最多300位宾客",
+        guests4:"第8区 · 最多400位宾客",
+        cta:"咨询特定场地"
+      },
+      portfolio: {
+        kicker:"作品集",
+        title:`精选作品，<br class="hidden sm:block" />源自巴黎，遍及各地。`,
+        filterAll:"全部", filterWeddings:"婚礼", filterAnniversaries:"纪念日", filterConferences:"会议活动",
+        item1:{cat:"婚礼 · 维莱特城堡", desc:"全场景布置，配双语司仪，服务180位宾客。"},
+        item2:{cat:"会议 · 加布里埃尔馆"}, item3:{cat:"纪念日 · 玛黑区"},
+        item4:{cat:"婚礼 · 圣日耳曼"}, item5:{cat:"企业活动 · 拉德芳斯"},
+        item6:{cat:"纪念日 · 第7区"}, item7:{cat:"婚礼 · 枫丹白露"},
+        item8:{cat:"企业活动 · 奥什厅"},
+        empty:"该类别暂无项目。", cta:"咨询您的活动"
+      },
+      testimonials: {
+        kicker:"客户评价",
+        title:`活动结束后，<br class="hidden sm:block" />他们这样说。`,
+        quote1:"「他们布置了整个温室花房，还主持了整晚的活动。宾客们一直在问那位主持人是谁——晚宴时他逗得全场大笑，而在我父亲致辞时又能让全场安静下来。整个流程没有一分钟延误。」",
+        quote2:"「我们为父母的金婚请了他们。Studio Ma Félicité 把一间普通的宴会厅变成了电影般的场景，又带着三代人一起走过整个夜晚——致敬环节、影片播放、切蛋糕，每个人都不觉得匆忙。」",
+        role2:"金婚庆典 · 巴黎第4区",
+        quote3:"「两天时间，九场分会，四百位代表。现场布置完全契合我们的品牌形象，主持人从容应对一位嘉宾临时取消，全场几乎无人察觉。我们已经确定明年继续合作。」",
+        role3:"活动负责人 · Horizon Tech",
+        quote4:"「选择他们正是因为双语主持服务，而且表现完美无缺——我们的英语宾客完全没有置身事外的感觉。花艺布置更是我在巴黎见过最美的。」",
+        role4:"婚礼 · 圣日耳曼德佩区",
+        prevAria:"上一条评价", nextAria:"下一条评价", dotAria:"查看第 {n} 条评价"
+      },
+      contact: {
+        kicker:"联系与预约",
+        title:`让我们一起筹备<br /><em class="italic text-wine-700">您的盛大夜晚</em>。`,
+        subtitle:"请告诉我们活动日期、场地与您期望的氛围。我们将在一个工作日内回复，提供档期与预估预算——无任何强制义务。",
+        phoneLabel:"电话", phoneHours:"周一至周六 9:00–19:00（巴黎时间）",
+        emailLabel:"邮箱", emailResponse:"24小时内回复",
+        addressLabel:"工作室地址", addressDesc:"法国巴黎75004 — 服务范围覆盖巴黎及法兰西岛地区，亦可应要求前往法国各地。",
+        followUs:"关注我们",
+        formTitle:"预约咨询",
+        formRequiredNote:`标有 <span class="text-wine-700">*</span> 的字段为必填项。`,
+        labelName:`姓名 <span class="text-wine-700">*</span>`, placeholderName:"王小雅", errName:"请填写您的姓名。",
+        labelEmail:`邮箱 <span class="text-wine-700">*</span>`, placeholderEmail:"wang@example.com", errEmail:"请输入有效的邮箱地址。",
+        labelDate:"活动日期",
+        labelType:`活动类型 <span class="text-wine-700">*</span>`, errType:"请选择活动类型。",
+        optChoose:"请选择…", optWedding:"婚礼", optAnniversary:"纪念日 / 重要庆典",
+        optConference:"会议 / 企业活动", optPrivate:"私人晚宴或酒会", optOther:"其他",
+        needLabel:"您需要哪些服务？", needDecoration:"装饰布置", needHosting:"主持 / 司仪", needBoth:"两者皆需",
+        labelMessage:`留言 <span class="text-wine-700">*</span>`, placeholderMessage:"场地、宾客人数、您心目中的氛围……", errMessage:"请简单描述一下您的活动。",
+        submit:"发送请求",
+        disclaimer:"提交即表示您同意我们就此咨询与您联系。我们绝不会分享您的个人信息。",
+        successTitle:"感谢您 — 我们已收到您的请求。", successDesc:"我们将在一个工作日内通过您提供的邮箱与您联系。", successReset:"再次发送请求"
+      },
+      footer: {
+        tagline:"婚庆装饰与专业主持，源自玛黑区的同一支团队构思，服务巴黎及法兰西岛地区。",
+        motto:"成就您的幸福，是我们的使命。",
+        navHeader:"导航", servicesHeader:"服务项目",
+        serviceLink1:"婚礼", serviceLink2:"纪念日", serviceLink3:"会议活动", serviceLink4:"主持与司仪", serviceLink5:"舞台设计",
+        atelierHeader:"工作室", rights:"版权所有。", legal1:"法律声明", legal2:"隐私政策"
+      }
+    }
+  };
+
+  function getPath(obj, path) {
+    return path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
+  }
+
+  let currentLang = 'fr';
+
+  function applyLang(lang) {
+    if (!I18N[lang]) return;
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    const dict = I18N[lang];
+    $$('[data-i18n]').forEach(el => {
+      const v = getPath(dict, el.dataset.i18n);
+      if (v != null) el.textContent = v;
+    });
+    $$('[data-i18n-html]').forEach(el => {
+      const v = getPath(dict, el.dataset.i18nHtml);
+      if (v != null) el.innerHTML = v;
+    });
+    $$('[data-i18n-ph]').forEach(el => {
+      const v = getPath(dict, el.dataset.i18nPh);
+      if (v != null) el.placeholder = v;
+    });
+    $$('[data-i18n-aria]').forEach(el => {
+      const v = getPath(dict, el.dataset.i18nAria);
+      if (v != null) el.setAttribute('aria-label', v);
+    });
+
+    if (dict.meta) {
+      document.title = dict.meta.title;
+      const metaDesc = $('#metaDescription');
+      if (metaDesc) metaDesc.setAttribute('content', dict.meta.description);
+    }
+
+    $$('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+
+    // Sync the burger's open/close aria-label — it's otherwise only touched on click.
+    const burgerEl = $('#burger');
+    if (burgerEl) burgerEl.setAttribute('aria-label', dict.a11y[typeof mobileOpen !== 'undefined' && mobileOpen ? 'closeMenu' : 'openMenu']);
+
+    // Rebuild dot aria-labels (they're generated dynamically by the carousel).
+    if (typeof buildDots === 'function') buildDots();
+
+    try { localStorage.setItem('smf-lang', lang); } catch (e) {}
+  }
+
+  $$('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+
+  /* ── Year ───────────────────────────────────────── */
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ── Hero background video ──────────────────────────
+     The <img> is the real background by default (fast, always works).
+     On capable connections and without prefers-reduced-motion, swap in a
+     muted looping video for a more cinematic hero — same pattern as
+     idf-evenements.com's homepage. */
+  (function initHeroVideo() {
+    const bg = $('#heroBg'), img = $('#heroImg');
+    if (!bg || !img) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const saveData = navigator.connection && (navigator.connection.saveData ||
+      /2g/.test(navigator.connection.effectiveType || ''));
+    if (reduceMotion || saveData) return;
+
+    const video = document.createElement('video');
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'auto';
+    video.setAttribute('aria-hidden', 'true');
+    video.className = img.className.replace('animate-slowZoom', '') + ' absolute inset-0';
+    video.poster = img.src;
+
+    const source = document.createElement('source');
+    source.src = 'images/hero-bg.mp4';
+    source.type = 'video/mp4';
+    video.appendChild(source);
+
+    // Only swap once the video actually has enough data to play through —
+    // if the fetch fails or stalls, the static image just stays put.
+    video.addEventListener('canplaythrough', () => {
+      bg.appendChild(video);
+      video.play().catch(() => {});
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 1.2s ease';
+    }, { once: true });
+  })();
+
+  /* ── Navigation: scroll state ───────────────────── */
+  const nav = $('#nav'), navInner = $('#navInner'), navLinks = $$('#navLinks a');
+  const LIGHT = ['text-cream-50'];
+  const SOLID = ['bg-cream-50/92','backdrop-blur-xl','shadow-soft','text-ink-900'];
+
+  function paintNav() {
+    const solid = window.scrollY > 40 || mobileOpen;
+    nav.classList.toggle('text-cream-50', !solid);
+    SOLID.forEach(c => nav.classList.toggle(c, solid));
+    navInner.classList.toggle('h-16', solid);
+    navInner.classList.toggle('lg:h-20', solid);
+  }
+  nav.classList.add(...LIGHT);
+
+  /* ── Mobile menu ────────────────────────────────── */
+  const burger = $('#burger'), menu = $('#mobileMenu');
+  let mobileOpen = false;
+
+  function setMenu(open) {
+    mobileOpen = open;
+    menu.style.maxHeight = open ? menu.scrollHeight + 'px' : '0px';
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', I18N[currentLang].a11y[open ? 'closeMenu' : 'openMenu']);
+    document.body.style.overflow = open ? 'hidden' : '';
+    const [b1, b2, b3] = $$('[data-bar]', burger);
+    b1.style.transform = open ? 'translateY(6.5px) rotate(45deg)'   : '';
+    b2.style.opacity   = open ? '0' : '1';
+    b3.style.transform = open ? 'translateY(-6.5px) rotate(-45deg)' : '';
+    paintNav();
+  }
+  burger.addEventListener('click', () => setMenu(!mobileOpen));
+  $$('.mob-link').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && mobileOpen) setMenu(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 1024 && mobileOpen) setMenu(false); });
+
+  /* ── Scroll listener (rAF-throttled) ────────────── */
+  const toTop = $('#toTop');
+  let ticking = false;
+  function onScroll() {
+    paintNav();
+    const show = window.scrollY > 600;
+    toTop.classList.toggle('opacity-0', !show);
+    toTop.classList.toggle('pointer-events-none', !show);
+    toTop.classList.toggle('translate-y-3', !show);
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Smooth scroll with sticky-header offset ────── */
+  $$('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - (window.innerWidth < 1024 ? 64 : 76);
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', id);
+    });
+  });
+
+  /* ── Active section in nav ──────────────────────── */
+  const sections = ['about','services','venues','portfolio','testimonials','contact']
+    .map(id => document.getElementById(id)).filter(Boolean);
+
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + en.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => spy.observe(s));
+  }
+
+  /* ── Scroll reveal ──────────────────────────────── */
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window) {
+    const ro = new IntersectionObserver((entries, obs) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) { en.target.classList.add('is-visible'); obs.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => ro.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* ── Animated stat counters ─────────────────────── */
+  function runCount(el) {
+    const to = parseInt(el.dataset.to, 10);
+    const dur = 1600, start = performance.now();
+    (function step(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * eased);
+      if (p < 1) requestAnimationFrame(step);
+    })(start);
+  }
+  // Final values live in the HTML so they still read correctly without JS;
+  // with JS we reset to 0 and animate up.
+  const counters = $$('.count');
+  if ('IntersectionObserver' in window) {
+    counters.forEach(c => { c.textContent = '0'; });
+    const co = new IntersectionObserver((entries, obs) => {
+      entries.forEach(en => { if (en.isIntersecting) { runCount(en.target); obs.unobserve(en.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach(c => co.observe(c));
+  } else {
+    counters.forEach(c => { c.textContent = c.dataset.to; });
+  }
+
+  /* ── Portfolio filter ───────────────────────────── */
+  const items = $$('.gal-item'), empty = $('#galEmpty');
+  $$('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.filter-btn').forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const f = btn.dataset.filter;
+      let shown = 0;
+      items.forEach(it => {
+        const match = f === 'all' || it.dataset.cat === f;
+        it.classList.toggle('is-hidden', !match);
+        if (match) {
+          shown++;
+          it.style.opacity = '0';
+          it.style.transform = 'translateY(14px)';
+          requestAnimationFrame(() => {
+            it.style.opacity = '1';
+            it.style.transform = 'none';
+          });
+        }
+      });
+      empty.classList.toggle('hidden', shown > 0);
+    });
+  });
+
+  /* ── Testimonial carousel ───────────────────────── */
+  const track = $('#track'), slides = $$('.slide', track), dotsWrap = $('#dots');
+  let index = 0, timer = null;
+
+  const perView = () => (window.innerWidth >= 1024 ? 3 : 1);
+  const maxIndex = () => Math.max(0, slides.length - perView());
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i <= maxIndex(); i++) {
+      const d = document.createElement('button');
+      d.className = 'h-1.5 rounded-full transition-all duration-300';
+      d.setAttribute('role', 'tab');
+      d.setAttribute('aria-label', I18N[currentLang].testimonials.dotAria.replace('{n}', i + 1));
+      d.addEventListener('click', () => { go(i); restart(); });
+      dotsWrap.appendChild(d);
+    }
+    paintDots();
+  }
+  function paintDots() {
+    Array.from(dotsWrap.children).forEach((d, i) => {
+      const on = i === index;
+      d.style.width = on ? '32px' : '10px';
+      d.style.background = on ? '#E3CD9F' : 'rgba(249,245,238,.28)';
+      d.setAttribute('aria-selected', String(on));
+    });
+  }
+  function go(i) {
+    index = Math.max(0, Math.min(i, maxIndex()));
+    track.style.transform = 'translateX(-' + (index * (100 / perView())) + '%)';
+    paintDots();
+  }
+  function nextSlide() { go(index >= maxIndex() ? 0 : index + 1); }
+  function prevSlide() { go(index <= 0 ? maxIndex() : index - 1); }
+
+  function restart() {
+    clearInterval(timer);
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      timer = setInterval(nextSlide, 6000);
+    }
+  }
+
+  $('#next').addEventListener('click', () => { nextSlide(); restart(); });
+  $('#prev').addEventListener('click', () => { prevSlide(); restart(); });
+
+  const viewport = $('#carouselViewport');
+  viewport.addEventListener('mouseenter', () => clearInterval(timer));
+  viewport.addEventListener('mouseleave', restart);
+
+  // Touch swipe
+  let x0 = null;
+  viewport.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 45) { dx < 0 ? nextSlide() : prevSlide(); restart(); }
+    x0 = null;
+  }, { passive: true });
+
+  let rz;
+  window.addEventListener('resize', () => {
+    clearTimeout(rz);
+    rz = setTimeout(() => { buildDots(); go(Math.min(index, maxIndex())); }, 150);
+  });
+
+  buildDots(); go(0); restart();
+
+  /* ── Booking form ───────────────────────────────── */
+  const form = $('#bookingForm'), success = $('#formSuccess');
+
+  function showError(field, on) {
+    const err = field.parentElement.querySelector('.err') ||
+                field.closest('div').parentElement.querySelector('.err');
+    if (err) err.classList.toggle('hidden', !on);
+    field.classList.toggle('border-red-400', on);
+    field.classList.toggle('border-taupe-200', !on);
+  }
+
+  function validate() {
+    let ok = true;
+    const name = $('#name'), email = $('#email'), type = $('#type'), msg = $('#message');
+
+    const checks = [
+      [name,  name.value.trim().length >= 2],
+      [email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())],
+      [type,  type.value !== ''],
+      [msg,   msg.value.trim().length >= 10]
+    ];
+    checks.forEach(([field, valid]) => {
+      showError(field, !valid);
+      if (!valid && ok) { field.focus(); ok = false; }
+      else if (!valid) ok = false;
+    });
+    return ok;
+  }
+
+  ['#name', '#email', '#type', '#message'].forEach(sel => {
+    const f = $(sel);
+    f.addEventListener('input',  () => showError(f, false));
+    f.addEventListener('change', () => showError(f, false));
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!validate()) return;
+    // Static site: no backend. Swap this for your endpoint (Formspree, Netlify Forms, etc.).
+    form.classList.add('hidden');
+    success.classList.remove('hidden');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  $('#formReset').addEventListener('click', () => {
+    form.reset();
+    $$('.err').forEach(el => el.classList.add('hidden'));
+    success.classList.add('hidden');
+    form.classList.remove('hidden');
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  /* ── Prevent past dates ─────────────────────────── */
+  const dateField = $('#date');
+  const today = new Date();
+  dateField.min = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, '0'),
+    String(today.getDate()).padStart(2, '0')
+  ].join('-');
+
+  /* ── Restore saved language (French unless the visitor chose otherwise) ── */
+  let savedLang = 'fr';
+  try { savedLang = localStorage.getItem('smf-lang') || 'fr'; } catch (e) {}
+  if (I18N[savedLang]) applyLang(savedLang);
+  else { $$('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === 'fr')); }
+})();
+</script>
+</body>
+</html>
