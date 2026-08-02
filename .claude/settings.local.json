@@ -128,7 +128,21 @@
       "Bash(cp \"photos/mmexport1785589644092.jpg\" \"images/rednote-red-silk-fans-backdrop.jpg\")",
       "Bash(cp \"photos/mmexport1785589605919.jpg\" \"images/rednote-gold-circle-floral-backdrop.jpg\")",
       "Bash(cp \"photos/mmexport1785589590283.jpg\" \"images/rednote-lilac-staircase.jpg\")",
-      "Bash(cp \"photos/mmexport1785589608189.jpg\" \"images/rednote-scarlet-canopy-mural.jpg\")"
+      "Bash(cp \"photos/mmexport1785589608189.jpg\" \"images/rednote-scarlet-canopy-mural.jpg\")",
+      "Bash(mkdir -p /tmp/rnvid)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36' -e https://www.rednote.com/ -o v1.mp4 http://sns-v27.rednotecdn.com/stream/1/110/114/01e90b7b553444ea010370019a54def4f2_114.mp4)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36' -e https://www.rednote.com/ -o v6.mp4 http://sns-v27.rednotecdn.com/stream/1/110/259/01e925e6b31b2c39010370039abc15993d_259.mp4)",
+      "Bash(ffmpeg -y -v error -i v6.mp4 -vf \"select='eq\\(n\\\\,0\\)'\" -vframes 1 v6_f0.jpg)",
+      "Bash(ffmpeg -y -v error -ss 2 -i v6.mp4 -vframes 1 v6_f2.jpg)",
+      "Bash(ffmpeg -y -v error -ss 4 -i v6.mp4 -vframes 1 v6_f4.jpg)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36' -e https://www.rednote.com/ -o v7.mp4 http://sns-v27.rednotecdn.com/stream/1/110/114/01e82dc22c49f75b0103700196f2bf861e_114.mp4)",
+      "Bash(ffmpeg -y -v error -i v7.mp4 -vf \"select='eq\\(n\\\\,0\\)'\" -vframes 1 v7_f0.jpg)",
+      "Bash(ffmpeg -y -v error -ss 2 -i v7.mp4 -vframes 1 v7_f2.jpg)",
+      "Bash(ffmpeg -y -v error -ss 4 -i v7.mp4 -vframes 1 v7_f4.jpg)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36' -e https://www.rednote.com/ -o v8.mp4 http://sns-v27.rednotecdn.com/stream/79/110/259/01e7d6e1f8251ccc01037003959f636912_259.mp4)",
+      "Bash(ffmpeg -y -v error -i v8.mp4 -vf \"select='eq\\(n\\\\,0\\)'\" -vframes 1 v8_f0.jpg)",
+      "Bash(ffmpeg -y -v error -ss 2 -i v8.mp4 -vframes 1 v8_f2.jpg)",
+      "Bash(ffmpeg -y -v error -ss 4 -i v8.mp4 -vframes 1 v8_f4.jpg)"
     ]
   }
 }
