@@ -124,7 +124,11 @@
       "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=380:267:300:0,format=rgba,pad=440:440:\\(ow-iw\\)/2:\\(oh-ih\\)/2:color=0x00000000,scale=64:64:flags=lanczos\" images/favicon.png)",
       "Bash(ffprobe -v error -show_entries stream=width,height -of csv=p=0 images/favicon.png)",
       "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=380:267:300:0,format=rgba,scale=iw*2:ih*2:flags=lanczos\" images/logo-mark-crop.png)",
-      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of csv=p=0 images/logo-mark-crop.png)"
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of csv=p=0 images/logo-mark-crop.png)",
+      "Bash(cp \"photos/mmexport1785589644092.jpg\" \"images/rednote-red-silk-fans-backdrop.jpg\")",
+      "Bash(cp \"photos/mmexport1785589605919.jpg\" \"images/rednote-gold-circle-floral-backdrop.jpg\")",
+      "Bash(cp \"photos/mmexport1785589590283.jpg\" \"images/rednote-lilac-staircase.jpg\")",
+      "Bash(cp \"photos/mmexport1785589608189.jpg\" \"images/rednote-scarlet-canopy-mural.jpg\")"
     ]
   }
 }
