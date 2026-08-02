@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title id="pageTitle">Studio Ma Félicité — Décoration événementielle &amp; Animation à Paris</title>
 <meta id="metaDescription" name="description" content="Studio Ma Félicité est une maison événementielle parisienne alliant décoration sur mesure et animation professionnelle pour mariages et anniversaires." />
-<meta name="theme-color" content="#3D0F14" />
+<meta name="theme-color" content="#3A0D16" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Studio Ma Félicité — Décoration événementielle &amp; Animation à Paris" />
@@ -23,9 +23,9 @@
     theme: {
       extend: {
         colors: {
-          cream:    { 50:'#FDFBF7', 100:'#F9F5EE', 200:'#F2EBE0', 300:'#E8DECE' },
+          cream:    { 50:'#FDFBF6', 100:'#F8F2E8', 200:'#EFE3D1', 300:'#E1D2B7' },
           taupe:    { 100:'#DED4C8', 200:'#C9BCAC', 300:'#B0A190', 400:'#8E7F6E', 500:'#6E6153' },
-          wine: { 50:'#F7ECED', 300:'#B3707A', 500:'#9B2F3A', 600:'#8F232C', 700:'#7C1E27', 900:'#3D0F14' },
+          wine: { 50:'#F6ECEC', 300:'#B5717C', 500:'#93303D', 600:'#7E232D', 700:'#6B1B26', 900:'#3A0D16' },
           gold:     { 300:'#E3CD9F', 400:'#D4B87C', 500:'#C9A96A', 600:'#A98A4E' },
           mauve:    { 500:'#8B5D73', 600:'#7A4E63', 700:'#6B4055' },
           dustyblue:{ 500:'#6B76A8', 600:'#5C6796', 700:'#4D5884' },
@@ -58,14 +58,14 @@
 
 <style>
   html { -webkit-tap-highlight-color: transparent; }
-  body { background:#FDFBF7; color:#242019; }
+  body { background:#FDFBF6; color:#242019; }
 
   /* Scroll reveal */
   .reveal { opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
   .reveal.is-visible { opacity:1; transform:none; }
 
   /* Image placeholder backdrop so a slow/failed asset still looks intentional */
-  .ph { background:linear-gradient(135deg,#E8DECE 0%,#C9BCAC 45%,#B0A190 100%); }
+  .ph { background:linear-gradient(135deg,#E1D2B7 0%,#C9BCAC 45%,#B0A190 100%); }
 
   /* Thin decorative rule */
   .rule::after { content:''; display:block; width:56px; height:1px; background:#C9A96A; margin-top:1.25rem; }
@@ -77,7 +77,7 @@
   .navlink:hover::after, .navlink.active::after { width:100%; }
 
   /* Portfolio filter */
-  .filter-btn.is-active { background:#7C1E27; color:#F9F5EE; border-color:#7C1E27; }
+  .filter-btn.is-active { background:#6B1B26; color:#F8F2E8; border-color:#6B1B26; }
 
   /* Language switch */
   .lang-btn.is-active { background:#C9A96A; color:#14110D; }
@@ -89,9 +89,9 @@
   .track { display:flex; transition:transform .7s cubic-bezier(.16,1,.3,1); }
 
   /* Form floating focus */
-  .field:focus { outline:none; border-color:#7C1E27; box-shadow:0 0 0 3px rgba(124,30,39,.10); }
+  .field:focus { outline:none; border-color:#6B1B26; box-shadow:0 0 0 3px rgba(107,27,38,.10); }
 
-  ::selection { background:#7C1E27; color:#F9F5EE; }
+  ::selection { background:#6B1B26; color:#F8F2E8; }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
@@ -133,7 +133,6 @@
       <nav class="hidden lg:flex items-center gap-9 text-[13px] uppercase tracking-[0.16em] font-medium" id="navLinks" aria-label="Navigation principale" data-i18n-aria="a11y.primaryNav">
         <a href="#about"     class="navlink" data-i18n="nav.about">Maison</a>
         <a href="#services"  class="navlink" data-i18n="nav.services">Prestations</a>
-        <a href="#venues"    class="navlink" data-i18n="nav.venues">Adresses</a>
         <a href="#portfolio" class="navlink" data-i18n="nav.portfolio">Portfolio</a>
         <a href="#testimonials" class="navlink" data-i18n="nav.testimonials">Clients</a>
         <a href="#contact"   class="navlink" data-i18n="nav.contact">Contact</a>
@@ -163,7 +162,6 @@
     <nav class="px-6 py-7 flex flex-col gap-1 text-ink-900" aria-label="Navigation mobile" data-i18n-aria="a11y.mobileNav">
       <a href="#about"        class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.about">Maison</a>
       <a href="#services"     class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.services">Prestations</a>
-      <a href="#venues"       class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.venues">Adresses</a>
       <a href="#portfolio"    class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.portfolio">Portfolio</a>
       <a href="#testimonials" class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.testimonials">Clients</a>
       <a href="#contact"      class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.contact">Contact</a>
@@ -178,14 +176,7 @@
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <section id="hero" class="relative min-h-[100svh] flex items-center overflow-hidden bg-wine-900">
-  <!-- Background: static image by default; a looping aerial-Paris video swaps in
-       via JS for visitors who haven't asked for reduced motion (see script below). -->
-  <div class="absolute inset-0 ph" id="heroBg">
-    <img src="images/hero-bg.jpg"
-         alt="" aria-hidden="true" id="heroImg"
-         class="w-full h-full object-cover animate-slowZoom" />
-  </div>
-  <div class="absolute inset-0 bg-gradient-to-br from-wine-900/88 via-wine-700/72 to-ink-900/80"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-wine-900 via-wine-700 to-ink-900"></div>
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_35%,rgba(201,169,106,.22),transparent_58%)]"></div>
 
   <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 w-full pt-32 pb-24 lg:py-36">
@@ -497,76 +488,6 @@
 </section>
 
 <!-- ══════════════════ VENUES ══════════════════ -->
-<section id="venues" class="relative py-24 sm:py-32 lg:py-36 bg-ink-900 text-cream-50 overflow-hidden">
-  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(201,169,106,.14),transparent_55%)]"></div>
-
-  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
-    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-      <div class="max-w-2xl">
-        <p class="rule text-[11px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.kicker">Nos Adresses</p>
-        <h2 class="mt-8 font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-[-0.02em]" data-i18n-html="venues.title">
-          Quatre adresses que nous<br class="hidden sm:block" /> connaissons mieux que personne.
-        </h2>
-      </div>
-      <p class="max-w-sm text-[15px] leading-relaxed text-cream-200/75" data-i18n="venues.subtitle">
-        Au-delà de la décoration et de l'animation, nous entretenons des relations de longue date avec une liste
-        restreinte de lieux parisiens — synonyme d'accès facilité, de moins de surprises, et d'un plan de salle
-        que nous connaissons déjà par cœur.
-      </p>
-    </div>
-
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-
-      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]">
-        <img src="images/rednote-chateau-purple.jpg" alt="French château wedding decor in a romantic purple palette" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgePartner">Partenaire</span>
-        <div class="absolute inset-x-0 bottom-0 p-6">
-          <h3 class="font-serif text-xl">Château de Villette</h3>
-          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n="venues.guests1">Yvelines · jusqu'à 250 invités</p>
-        </div>
-      </article>
-
-      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.08s">
-        <img src="images/venue-rooftop-gabriel.jpg" alt="Rooftop terrace overlooking Paris with the Eiffel Tower at dusk" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgeExclusive">Exclusivité</span>
-        <div class="absolute inset-x-0 bottom-0 p-6">
-          <h3 class="font-serif text-xl">Rooftop Gabriel</h3>
-          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n-html="venues.guests2">8<sup>e</sup> arrondissement · jusqu'à 180 invités</p>
-        </div>
-      </article>
-
-      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.16s">
-        <img src="images/venue-hotel-rothschild.jpg" alt="Elegant Parisian hôtel particulier courtyard entrance" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgePartner">Partenaire</span>
-        <div class="absolute inset-x-0 bottom-0 p-6">
-          <h3 class="font-serif text-xl">Hôtel Salomon<br />de Rothschild</h3>
-          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n-html="venues.guests3">8<sup>e</sup> arrondissement · jusqu'à 300 invités</p>
-        </div>
-      </article>
-
-      <article class="reveal group relative overflow-hidden rounded-[1.5rem] ph aspect-[3/4]" style="transition-delay:.24s">
-        <img src="images/rednote-salons-hoche-birthday.jpg" alt="Les Salons Hoche decorated for an 18th birthday celebration" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-        <span class="absolute top-4 left-4 rounded-full border border-gold-300/50 bg-black/40 backdrop-blur px-3.5 py-1 text-[9px] uppercase tracking-widest2 text-gold-300" data-i18n="venues.badgeExclusive">Exclusivité</span>
-        <div class="absolute inset-x-0 bottom-0 p-6">
-          <h3 class="font-serif text-xl">Les Salons Hoche</h3>
-          <p class="mt-1.5 text-xs text-cream-200/70" data-i18n-html="venues.guests4">8<sup>e</sup> arrondissement · jusqu'à 400 invités</p>
-        </div>
-      </article>
-    </div>
-
-    <div class="reveal mt-12 text-center">
-      <a href="#contact" data-i18n="venues.cta" class="inline-flex items-center gap-3 rounded-full border border-gold-300/50 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold-300 transition-all duration-300 hover:bg-gold-500 hover:text-ink-900 hover:border-gold-500">
-        Nous consulter pour un lieu précis
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════ PORTFOLIO ══════════════════ -->
 <section id="portfolio" class="py-24 sm:py-32 lg:py-40 bg-cream-50">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
@@ -891,7 +812,7 @@
         <div class="mt-10 pt-8 border-t border-taupe-100">
           <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.followUs">Suivez-nous</p>
           <div class="mt-4 flex gap-3">
-            <a href="https://www.rednote.com/user/profile/63b6a3fa0000000026011ae4?xsec_token=ABy1RzgtTyJW4dYonvTPjh_zUPnIS3vViFRxaRkA35V68=&xsec_source=pc_note" target="_blank" rel="noopener" aria-label="rednote" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
+            <a href="https://www.rednote.com/user/profile/63b6a3fa0000000026011ae4" target="_blank" rel="noopener" aria-label="rednote" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
               <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 1-2-2V5z" stroke-linejoin="round"/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 0 2-2V5z" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -1018,7 +939,6 @@
         <ul class="mt-5 space-y-3 text-sm">
           <li><a href="#about" class="hover:text-gold-300 transition" data-i18n="nav.about">Maison</a></li>
           <li><a href="#services" class="hover:text-gold-300 transition" data-i18n="nav.services">Prestations</a></li>
-          <li><a href="#venues" class="hover:text-gold-300 transition" data-i18n="nav.venues">Adresses</a></li>
           <li><a href="#portfolio" class="hover:text-gold-300 transition" data-i18n="nav.portfolio">Portfolio</a></li>
           <li><a href="#testimonials" class="hover:text-gold-300 transition" data-i18n="nav.testimonials">Clients</a></li>
           <li><a href="#contact" class="hover:text-gold-300 transition" data-i18n="nav.contact">Contact</a></li>
@@ -1086,7 +1006,7 @@
               marquee:"Lieux et partenaires sélectionnés", filterPortfolio:"Filtrer le portfolio",
               testimonialSlides:"Diapositives de témoignages", toTop:"Retour en haut",
               openMenu:"Ouvrir le menu", closeMenu:"Fermer le menu" },
-      nav: { about:"Maison", services:"Prestations", venues:"Adresses", portfolio:"Portfolio",
+      nav: { about:"Maison", services:"Prestations", portfolio:"Portfolio",
              testimonials:"Clients", contact:"Contact", bookCta:"Réserver un rendez-vous" },
       hero: {
         kicker:"Décoration & Animation · Paris",
@@ -1125,17 +1045,6 @@
         step2Label:"Étape 02", step2Title:"Conception & Script", step2Desc:"Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.",
         step3Label:"Étape 03", step3Title:"Installation", step3Desc:"Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.",
         step4Label:"Étape 04", step4Title:"Le Grand Soir", step4Desc:"Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité."
-      },
-      venues: {
-        kicker:"Nos Adresses",
-        title:`Quatre adresses que nous<br class="hidden sm:block" /> connaissons mieux que personne.`,
-        subtitle:"Au-delà de la décoration et de l'animation, nous entretenons des relations de longue date avec une liste restreinte de lieux parisiens — synonyme d'accès facilité, de moins de surprises, et d'un plan de salle que nous connaissons déjà par cœur.",
-        badgePartner:"Partenaire", badgeExclusive:"Exclusivité",
-        guests1:"Yvelines · jusqu'à 250 invités",
-        guests2:`8<sup>e</sup> arrondissement · jusqu'à 180 invités`,
-        guests3:`8<sup>e</sup> arrondissement · jusqu'à 300 invités`,
-        guests4:`8<sup>e</sup> arrondissement · jusqu'à 400 invités`,
-        cta:"Nous consulter pour un lieu précis"
       },
       portfolio: {
         kicker:"Portfolio",
@@ -1206,7 +1115,7 @@
               marquee:"Selected venues and partners", filterPortfolio:"Filter portfolio",
               testimonialSlides:"Testimonial slides", toTop:"Back to top",
               openMenu:"Open menu", closeMenu:"Close menu" },
-      nav: { about:"About", services:"Services", venues:"Venues", portfolio:"Portfolio",
+      nav: { about:"About", services:"Services", portfolio:"Portfolio",
              testimonials:"Testimonials", contact:"Contact", bookCta:"Book a Consultation" },
       hero: {
         kicker:"Decoration & Hosting · Paris",
@@ -1245,17 +1154,6 @@
         step2Label:"Step 02", step2Title:"Design & Script", step2Desc:"Mood boards, floor plans and the full run-of-show, delivered together.",
         step3Label:"Step 03", step3Title:"Installation", step3Desc:"Our crew dresses the venue and rehearses cues with your suppliers.",
         step4Label:"Step 04", step4Title:"The Big Night", step4Desc:"We host, we watch the clock, and you spend the night as a guest."
-      },
-      venues: {
-        kicker:"Our Venues",
-        title:`Four addresses we know<br class="hidden sm:block" /> better than anyone.`,
-        subtitle:"Beyond decoration and hosting, we hold long-standing relationships with a short list of Parisian venues — which means faster access, fewer surprises, and a floor plan we already know by heart.",
-        badgePartner:"Partner", badgeExclusive:"Exclusive",
-        guests1:"Yvelines · up to 250 guests",
-        guests2:`8<sup>th</sup> arrondissement · up to 180 guests`,
-        guests3:`8<sup>th</sup> arrondissement · up to 300 guests`,
-        guests4:`8<sup>th</sup> arrondissement · up to 400 guests`,
-        cta:"Ask about a specific venue"
       },
       portfolio: {
         kicker:"Portfolio",
@@ -1326,7 +1224,7 @@
               marquee:"精选场地与合作伙伴", filterPortfolio:"筛选作品集",
               testimonialSlides:"客户评价轮播", toTop:"返回顶部",
               openMenu:"打开菜单", closeMenu:"关闭菜单" },
-      nav: { about:"关于我们", services:"服务项目", venues:"场地", portfolio:"作品集",
+      nav: { about:"关于我们", services:"服务项目", portfolio:"作品集",
              testimonials:"客户评价", contact:"联系我们", bookCta:"预约咨询" },
       hero: {
         kicker:"婚庆布置与主持 · 巴黎",
@@ -1365,17 +1263,6 @@
         step2Label:"步骤 02", step2Title:"设计与流程脚本", step2Desc:"灵感板、场地平面图与完整流程脚本一并交付。",
         step3Label:"步骤 03", step3Title:"现场布置", step3Desc:"我们的团队负责现场布置，并与您的其他供应商彩排流程衔接。",
         step4Label:"步骤 04", step4Title:"活动当晚", step4Desc:"我们主持全场、把控时间，您只需以宾客身份尽情享受当晚。"
-      },
-      venues: {
-        kicker:"合作场地",
-        title:`四个我们比任何人<br class="hidden sm:block" />都更熟悉的场地。`,
-        subtitle:"除了装饰与主持，我们与少数几处巴黎场地保持着长期合作关系——这意味着更快捷的进场安排、更少的意外状况，以及我们早已烂熟于心的场地平面图。",
-        badgePartner:"合作场地", badgeExclusive:"独家场地",
-        guests1:"伊夫林省 · 最多250位宾客",
-        guests2:"第8区 · 最多180位宾客",
-        guests3:"第8区 · 最多300位宾客",
-        guests4:"第8区 · 最多400位宾客",
-        cta:"咨询特定场地"
       },
       portfolio: {
         kicker:"作品集",
@@ -1494,44 +1381,6 @@
   /* ── Year ───────────────────────────────────────── */
   $('#year').textContent = new Date().getFullYear();
 
-  /* ── Hero background video ──────────────────────────
-     The <img> is the real background by default (fast, always works).
-     On capable connections and without prefers-reduced-motion, swap in a
-     muted looping video for a more cinematic hero — same pattern as
-     idf-evenements.com's homepage. */
-  (function initHeroVideo() {
-    const bg = $('#heroBg'), img = $('#heroImg');
-    if (!bg || !img) return;
-
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const saveData = navigator.connection && (navigator.connection.saveData ||
-      /2g/.test(navigator.connection.effectiveType || ''));
-    if (reduceMotion || saveData) return;
-
-    const video = document.createElement('video');
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
-    video.preload = 'auto';
-    video.setAttribute('aria-hidden', 'true');
-    video.className = img.className.replace('animate-slowZoom', '') + ' absolute inset-0';
-    video.poster = img.src;
-
-    const source = document.createElement('source');
-    source.src = 'images/hero-bg.mp4';
-    source.type = 'video/mp4';
-    video.appendChild(source);
-
-    // Only swap once the video actually has enough data to play through —
-    // if the fetch fails or stalls, the static image just stays put.
-    video.addEventListener('canplaythrough', () => {
-      bg.appendChild(video);
-      video.play().catch(() => {});
-      img.style.opacity = '0';
-      img.style.transition = 'opacity 1.2s ease';
-    }, { once: true });
-  })();
-
   /* ── Navigation: scroll state ───────────────────── */
   const nav = $('#nav'), navInner = $('#navInner'), navLinks = $$('#navLinks a');
   const LIGHT = ['text-cream-50'];
@@ -1600,7 +1449,7 @@
   });
 
   /* ── Active section in nav ──────────────────────── */
-  const sections = ['about','services','venues','portfolio','testimonials','contact']
+  const sections = ['about','services','portfolio','testimonials','contact']
     .map(id => document.getElementById(id)).filter(Boolean);
 
   if ('IntersectionObserver' in window) {

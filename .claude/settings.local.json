@@ -104,7 +104,27 @@
       "Bash(cp /tmp/rn/6a58c8e1.jpg images/rednote-blue-gold-18th.jpg)",
       "Bash(cp /tmp/rn/6a15eb74.jpg images/rednote-purple-lilac-backdrop.jpg)",
       "Bash(cp /tmp/rn/6a0c4c37.jpg images/rednote-pink-lavender-photocall.jpg)",
-      "Bash(cp /tmp/rn/69e3b3f6.jpg images/rednote-white-calla-aisle.jpg)"
+      "Bash(cp /tmp/rn/69e3b3f6.jpg images/rednote-white-calla-aisle.jpg)",
+      "Bash(pkill -f \"http.server 8794\")",
+      "Bash(python3 -c ' *)",
+      "Bash(ffmpeg -y -i \"logo/logo-new.png\" -vf \"format=rgba\" -f rawvideo -pix_fmt rgba /tmp/logo_test.raw)",
+      "Bash(ffmpeg -y -i \"logo/logo-new.png\" -vf alphaextract /tmp/logo_alpha.png)",
+      "Bash(python -c \"print\\('test'\\)\")",
+      "Bash(command -v magick)",
+      "Read(//c/Program Files/**)",
+      "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=320:267:330:0\" /tmp/logo_crop_test2.png)",
+      "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=370:267:305:0\" /tmp/logo_crop_test3.png)",
+      "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"format=rgba,alphaextract\" /tmp/logo_alpha_full.png)",
+      "Bash(ffmpeg -y -v error -i /tmp/logo_alpha_full.png -vf \"cropdetect=limit=16:round=2:reset=1\" -frames:v 1 -f null -)",
+      "Bash(ffprobe -v error -show_entries stream=width,height -of csv=p=0 /tmp/logo_alpha_full.png)",
+      "Bash(ffmpeg -y -v error -i /tmp/logo_alpha_full.png -vf \"cropdetect=24:2:0\" -f null -)",
+      "Bash(ffmpeg -i /tmp/logo_alpha_full.png -vf \"cropdetect=24:2:0\" -f null -)",
+      "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=380:267:300:0,scale=iw*2:ih*2:flags=lanczos\" images/logo-mark-crop.png)",
+      "Bash(ffprobe -v error -show_entries stream=width,height -of csv=p=0 images/logo-mark-crop.png)",
+      "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=380:267:300:0,format=rgba,pad=440:440:\\(ow-iw\\)/2:\\(oh-ih\\)/2:color=0x00000000,scale=64:64:flags=lanczos\" images/favicon.png)",
+      "Bash(ffprobe -v error -show_entries stream=width,height -of csv=p=0 images/favicon.png)",
+      "Bash(ffmpeg -y -v error -i \"logo/logo-new.png\" -vf \"crop=380:267:300:0,format=rgba,scale=iw*2:ih*2:flags=lanczos\" images/logo-mark-crop.png)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of csv=p=0 images/logo-mark-crop.png)"
     ]
   }
 }
