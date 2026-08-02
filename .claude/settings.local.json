@@ -143,7 +143,9 @@
       "Bash(ffmpeg -y -v error -i v8.mp4 -vf \"select='eq\\(n\\\\,0\\)'\" -vframes 1 v8_f0.jpg)",
       "Bash(ffmpeg -y -v error -ss 2 -i v8.mp4 -vframes 1 v8_f2.jpg)",
       "Bash(ffmpeg -y -v error -ss 4 -i v8.mp4 -vframes 1 v8_f4.jpg)",
-      "Bash(rm -rf /tmp/rnvid)"
+      "Bash(rm -rf /tmp/rnvid)",
+      "Bash(rm -rf photos logo)",
+      "Bash(rm -v \"images/gallery-conference-3.jpg\" \"images/gallery-wedding-1.jpg\" \"images/gallery-wedding-2.jpg\" \"images/logo-real.png\" \"images/service-weddings.jpg\" \"images/venue-chateau-villette.jpg\" \"images/venue-salons-hoche.jpg\" \"images/哇哇哇， 美到失语的城堡布置😁_1_Studio MA Félicité 婚礼定制_depuis rednote web.jpg\" \"images/效果有点小惊艳😍-爱丽舍婚礼鲜花布置_1_Studio MA Félicité 婚礼定制_depuis rednote web.jpg\")"
     ]
   }
 }
