@@ -861,7 +861,14 @@
           <h3 class="font-serif text-2xl text-ink-900" data-i18n="contact.formTitle">Demander une consultation</h3>
           <p class="mt-2 text-sm text-taupe-500" data-i18n-html="contact.formRequiredNote">Les champs marqués <span class="text-wine-700">*</span> sont obligatoires.</p>
 
-          <form id="bookingForm" novalidate class="mt-8 grid sm:grid-cols-2 gap-5">
+          <form id="bookingForm" action="https://formspree.io/f/xwvgdjel" method="POST" novalidate class="mt-8 grid sm:grid-cols-2 gap-5">
+
+            <!-- Honeypot: invisible to real visitors, bots fill every field they can see.
+                 Named _gotcha so Formspree discards these submissions automatically. -->
+            <div class="hidden" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
 
             <div>
               <label for="name" class="block text-[11px] uppercase tracking-[0.16em] text-taupe-500 mb-2" data-i18n-html="contact.labelName">Nom complet <span class="text-wine-700">*</span></label>
@@ -925,7 +932,7 @@
             </div>
 
             <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-5 pt-1">
-              <button type="submit" data-i18n="contact.submit" class="group inline-flex items-center justify-center gap-3 rounded-full bg-wine-700 px-9 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-cream-50 transition-all duration-300 hover:bg-wine-600 hover:shadow-lift hover:-translate-y-0.5">
+              <button type="submit" data-i18n="contact.submit" class="group inline-flex items-center justify-center gap-3 rounded-full bg-wine-700 px-9 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-cream-50 transition-all duration-300 hover:bg-wine-600 hover:shadow-lift hover:-translate-y-0.5 disabled:opacity-60 disabled:pointer-events-none">
                 Envoyer la demande
                 <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
@@ -934,6 +941,10 @@
                 partageons jamais vos informations.
               </p>
             </div>
+            <p id="formSubmitError" class="sm:col-span-2 hidden text-sm text-red-600" data-i18n="contact.submitError">
+              Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à
+              bonjour@studiomafelicite.com.
+            </p>
           </form>
 
           <!-- Success state -->
@@ -1137,6 +1148,7 @@
         labelMessage:`Message <span class="text-wine-700">*</span>`, placeholderMessage:"Lieu, nombre d'invités, l'ambiance que vous imaginez…", errMessage:"Merci d'ajouter quelques mots sur votre événement.",
         submit:"Envoyer la demande",
         disclaimer:"En envoyant ce formulaire, vous acceptez d'être contacté au sujet de votre demande. Nous ne partageons jamais vos informations.",
+        submitError:"Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à bonjour@studiomafelicite.com.",
         successTitle:"Merci — demande bien reçue.", successDesc:"Nous vous recontactons sous un jour ouvré à l'adresse indiquée.", successReset:"Envoyer une nouvelle demande"
       },
       footer: {
@@ -1250,6 +1262,7 @@
         labelMessage:`Message <span class="text-wine-700">*</span>`, placeholderMessage:"Venue, guest count, the atmosphere you have in mind…", errMessage:"Please add a few words about your event.",
         submit:"Send request",
         disclaimer:"By sending you agree to be contacted about your enquiry. We never share your details.",
+        submitError:"Something went wrong while sending your request. Please try again or email us directly at bonjour@studiomafelicite.com.",
         successTitle:"Merci — request received.", successDesc:"We'll be in touch within one working day at the address you gave us.", successReset:"Send another request"
       },
       footer: {
@@ -1363,6 +1376,7 @@
         labelMessage:`留言 <span class="text-wine-700">*</span>`, placeholderMessage:"场地、宾客人数、您心目中的氛围……", errMessage:"请简单描述一下您的活动。",
         submit:"发送请求",
         disclaimer:"提交即表示您同意我们就此咨询与您联系。我们绝不会分享您的个人信息。",
+        submitError:"发送时出现错误。请重试，或直接发邮件至 bonjour@studiomafelicite.com 与我们联系。",
         successTitle:"感谢您 — 我们已收到您的请求。", successDesc:"我们将在一个工作日内通过您提供的邮箱与您联系。", successReset:"再次发送请求"
       },
       footer: {
@@ -1646,6 +1660,8 @@
 
   /* ── Booking form ───────────────────────────────── */
   const form = $('#bookingForm'), success = $('#formSuccess');
+  const honeypot = $('#website');
+  const formLoadedAt = Date.now();
 
   function showError(field, on) {
     const err = field.parentElement.querySelector('.err') ||
@@ -1679,13 +1695,41 @@
     f.addEventListener('change', () => showError(f, false));
   });
 
-  form.addEventListener('submit', e => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitError = $('#formSubmitError');
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!validate()) return;
-    // Static site: no backend. Swap this for your endpoint (Formspree, Netlify Forms, etc.).
-    form.classList.add('hidden');
-    success.classList.remove('hidden');
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Anti-spam: a filled honeypot or a submission faster than a human can type
+    // means a bot. Show the normal success state (so the bot doesn't adapt) but
+    // stop before actually sending anything.
+    const isBot = (honeypot && honeypot.value.trim() !== '') || (Date.now() - formLoadedAt < 3000);
+    if (isBot) {
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    submitError.classList.add('hidden');
+    submitBtn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (!res.ok) throw new Error('Submission failed');
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (err) {
+      submitError.classList.remove('hidden');
+      submitBtn.disabled = false;
+    }
   });
 
   $('#formReset').addEventListener('click', () => {
