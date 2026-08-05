@@ -104,7 +104,7 @@
      would stay invisible. Show it all instead. -->
 <noscript><style>
   .reveal { opacity:1 !important; transform:none !important; }
-  #mobileMenu { max-height:none !important; }
+  #mobileMenu { grid-template-rows:1fr !important; }
 </style></noscript>
 </head>
 
@@ -158,19 +158,21 @@
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobileMenu" class="lg:hidden overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out bg-cream-50/97 backdrop-blur-xl border-t border-taupe-100">
-    <nav class="px-6 py-7 flex flex-col gap-1 text-ink-900" aria-label="Navigation mobile" data-i18n-aria="a11y.mobileNav">
-      <a href="#about"        class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.about">Maison</a>
-      <a href="#services"     class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.services">Prestations</a>
-      <a href="#portfolio"    class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.portfolio">Portfolio</a>
-      <a href="#testimonials" class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.testimonials">Clients</a>
-      <a href="#contact"      class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.contact">Contact</a>
-      <div class="lang-switch mt-6 flex items-center justify-center gap-1 rounded-full border border-taupe-200 p-1 text-[12px] font-semibold uppercase tracking-wider self-center" id="langSwitchMobile" role="group" aria-label="Choisir la langue">
-        <button type="button" class="lang-btn rounded-full px-4 py-1.5 transition-colors duration-200" data-lang="fr">FR</button>
-        <button type="button" class="lang-btn rounded-full px-4 py-1.5 transition-colors duration-200" data-lang="zh">中文</button>
-        <button type="button" class="lang-btn rounded-full px-4 py-1.5 transition-colors duration-200" data-lang="en">EN</button>
-      </div>
-    </nav>
+  <div id="mobileMenu" class="lg:hidden grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out bg-cream-50/97 backdrop-blur-xl border-t border-taupe-100">
+    <div class="overflow-hidden min-h-0">
+      <nav class="px-6 py-7 flex flex-col gap-1 text-ink-900" aria-label="Navigation mobile" data-i18n-aria="a11y.mobileNav">
+        <a href="#about"        class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.about">Maison</a>
+        <a href="#services"     class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.services">Prestations</a>
+        <a href="#portfolio"    class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#testimonials" class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.testimonials">Clients</a>
+        <a href="#contact"      class="mob-link font-serif text-2xl py-3 border-b border-taupe-100/70" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switch mt-6 flex items-center justify-center gap-1 rounded-full border border-taupe-200 p-1 text-[12px] font-semibold uppercase tracking-wider self-center" id="langSwitchMobile" role="group" aria-label="Choisir la langue">
+          <button type="button" class="lang-btn min-h-11 inline-flex items-center justify-center rounded-full px-4 transition-colors duration-200" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn min-h-11 inline-flex items-center justify-center rounded-full px-4 transition-colors duration-200" data-lang="zh">中文</button>
+          <button type="button" class="lang-btn min-h-11 inline-flex items-center justify-center rounded-full px-4 transition-colors duration-200" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -352,7 +354,7 @@
                alt="Ma Rong, founder of Studio Ma Félicité" loading="lazy" class="w-14 h-14 rounded-full object-cover ph ring-1 ring-taupe-100" />
           <div>
             <p class="font-serif text-lg text-ink-900">Ma Rong</p>
-            <p class="text-xs uppercase tracking-[0.16em] text-taupe-400" data-i18n="about.founderTitle">Fondatrice &amp; Directrice de création</p>
+            <p class="text-xs uppercase tracking-[0.16em] text-taupe-500" data-i18n="about.founderTitle">Fondatrice &amp; Directrice de création</p>
           </div>
         </div>
       </div>
@@ -461,25 +463,25 @@
     <div class="reveal mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
       <div class="relative pl-6 border-l border-taupe-100">
         <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step1Label">Étape 01</p>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step1Label">Étape 01</p>
         <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step1Title">Consultation</h4>
         <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step1Desc">Une session de 60 minutes à Paris ou en visioconférence, sans engagement.</p>
       </div>
       <div class="relative pl-6 border-l border-taupe-100">
         <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step2Label">Étape 02</p>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step2Label">Étape 02</p>
         <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step2Title">Conception &amp; Script</h4>
         <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step2Desc">Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.</p>
       </div>
       <div class="relative pl-6 border-l border-taupe-100">
         <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step3Label">Étape 03</p>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step3Label">Étape 03</p>
         <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step3Title">Installation</h4>
         <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step3Desc">Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.</p>
       </div>
       <div class="relative pl-6 border-l border-taupe-100">
         <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="services.step4Label">Étape 04</p>
+        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step4Label">Étape 04</p>
         <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step4Title">Le Grand Soir</h4>
         <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step4Desc">Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité.</p>
       </div>
@@ -512,7 +514,7 @@
     <div id="gallery" class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
-        <video src="videos/rednote-red-floral-macro.mp4" poster="images/rednote-red-floral-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Red floral arrangement, close-up detail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
+        <video src="videos/rednote-red-floral-macro.mp4" poster="images/rednote-red-floral-poster.jpg" muted loop playsinline preload="metadata" aria-label="Red floral arrangement, close-up detail" class="gal-video absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
           <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item18.cat">Mariage · Paris</p>
@@ -521,7 +523,7 @@
       </figure>
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
-        <video src="videos/rednote-maillard-floral-macro.mp4" poster="images/rednote-maillard-floral-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Maillard-toned floral arrangement, close-up detail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
+        <video src="videos/rednote-maillard-floral-macro.mp4" poster="images/rednote-maillard-floral-poster.jpg" muted loop playsinline preload="metadata" aria-label="Maillard-toned floral arrangement, close-up detail" class="gal-video absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
           <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item19.cat">Mariage · Paris</p>
@@ -530,7 +532,7 @@
       </figure>
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
-        <video src="videos/rednote-champagne-ceremony.mp4" poster="images/rednote-champagne-ceremony-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Champagne-toned ceremony backdrop with candles" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
+        <video src="videos/rednote-champagne-ceremony.mp4" poster="images/rednote-champagne-ceremony-poster.jpg" muted loop playsinline preload="metadata" aria-label="Champagne-toned ceremony backdrop with candles" class="gal-video absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
           <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item20.cat">Mariage · Paris</p>
@@ -539,7 +541,7 @@
       </figure>
 
       <figure class="gal-item group relative overflow-hidden rounded-[1.5rem] ph aspect-[4/3] cursor-pointer" data-cat="weddings">
-        <video src="videos/rednote-monet-purple-macro.mp4" poster="images/rednote-monet-purple-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Mauve paper-flower detail with neon couple sign" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
+        <video src="videos/rednote-monet-purple-macro.mp4" poster="images/rednote-monet-purple-poster.jpg" muted loop playsinline preload="metadata" aria-label="Mauve paper-flower detail with neon couple sign" class="gal-video absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"></video>
         <div class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
         <figcaption class="absolute inset-x-0 bottom-0 p-6 text-cream-50 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
           <p class="text-[10px] uppercase tracking-widest2 text-gold-300" data-i18n="portfolio.item21.cat">Mariage · Paris</p>
@@ -694,7 +696,7 @@
 
     </div>
 
-    <p id="galEmpty" class="hidden mt-12 text-center text-taupe-400 italic" data-i18n="portfolio.empty">Aucun projet dans cette catégorie pour le moment.</p>
+    <p id="galEmpty" class="hidden mt-12 text-center text-taupe-500 italic" data-i18n="portfolio.empty">Aucun projet dans cette catégorie pour le moment.</p>
 
     <div class="reveal mt-14 text-center">
       <a href="#contact" data-i18n="portfolio.cta" class="inline-flex items-center gap-3 rounded-full border border-wine-700 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-wine-700 transition-all duration-300 hover:bg-wine-700 hover:text-cream-50">
@@ -842,9 +844,9 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <div>
-              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.phoneLabel">Téléphone</p>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="contact.phoneLabel">Téléphone</p>
               <a href="tel:+33698772612" class="mt-1 block font-serif text-xl text-ink-900 hover:text-wine-700 transition">+33 6 98 77 26 12</a>
-              <p class="text-sm text-taupe-400" data-i18n="contact.phoneHours">Lun–Sam, 9h – 19h (heure de Paris)</p>
+              <p class="text-sm text-taupe-500" data-i18n="contact.phoneHours">Lun–Sam, 9h – 19h (heure de Paris)</p>
             </div>
           </li>
 
@@ -853,9 +855,9 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <div>
-              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.emailLabel">Email</p>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="contact.emailLabel">Email</p>
               <a href="mailto:bonjour@studiomafelicite.com" class="mt-1 block font-serif text-xl text-ink-900 hover:text-wine-700 transition break-all">bonjour@studiomafelicite.com</a>
-              <p class="text-sm text-taupe-400" data-i18n="contact.emailResponse">Réponse sous 24 h</p>
+              <p class="text-sm text-taupe-500" data-i18n="contact.emailResponse">Réponse sous 24 h</p>
             </div>
           </li>
 
@@ -864,16 +866,16 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.6"/></svg>
             </span>
             <div>
-              <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.addressLabel">Localisation</p>
+              <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="contact.addressLabel">Localisation</p>
               <p class="mt-1 font-serif text-xl text-ink-900">Paris, France</p>
-              <p class="text-sm text-taupe-400" data-i18n="contact.addressDesc">Nous intervenons à Paris &amp; en Île-de-France, et nous déplaçons partout en France sur demande.</p>
+              <p class="text-sm text-taupe-500" data-i18n="contact.addressDesc">Nous intervenons à Paris &amp; en Île-de-France, et nous déplaçons partout en France sur demande.</p>
             </div>
           </li>
         </ul>
 
         <!-- Socials -->
         <div class="mt-10 pt-8 border-t border-taupe-100">
-          <p class="text-[10px] uppercase tracking-widest2 text-taupe-400" data-i18n="contact.followUs">Suivez-nous</p>
+          <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="contact.followUs">Suivez-nous</p>
           <div class="mt-4 flex gap-3">
             <a href="https://www.rednote.com/user/profile/63b6a3fa0000000026011ae4" target="_blank" rel="noopener" aria-label="rednote" class="grid place-items-center w-11 h-11 rounded-full border border-taupe-200 text-ink-700 transition-all duration-300 hover:bg-wine-700 hover:border-wine-700 hover:text-cream-50 hover:-translate-y-0.5">
               <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 1-2-2V5z" stroke-linejoin="round"/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 0 2-2V5z" stroke-linejoin="round"/></svg>
@@ -963,7 +965,7 @@
                 Envoyer
                 <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
-              <p class="text-xs text-taupe-400 leading-relaxed" data-i18n="contact.disclaimer">
+              <p class="text-xs text-taupe-500 leading-relaxed" data-i18n="contact.disclaimer">
                 En envoyant ce formulaire, vous acceptez d'être contacté au sujet de votre demande. Nous ne
                 partageons jamais vos informations.
               </p>
@@ -1479,6 +1481,25 @@
   /* ── Year ───────────────────────────────────────── */
   $('#year').textContent = new Date().getFullYear();
 
+  /* ── Gallery video: play only while visible, respect prefers-reduced-motion ──
+     autoplay was removed from the markup. Videos play while scrolled into view
+     and pause off-screen (saves battery/bandwidth); the poster frame stays as
+     the reduced-motion fallback when the visitor has that OS preference set. */
+  const galVideos = $$('.gal-video');
+  if (galVideos.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if ('IntersectionObserver' in window) {
+      const vo = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.isIntersecting) en.target.play().catch(() => {});
+          else en.target.pause();
+        });
+      }, { threshold: 0.15 });
+      galVideos.forEach(v => vo.observe(v));
+    } else {
+      galVideos.forEach(v => v.play().catch(() => {}));
+    }
+  }
+
   /* ── Navigation: scroll state ───────────────────── */
   const nav = $('#nav'), navInner = $('#navInner'), navLinks = $$('#navLinks a');
   const LIGHT = ['text-cream-50'];
@@ -1499,7 +1520,7 @@
 
   function setMenu(open) {
     mobileOpen = open;
-    menu.style.maxHeight = open ? menu.scrollHeight + 'px' : '0px';
+    menu.style.gridTemplateRows = open ? '1fr' : '0fr';
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', I18N[currentLang].a11y[open ? 'closeMenu' : 'openMenu']);
     document.body.style.overflow = open ? 'hidden' : '';
