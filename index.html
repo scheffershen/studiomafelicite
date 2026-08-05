@@ -412,7 +412,10 @@
         </div>
 
         <div class="flex flex-col flex-1 p-7 lg:p-8">
-          <h3 class="font-serif text-2xl text-ink-900" data-i18n="services.title1">Mariages</h3>
+          <div class="-mt-14 lg:-mt-16 mb-3 inline-flex w-fit rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
+            <p class="font-serif text-3xl leading-none">01</p>
+          </div>
+          <h3 class="font-serif text-3xl text-ink-900" data-i18n="services.title1">Mariages</h3>
           <p class="mt-3 text-[15px] leading-relaxed text-ink-500 flex-1" data-i18n="services.desc1">
             Décor floral et scénographie sur mesure autour de votre palette, associés à un animateur charismatique
             qui guide la cérémonie, les entrées et la réception sans jamais voler la vedette.
@@ -440,7 +443,10 @@
         </div>
 
         <div class="flex flex-col flex-1 p-7 lg:p-8">
-          <h3 class="font-serif text-2xl text-ink-900" data-i18n="services.title2">Anniversaires</h3>
+          <div class="-mt-14 lg:-mt-16 mb-3 inline-flex w-fit rounded-2xl bg-mauve-600 text-cream-50 px-6 py-5 shadow-lift">
+            <p class="font-serif text-3xl leading-none">02</p>
+          </div>
+          <h3 class="font-serif text-3xl text-ink-900" data-i18n="services.title2">Anniversaires</h3>
           <p class="mt-3 text-[15px] leading-relaxed text-ink-500 flex-1" data-i18n="services.desc2">
             D'un dîner intime pour douze personnes à un grand gala de noces d'or, nous construisons le décor puis
             menons le déroulé — toasts, hommages, surprises et gâteau, tout arrive au bon moment.
@@ -460,30 +466,41 @@
     </div>
 
     <!-- Process strip -->
-    <div class="reveal mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-      <div class="relative pl-6 border-l border-taupe-100">
-        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step1Label">Étape 01</p>
-        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step1Title">Consultation</h4>
-        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step1Desc">Une session de 60 minutes à Paris ou en visioconférence, sans engagement.</p>
-      </div>
-      <div class="relative pl-6 border-l border-taupe-100">
-        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step2Label">Étape 02</p>
-        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step2Title">Conception &amp; Script</h4>
-        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step2Desc">Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.</p>
-      </div>
-      <div class="relative pl-6 border-l border-taupe-100">
-        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step3Label">Étape 03</p>
-        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step3Title">Installation</h4>
-        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step3Desc">Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.</p>
-      </div>
-      <div class="relative pl-6 border-l border-taupe-100">
-        <span class="absolute -left-[6px] top-1 w-[11px] h-[11px] rounded-full bg-gold-500"></span>
-        <p class="text-[10px] uppercase tracking-widest2 text-taupe-500" data-i18n="services.step4Label">Étape 04</p>
-        <h4 class="mt-2 font-serif text-xl text-ink-900" data-i18n="services.step4Title">Le Grand Soir</h4>
-        <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step4Desc">Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité.</p>
+    <div class="reveal mt-20 relative">
+      <div class="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-gold-300/70 to-transparent"></div>
+      <div class="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+        <div>
+          <div class="inline-block rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
+            <p class="font-serif text-3xl leading-none">01</p>
+            <p class="mt-1 text-[10px] uppercase tracking-widest2 text-cream-200/75" data-i18n="services.step1Label">Étape 01</p>
+          </div>
+          <h4 class="mt-5 font-serif text-2xl text-ink-900" data-i18n="services.step1Title">Consultation</h4>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step1Desc">Une session de 60 minutes à Paris ou en visioconférence, sans engagement.</p>
+        </div>
+        <div>
+          <div class="inline-block rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
+            <p class="font-serif text-3xl leading-none">02</p>
+            <p class="mt-1 text-[10px] uppercase tracking-widest2 text-cream-200/75" data-i18n="services.step2Label">Étape 02</p>
+          </div>
+          <h4 class="mt-5 font-serif text-2xl text-ink-900" data-i18n="services.step2Title">Conception &amp; Script</h4>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step2Desc">Planches d'inspiration, plans de salle et déroulé complet, livrés ensemble.</p>
+        </div>
+        <div>
+          <div class="inline-block rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
+            <p class="font-serif text-3xl leading-none">03</p>
+            <p class="mt-1 text-[10px] uppercase tracking-widest2 text-cream-200/75" data-i18n="services.step3Label">Étape 03</p>
+          </div>
+          <h4 class="mt-5 font-serif text-2xl text-ink-900" data-i18n="services.step3Title">Installation</h4>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step3Desc">Notre équipe habille le lieu et répète les enchaînements avec vos prestataires.</p>
+        </div>
+        <div>
+          <div class="inline-block rounded-2xl bg-wine-700 text-cream-50 px-6 py-5 shadow-lift">
+            <p class="font-serif text-3xl leading-none">04</p>
+            <p class="mt-1 text-[10px] uppercase tracking-widest2 text-cream-200/75" data-i18n="services.step4Label">Étape 04</p>
+          </div>
+          <h4 class="mt-5 font-serif text-2xl text-ink-900" data-i18n="services.step4Title">Le Grand Soir</h4>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500" data-i18n="services.step4Desc">Nous animons, nous surveillons l'horaire, et vous profitez de la soirée en tant qu'invité.</p>
+        </div>
       </div>
     </div>
   </div>
