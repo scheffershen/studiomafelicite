@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { -webkit-tap-highlight-color: transparent; }
+body { background:#FDFBF6; color:#242019; }
+
+/* Scroll reveal */
+.reveal { opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+.reveal.is-visible { opacity:1; transform:none; }
+
+/* Image placeholder backdrop so a slow/failed asset still looks intentional */
+.ph { background:linear-gradient(135deg,#E1D2B7 0%,#C9BCAC 45%,#B0A190 100%); }
+
+/* Thin decorative rule */
+.rule::after { content:''; display:block; width:56px; height:1px; background:#C9A96A; margin-top:1.25rem; }
+.rule-center::after { margin-left:auto; margin-right:auto; }
+
+/* Nav link underline */
+.navlink { position:relative; }
+.navlink::after { content:''; position:absolute; left:0; bottom:-4px; height:1px; width:0; background:currentColor; transition:width .35s cubic-bezier(.16,1,.3,1); }
+.navlink:hover::after, .navlink.active::after { width:100%; }
+
+/* Portfolio filter */
+.filter-btn.is-active { background:#6B1B26; color:#F8F2E8; border-color:#6B1B26; }
+
+/* Language switch */
+.lang-btn.is-active { background:#C9A96A; color:#14110D; }
+
+.gal-item { transition:opacity .45s ease, transform .45s ease; }
+.gal-item.is-hidden { display:none; }
+
+/* Carousel */
+.track { display:flex; transition:transform .7s cubic-bezier(.16,1,.3,1); }
+
+/* Form floating focus */
+.field:focus { outline:none; border-color:#6B1B26; box-shadow:0 0 0 3px rgba(107,27,38,.10); }
+
+::selection { background:#6B1B26; color:#F8F2E8; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  .reveal { opacity:1; transform:none; }
+  html { scroll-behavior:auto; }
+}

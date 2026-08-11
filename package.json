@@ -1,0 +1,29 @@
+{
+  "name": "studiomafelicite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch",
+    "build:i18n": "node scripts/build-i18n.js",
+    "build": "npm run build:css && npm run build:i18n",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scheffershen/studiomafelicite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/scheffershen/studiomafelicite/issues"
+  },
+  "homepage": "https://github.com/scheffershen/studiomafelicite#readme",
+  "devDependencies": {
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^3.4.19"
+  }
+}
